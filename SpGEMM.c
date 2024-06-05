@@ -2,45 +2,54 @@
 #include <stdlib.h>
 #include <sys/time.h>
 
-#define RATIO 0.25
+#define RATIO   0.25    // Sparse density ratio
+#define SHOW    0       // 0: Do not show matrices. 1: Show matrices.
 
-int randCnt = 0;
-double get_time();
-int SHOW = 0;
+// Global variables
+int randCnt = 0;        // Random number generator counter
 
+// Get time in seconds
+double get_time(){
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return (double)tv.tv_sec + (double)1e-6 * tv.tv_usec; // tv.tv_usec is the number of microsecond since last second.
+}
+
+// Generate a sparse matrix with random values.
+// The number of non-zero elements is RATIO * rows * cols
 void prepareSparse(float* matrix, int rows, int cols){
-    int nnz = RATIO * rows * cols;
+    int nnz = (int)(rows * cols * RATIO);
     // printf("Number of non-zero elements: %d\n", nnz);
     srand((unsigned)time(NULL) + (randCnt++));
     for(int h = 0; h < nnz; h++) {
       int i = rand() % rows;
       int j = rand() % cols;
       if(matrix[i * cols + j] != 0){
-          h--;
-          continue;
+        h--; continue;
       }
-      matrix[i * cols + j] = (float)(rand() % 20000 - 10000)/1000;
+      matrix[i * cols + j] = (float)(rand() % 20000 - 10000) / 1000; // Random number between -10 and 10.
     }
-    // toCSR(matrix, rows, cols, rowPtr, colInd, val);
-    
 }
 
+// Convert a matrix to CSR format
 void matrixToCSR(float* matrix, int rows,int cols, int* rowPtr, int* colInd, float* val){
-    int size = 0;
+    int nnzCnt = 0;
     for(int row = 0; row < rows; row++){
-        rowPtr[row] = size;
+        rowPtr[row] = nnzCnt;
         for(int col = 0; col < cols; col++){
             float num = matrix[row * cols + col];
             if(num != 0){
-                val[size] = num;
-                colInd[size] = col;
-                size++;
+                val[nnzCnt] = num;
+                colInd[nnzCnt] = col;
+                nnzCnt++;
             }
         }
     }
-    rowPtr[rows] = size;
+    rowPtr[rows] = nnzCnt; // End of row pointer
 }
 
+// Convert CSR format back to a normal matrix. 
+// Not used yet.
 void CSRToMatrix(float* matrix, int rows,int cols, int* rowPtr, int* colInd, float* val){
     for(int i = 0; i < rows; i++){
         int row_start = rowPtr[i];
@@ -51,8 +60,10 @@ void CSRToMatrix(float* matrix, int rows,int cols, int* rowPtr, int* colInd, flo
     }
 }
 
+// Display a matrix
 void showMatrix(float* matrix, int rows, int cols){
-    if(SHOW == 0) return;
+    if(SHOW == 0) return; // If SHOW is 0, do not show the matrix.
+    
     printf("Matrix: \n");
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < cols; j++){
@@ -63,8 +74,9 @@ void showMatrix(float* matrix, int rows, int cols){
     printf("\n");
 }
 
+// Display a matrix in CSR format
 void showCSR(int rows, int cols, int* rowPtr, int *colInd, float* val){
-    if(SHOW == 0) return;
+    if(SHOW == 0) return; // If SHOW is 0, do not show the matrix.
     
     printf("CSR: \n");
     printf("rowPtr: ");
@@ -87,7 +99,7 @@ void showCSR(int rows, int cols, int* rowPtr, int *colInd, float* val){
     printf("\n\n");
 }
 
-// Input a pointer of a matrix and zeroize the array
+// Input a pointer of a matrix and zeroize it
 void zeroizeMatrix(float* matrix, int rows, int cols){
     printf("******** Zeroize Matrix ********\n");
     for(int i = 0; i < rows; i++){
@@ -103,7 +115,7 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
 
     printf("********** ********** **********\n");
     printf("Simple Multiplicaiton: \n");
-    printf("- M x K x N = %d x %d x %d\n", M, N, M, K, N);
+    printf("- M x K x N = %d x %d x %d\n", M, K, N);
     printf("- Number of non-zero elements in A: %d, in B: %d\n", (int)(M * K * RATIO), (int)(K * N * RATIO));
     double start = get_time();
     for(int i = 0; i < M; i++){
@@ -116,8 +128,8 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
     }
     double end = get_time();
     printf("- Time: %.3f\n", end - start);
-    if(SHOW)
-        showMatrix(matrixC, M, N);
+    
+    showMatrix(matrixC, M, N);
     printf("********** ********** **********\n");
 }
 
@@ -128,8 +140,9 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
     
     printf("********** ********** **********\n");
     printf("Sparse Multiplication: \n");
-    printf("- M x K x N = %d x %d x %d\n", M, N, M, K, N);
+    printf("- M x K x N = %d x %d x %d\n", M, K, N);
     printf("- Number of non-zero elements in A: %d, in B: %d\n", (int)(M * K * RATIO), (int)(K * N * RATIO));
+    
     double start = get_time();
     // #pragma omp parallel for num_threads(threads)
     for(int m = 0; m < M; m++){
@@ -145,16 +158,9 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
     }
     double end = get_time();
     printf("- Time: %.3f\n", end - start);
-    if(SHOW)
-        showMatrix(matrixC, M, N);
+    
+    showMatrix(matrixC, M, N);
     printf("********** ********** **********\n");
-}
-
-// Get time in seconds
-double get_time(){
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    return (double)tv.tv_sec + (double)1e-6 * tv.tv_usec;
 }
 
 
@@ -171,20 +177,22 @@ int main(int argc, char *argv[]){
     //          M x N = (M x K) x (K x N)
     
     float *matrixA = (float*)malloc(M * K * sizeof(float));
+    int nnzA = (int)(M * K * RATIO);
     int *rowPtrA = (int*)malloc((M + 1) * sizeof(int));
-    int *colIndA = (int*)malloc(M * K * RATIO * sizeof(int));
-    float *valA = (float*)malloc(M * K * RATIO * sizeof(float));
+    int *colIndA = (int*)malloc(nnzA * sizeof(int));
+    float *valA = (float*)malloc(nnzA * sizeof(float));
 
     float *matrixB = (float*)malloc(K * N * sizeof(float));
+    int nnzB = (int)(K * N * RATIO);
     int *rowPtrB = (int*)malloc((K + 1) * sizeof(int));
-    int *colIndB = (int*)malloc(K * N * RATIO * sizeof(int));
-    float *valB = (float*)malloc(K * N * RATIO * sizeof(float));
+    int *colIndB = (int*)malloc(nnzB * sizeof(int));
+    float *valB = (float*)malloc(nnzB * sizeof(float));
     
-    // Create random matrices
+    // Produce random elements in sparse matrix A and B.
     prepareSparse(matrixA, M, K);
     prepareSparse(matrixB, K, N);
 
-    // Display matrices
+    // Display matrix A and B, and their CSR format.
     showMatrix(matrixA, M, K);
     matrixToCSR(matrixA, M, K, rowPtrA, colIndA, valA);
     showCSR(M, K, rowPtrA, colIndA, valA);
