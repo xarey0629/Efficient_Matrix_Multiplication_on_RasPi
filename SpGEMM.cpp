@@ -1,6 +1,11 @@
+// gcc -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128
+// g++ -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
+#include "BIN.h"
 
 #define RATIO   0.25    // Sparse density ratio
 #define SHOW    0       // 0: Do not show matrices. 1: Show matrices.
@@ -200,6 +205,26 @@ int main(int argc, char *argv[]){
     showMatrix(matrixB, K, N);
     matrixToCSR(matrixB, K, N, rowPtrB, colIndB, valB);
     showCSR(K, N, rowPtrB, colIndB, valB);
+
+    // Test BIN
+    BIN myBin(M, 8);
+    myBin.set_intprod_num(rowPtrA, colIndA, rowPtrB, M);
+    printf("Total intprod: %lld\n", myBin.total_intprod);
+    // print each row's nnz
+    for(int i = 0; i < M; i++){
+        printf("row_nnz[%d]: %d\n", i, myBin.row_nnz[i]);
+    }
+    myBin.set_rows_offset(M);
+    // print row_offset
+    for(int i = 0; i < myBin.num_of_threads + 1; i++){
+        printf("row_offset[%d]: %d\n", i, myBin.row_offset[i]);
+    }
+    
+    
+
+
+
+    
 
     // Create matrix C
     float *matrixC = (float*)malloc(M * N * sizeof(float));
