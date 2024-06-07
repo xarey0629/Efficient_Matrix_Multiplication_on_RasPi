@@ -212,12 +212,12 @@ int main(int argc, char *argv[]){
     printf("Total intprod: %lld\n", myBin.total_intprod);
     // print each row's nnz
     for(int i = 0; i < M; i++){
-        printf("row_nnz[%d]: %d\n", i, myBin.row_nnz[i]);
+        printf("row_nnzflops[%d]: %d\n", i, myBin.row_nnzflops[i]);
     }
-    myBin.set_rows_offset(M);
-    // print row_offset
+    myBin.set_thread_row_offsets(M);
+    // print thread_row_offsets
     for(int i = 0; i < myBin.num_of_threads + 1; i++){
-        printf("row_offset[%d]: %d\n", i, myBin.row_offset[i]);
+        printf("thread_row_offsets[%d]: %d\n", i, myBin.thread_row_offsets[i]);
     }
     
     
