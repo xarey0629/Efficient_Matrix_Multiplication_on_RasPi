@@ -6,6 +6,8 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <assert.h>
+#include <vector>
+using namespace std;
 
 #define HASHING_CONST  2654435761
 
@@ -171,6 +173,35 @@ inline void BIN::allocate_hash_tables(const int cols)
     }    
 }
 
+inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, float *cval_start, const int ht_size, const int vec_size, const bool SORT = true)
+{
+    int cnt = 0;
+    if(SORT){
+        std::vector<std::pair<int, double>> vec(vec_size);
+        for(int i = 0; i < ht_size; i++)
+        {
+            if(map[i] != -1) vec.push_back(std::make_pair(map[i], map_val[i]));
+        }
+        // Sort the hash table by column indices and store the values back to CSR format
+        sort(vec.begin(), vec.end());
+        for(int i = 0; i < vec.size(); i++)
+        {
+            ccol_start[i] = vec[i].first;
+            cval_start[i] = vec[i].second;
+        }
+    }else{ // No sorting
+        for(int i = 0; i < ht_size; i++)
+        {
+            if(map[i] != -1)
+            {
+                ccol_start[cnt] = map[i];
+                cval_start[cnt] = map_val[i];
+                cnt++;
+            }
+        }
+    }
+}
+
 inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *brpt, const int *bcol, BIN &bin)
 {
     #pragma omp parallel
@@ -180,9 +211,9 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
         for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++)
         {
             int nz = 0;
-            int left_shift = bin.bin_size_leftShift_bits[i]; // row by row
-            if(left_shift > 0){
-                int ht_size = bin.min_hashTable_size << (left_shift - 1);
+            int ht_size_left_shift_bits = bin.bin_size_leftShift_bits[i]; // row by row
+            if(ht_size_left_shift_bits > 0){
+                int ht_size = bin.min_hashTable_size << (ht_size_left_shift_bits - 1);
                 // Initialize hash table
                 for(int j = 0; j < ht_size; j++)
                 {
@@ -195,7 +226,7 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
                     int aCol = acol[j];
                     for(int k = brpt[aCol]; k < brpt[aCol + 1]; k++)
                     {
-                        int bCol = bcol[k];
+                        int bCol = bcol[k]; // Use column index of matrix B as the key.
                         int hashKey = (bCol * HASHING_CONST) & (ht_size - 1);
                         // Linear probing
                         while(1) 
@@ -206,21 +237,15 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
                                 nz++;
                                 break;
                             }
-                            else if(map[hashKey] == bCol)
-                            {
-                                break;
-                            }
-                            else
-                            {
-                                hashKey = (hashKey + 1) & (ht_size - 1);
-                            }
+                            else if(map[hashKey] == bCol) break;
+                            else hashKey = (hashKey + 1) & (ht_size - 1);
                         }
                     }
                 }
             }
-            // Check the nnz;
+            // Check the nnzflops of each row.
             printf("The number of non-zero flops for row %d: is match? Ans: %B\n", i, bin.row_nnzflops[i] == nz ? true : false);
-            bin.c_row_nnz[i] = nz;              
+            bin.c_row_nnz[i] = nz; // Actual nnz of each row in matrix C              
         }
     }
 }
@@ -230,6 +255,61 @@ inline void hash_symbolic(const int *arpt, const int *acol, const int *brpt, con
     hash_symbolic_kernel(arpt, acol, brpt, bcol, bin);
     generateSequentialPrefixSum(bin.c_row_nnz, crpt, nrow + 1);
     *c_nnz = crpt[nrow];
+}
+
+// Numeric phase: Compute the actual values of matrix C
+inline void hash_numeric(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, int *crpt, int *ccol, float *cval, BIN &bin){
+    #pragma omp parallel
+    {
+        int tid = omp_get_thread_num();
+        int *map = bin.local_hash_table_idx[tid];
+        double *map_val = bin.local_hash_table_val[tid];
+
+        for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++)
+        {
+            int ht_size_left_shift_bits = bin.bin_size_leftShift_bits[i];
+            if(ht_size_left_shift_bits > 0)
+            {
+                int idx_offset = crpt[i];
+                int ht_size = bin.min_hashTable_size << (ht_size_left_shift_bits - 1);
+                // Initialize hash table
+                for(int j = 0; j < ht_size; j++)
+                {
+                    map[j] = -1;
+                }
+                // Fill hash table row by row.
+                for(int j = arpt[i]; j < arpt[i + 1]; j++)
+                {
+                    int aCol = acol[j];
+                    for(int k = brpt[aCol]; k < brpt[aCol + 1]; k++)
+                    {
+                        int bCol = bcol[k]; // Use column index of matrix B as the key.
+                        int hashKey = (bCol * HASHING_CONST) & (ht_size - 1);
+                        // Linear probing
+                        while(1) 
+                        {
+                            if(map[hashKey] == -1)
+                            {
+                                map[hashKey] = bCol;
+                                map_val[hashKey] = aval[j] * bval[k];
+                                break;
+                            }
+                            else if(map[hashKey] == bCol)
+                            {
+                                map_val[hashKey] += aval[j] * bval[k];
+                                break;
+                            }
+                            else hashKey = (hashKey + 1) & (ht_size - 1);
+                        }
+                    }
+                }
+                // Fill out the actual values of matrix C
+                // Method 1: If the matrix C is in normal format, just fill out the values.    
+                // Method 2: If the matrix C is in CSR format, we need to sort the hash table by column indices, then store values.
+                sort_and_storeToCSR(map, map_val, ccol + idx_offset, cval + idx_offset, ht_size, bin.c_row_nnz[i]);
+            }
+        }
+    }
 }
 
 
