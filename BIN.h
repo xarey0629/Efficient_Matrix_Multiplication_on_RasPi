@@ -312,5 +312,4 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
     }
 }
 
-
 #endif // _BIN_H_
