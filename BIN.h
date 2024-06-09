@@ -9,7 +9,8 @@
 #include <vector>
 using namespace std;
 
-#define HASHING_CONST  2654435761
+#define HASHING_CONST           2654435761
+#define MAX_HASH_TABLE_SIZE     8
 
 template <typename T>
 inline T *my_malloc(int arr_size)
@@ -30,7 +31,7 @@ inline void my_free(T *p)
 }
 
 struct BIN {
-    BIN(int rows, int ht_size): total_intprod(0), max_intprod(0), max_nnz(0), num_of_threads(omp_get_max_threads()), min_hashTable_size(ht_size)
+    BIN(int rows, int ht_size = 8): total_intprod(0), max_intprod(0), max_nnz(0), num_of_threads(omp_get_max_threads()), min_hashTable_size(ht_size)
     {
         assert(rows != 0);
         row_nnzflops = my_malloc<int>(rows);
@@ -40,6 +41,21 @@ struct BIN {
         local_hash_table_val = my_malloc<double *>(num_of_threads);
         // Matrix C
         c_row_nnz = my_malloc<int>(rows);
+    }
+    ~BIN()
+    {
+        my_free(row_nnzflops);
+        my_free(thread_row_offsets);
+        my_free(bin_size_leftShift_bits);
+        #pragma omp parallel
+        {
+            int tid = omp_get_thread_num();
+            my_free(local_hash_table_idx[tid]);
+            my_free(local_hash_table_val[tid]);
+        }
+        my_free(local_hash_table_idx);
+        my_free(local_hash_table_val);
+        my_free(c_row_nnz);
     }
 
 
@@ -80,18 +96,18 @@ inline void BIN::set_intprod_num(const int *arpt, const int *acol, const int *br
         int nflops_per_row = 0;
         for(int j = arpt[i]; j < arpt[i + 1]; j++)
         {
-            int col = acol[j];
-            nflops_per_row += (brpt[col + 1] - brpt[col]);
+            int a_col_idx = acol[j];
+            nflops_per_row += (brpt[a_col_idx + 1] - brpt[a_col_idx]);
         }
         row_nnzflops[i] = nflops_per_row;
         each_inter_prod += nflops_per_row;
     }
 #pragma omp atomic
-    total_intprod += each_inter_prod;
+    this->total_intprod += each_inter_prod;
 }
 }
 
-// Get prefix sum (could be parallelized)
+// Set prefix sum of in into out. (could be parallelized)
 void generateSequentialPrefixSum(int *in, int *out, int size)
 {
     out[0] = 0;
@@ -100,8 +116,8 @@ void generateSequentialPrefixSum(int *in, int *out, int size)
     }
 } 
 
-// Get prefix sum of row_nnzflops and the average number of non-zero elements per thread
-// Then distribute equal work to each thread
+// Get prefix sum of row_nnzflops and the average number of non-zero elements per thread.
+// Then distribute equal work to each thread.
 inline void BIN::set_thread_row_offsets(const int rows)
 {
     // Get prefix sum of row_nnzflops
@@ -116,7 +132,7 @@ inline void BIN::set_thread_row_offsets(const int rows)
     #pragma omp parallel
     {
         int tid = omp_get_thread_num();
-        int end = std::lower_bound(row_nnzflops_prefix_sum, row_nnzflops_prefix_sum + rows + 1, avg_nnz_per_thread * (tid + 1)) - row_nnzflops_prefix_sum;
+        int end = std::lower_bound(row_nnzflops_prefix_sum, row_nnzflops_prefix_sum + rows, avg_nnz_per_thread * (tid + 1)) - row_nnzflops_prefix_sum;
         thread_row_offsets[tid + 1] = end;
     }
     thread_row_offsets[num_of_threads] = rows;
@@ -170,18 +186,22 @@ inline void BIN::allocate_hash_tables(const int cols)
         }
         local_hash_table_idx[tid] = my_malloc<int>(ht_size);
         local_hash_table_val[tid] = my_malloc<double>(ht_size);
+        // printf("Thread %d: Allocate hash table with size %d\n", tid, ht_size);
     }    
 }
 
+// Sort the hash table by column indices and store the values back to CSR format
 inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, float *cval_start, const int ht_size, const int vec_size, const bool SORT = true)
 {
     int cnt = 0;
     if(SORT){
-        std::vector<std::pair<int, double>> vec(vec_size);
+        std::vector<std::pair<int, double>> vec;
         for(int i = 0; i < ht_size; i++)
         {
             if(map[i] != -1) vec.push_back(std::make_pair(map[i], map_val[i]));
         }
+        assert(vec.size() == vec_size);
+
         // Sort the hash table by column indices and store the values back to CSR format
         sort(vec.begin(), vec.end());
         for(int i = 0; i < vec.size(); i++)
@@ -189,7 +209,7 @@ inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, floa
             ccol_start[i] = vec[i].first;
             cval_start[i] = vec[i].second;
         }
-    }else{ // No sorting
+    }else{ // No sorting, if unnecessary
         for(int i = 0; i < ht_size; i++)
         {
             if(map[i] != -1)
@@ -212,7 +232,7 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
         {
             int nz = 0;
             int ht_size_left_shift_bits = bin.bin_size_leftShift_bits[i]; // row by row
-            if(ht_size_left_shift_bits > 0){
+            if(ht_size_left_shift_bits != 0){
                 int ht_size = bin.min_hashTable_size << (ht_size_left_shift_bits - 1);
                 // Initialize hash table
                 for(int j = 0; j < ht_size; j++)
@@ -220,7 +240,7 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
                     map[j] = -1;
                 }
 
-                // Fill hash table row by row.
+                // Fill out hash table row by row.
                 for(int j = arpt[i]; j < arpt[i + 1]; j++)
                 {
                     int aCol = acol[j];
@@ -242,9 +262,8 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
                         }
                     }
                 }
+                // printf("Thread %d finished row %d\n", tid, i);
             }
-            // Check the nnzflops of each row.
-            printf("The number of non-zero flops for row %d: is match? Ans: %B\n", i, bin.row_nnzflops[i] == nz ? true : false);
             bin.c_row_nnz[i] = nz; // Actual nnz of each row in matrix C              
         }
     }
@@ -254,7 +273,7 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
 inline void hash_symbolic(const int *arpt, const int *acol, const int *brpt, const int *bcol, int *crpt, BIN &bin, const int nrow, int *c_nnz){
     hash_symbolic_kernel(arpt, acol, brpt, bcol, bin);
     generateSequentialPrefixSum(bin.c_row_nnz, crpt, nrow + 1);
-    *c_nnz = crpt[nrow];
+    *c_nnz = crpt[nrow];  // Set the total number of non-zero elements in matrix C
 }
 
 // Numeric phase: Compute the actual values of matrix C
@@ -277,7 +296,7 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
                 {
                     map[j] = -1;
                 }
-                // Fill hash table row by row.
+                // Fill out hash table row by row.
                 for(int j = arpt[i]; j < arpt[i + 1]; j++)
                 {
                     int aCol = acol[j];
@@ -311,5 +330,35 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
         }
     }
 }
+
+inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float *aval, 
+                                        const int *brpt, const int *bcol, const float *bval, 
+                                        int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol)
+{
+    BIN myBin(nrow, MAX_HASH_TABLE_SIZE);
+    // Load balancing and set the size of hash table for each row
+    myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);
+    // Allocate hash table for each thread
+    myBin.allocate_hash_tables(ncol);
+    // Symbolic phase
+    int c_nnz = 0;  // Total number of non-zero elements in matrix C
+    crpt = my_malloc<int>(nrow + 1);
+    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz);
+    ccol = my_malloc<int>(c_nnz);
+    cval = my_malloc<float>(c_nnz);
+
+    // // print each row's nnz
+    // for(int i = 0; i < nrow; i++){
+    //     printf("row_nnzflops[%d]: %d\n", i, myBin.row_nnzflops[i]);
+    // }
+    // // print thread_row_offsets
+    // for(int i = 0; i < myBin.num_of_threads + 1; i++){
+    //     printf("thread_row_offsets[%d]: %d\n", i, myBin.thread_row_offsets[i]);
+    // }
+
+    // Numeric phase
+    hash_numeric(arpt, acol, aval, brpt, bcol, bval, crpt, ccol, cval, myBin);
+}
+
 
 #endif // _BIN_H_

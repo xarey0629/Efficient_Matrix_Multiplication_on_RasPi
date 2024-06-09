@@ -91,7 +91,8 @@ void showCSR(int rows, int cols, int* rowPtr, int *colInd, float* val){
     printf("\n");
 
     printf("colInd: ");
-    int n = RATIO * rows * cols;
+    // int n = RATIO * rows * cols;
+    int n = rowPtr[rows];
     for(int i = 0; i < n; i++){
         printf("%d ", colInd[i]);
     }
@@ -206,31 +207,20 @@ int main(int argc, char *argv[]){
     matrixToCSR(matrixB, K, N, rowPtrB, colIndB, valB);
     showCSR(K, N, rowPtrB, colIndB, valB);
 
-    // Test BIN
-    BIN myBin(M, 8);
-    myBin.set_intprod_num(rowPtrA, colIndA, rowPtrB, M);
-    printf("Total intprod: %lld\n", myBin.total_intprod);
-    // print each row's nnz
-    for(int i = 0; i < M; i++){
-        printf("row_nnzflops[%d]: %d\n", i, myBin.row_nnzflops[i]);
-    }
-    myBin.set_thread_row_offsets(M);
-    // print thread_row_offsets
-    for(int i = 0; i < myBin.num_of_threads + 1; i++){
-        printf("thread_row_offsets[%d]: %d\n", i, myBin.thread_row_offsets[i]);
-    }
-    
-    
-
-
-
-    
-
     // Create matrix C
     float *matrixC = (float*)malloc(M * N * sizeof(float));
     simpleMatrixMultiplication(matrixA, matrixB, matrixC, M, K, N);
     zeroizeMatrix(matrixC, M, N);
     sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
+   
+    // Execute Hashing SpGEMM
+    int *c_rowPtr, *c_colInd;
+    float *c_val;
+    double start = get_time();
+    execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    double end = get_time();
+    printf("Time: %.3f\n", end - start);
+    showCSR(M, N, c_rowPtr, c_colInd, c_val);
 
     return 0;
 }
