@@ -10,7 +10,7 @@
 using namespace std;
 
 #define HASHING_CONST           2654435761
-#define MAX_HASH_TABLE_SIZE     8
+#define MIN_HASH_TABLE_SIZE     8
 
 template <typename T>
 inline T *my_malloc(int arr_size)
@@ -83,7 +83,7 @@ struct BIN {
     void set_bin_leftShift_bits(const int rows, const int cols, const int min_ht_size);
 };
 
-// Compute the number of floating operations for each row
+// Compute the number of floating operations of each row
 // Then compute the total number of floating operations
 inline void BIN::set_intprod_num(const int *arpt, const int *acol, const int *brpt, const int rows)
 {
@@ -156,7 +156,7 @@ inline void BIN::set_bin_leftShift_bits(const int rows, const int cols, const in
             while(actual_size > (min_ht_size << j)){
                 j++;
             }
-            bin_size_leftShift_bits[i] = j + 1; // 0 is saved for the empty row
+            bin_size_leftShift_bits[i] = j + 1; // 0 is saved for the empty row, minus 1 when retrieving the size.
         }
     }    
 }
@@ -190,11 +190,15 @@ inline void BIN::allocate_hash_tables(const int cols)
     }    
 }
 
-// Sort the hash table by column indices and store the values back to CSR format
+/* 
+* Sort the hash table by column indices and store the values back to CSR format
+* The reason why we need to sort the hash table by column indices is that the hash table is filled out in a random order, but CSR needs that order.
+*/
 inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, float *cval_start, const int ht_size, const int vec_size, const bool SORT = true)
 {
     int cnt = 0;
     if(SORT){
+        // *** TODO ***: Rebuild hash table with a pair array. But the time sorting -1 indices should be considered.
         std::vector<std::pair<int, double>> vec;
         for(int i = 0; i < ht_size; i++)
         {
@@ -209,7 +213,8 @@ inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, floa
             ccol_start[i] = vec[i].first;
             cval_start[i] = vec[i].second;
         }
-    }else{ // No sorting, if unnecessary
+    }
+    else{ // No sorting, if unnecessary
         for(int i = 0; i < ht_size; i++)
         {
             if(map[i] != -1)
@@ -248,16 +253,17 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
                     {
                         int bCol = bcol[k]; // Use column index of matrix B as the key.
                         int hashKey = (bCol * HASHING_CONST) & (ht_size - 1);
+                        
                         // Linear probing
                         while(1) 
                         {
-                            if(map[hashKey] == -1)
+                            if(map[hashKey] == -1) // The column index doesn't exist, insert it and increment the number of non-zero elements in the current row of matrix C.
                             {
                                 map[hashKey] = bCol;
                                 nz++;
                                 break;
                             }
-                            else if(map[hashKey] == bCol) break;
+                            else if(map[hashKey] == bCol) break; // If the same column index is found, do nothing.
                             else hashKey = (hashKey + 1) & (ht_size - 1);
                         }
                     }
@@ -284,7 +290,7 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
         int *map = bin.local_hash_table_idx[tid];
         double *map_val = bin.local_hash_table_val[tid];
 
-        for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++)
+        for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++) // In a row by row manner
         {
             int ht_size_left_shift_bits = bin.bin_size_leftShift_bits[i];
             if(ht_size_left_shift_bits > 0)
@@ -335,11 +341,12 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
                                         const int *brpt, const int *bcol, const float *bval, 
                                         int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol)
 {
-    BIN myBin(nrow, MAX_HASH_TABLE_SIZE);
-    // Load balancing and set the size of hash table for each row
+    BIN myBin(nrow, MIN_HASH_TABLE_SIZE);
+    // Load balancing and set the size of hash table, which is flops(row_i), for each row
     myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);
     // Allocate hash table for each thread
     myBin.allocate_hash_tables(ncol);
+
     // Symbolic phase
     int c_nnz = 0;  // Total number of non-zero elements in matrix C
     crpt = my_malloc<int>(nrow + 1);

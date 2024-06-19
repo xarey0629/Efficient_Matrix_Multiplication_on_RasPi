@@ -213,14 +213,14 @@ int main(int argc, char *argv[]){
     zeroizeMatrix(matrixC, M, N);
     sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
-    // Execute Hashing SpGEMM
-    int *c_rowPtr, *c_colInd;
-    float *c_val;
-    double start = get_time();
-    execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
-    double end = get_time();
-    printf("Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
+    // // Execute Hashing SpGEMM
+    // int *c_rowPtr, *c_colInd;
+    // float *c_val;
+    // double start = get_time();
+    // execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // double end = get_time();
+    // printf("Time: %.3f\n", end - start);`
+    // showCSR(M, N, c_rowPtr, c_colInd, c_val);
 
     return 0;
 }
