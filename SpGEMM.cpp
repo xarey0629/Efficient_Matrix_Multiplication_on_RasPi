@@ -53,7 +53,7 @@ void matrixToCSR(float* matrix, int rows,int cols, int* rowPtr, int* colInd, flo
     rowPtr[rows] = nnzCnt; // End of row pointer
 }
 
-// Convert CSR format back to a normal matrix. 
+// Convert CSR back to a normal matrix. 
 // Not used yet.
 void CSRToMatrix(float* matrix, int rows,int cols, int* rowPtr, int* colInd, float* val){
     for(int i = 0; i < rows; i++){
@@ -169,8 +169,6 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
     printf("********** ********** **********\n");
 }
 
-
-
 int main(int argc, char *argv[]){
     // ************** Input(argv): M, K, N **************
     int M = strtol(argv[1], NULL, 10);
@@ -181,7 +179,8 @@ int main(int argc, char *argv[]){
     // ************** Multiplication ************** 
     //            C   =    A    x    B
     //          M x N = (M x K) x (K x N)
-    
+
+    // ************** Memory Allocation **************
     float *matrixA = (float*)malloc(M * K * sizeof(float));
     int nnzA = (int)(M * K * RATIO);
     int *rowPtrA = (int*)malloc((M + 1) * sizeof(int));
@@ -207,13 +206,19 @@ int main(int argc, char *argv[]){
     matrixToCSR(matrixB, K, N, rowPtrB, colIndB, valB);
     showCSR(K, N, rowPtrB, colIndB, valB);
 
-    // Create matrix C
+    // Allocate matrix C
     float *matrixC = (float*)malloc(M * N * sizeof(float));
+
+    // ************** Multiplication Execution **************
+
+    // Execute simple matrix multiplication O(n^3)
     simpleMatrixMultiplication(matrixA, matrixB, matrixC, M, K, N);
+    // Reset matrix C
     zeroizeMatrix(matrixC, M, N);
+    // Execute sparse matrix multiplication O(flops)
     sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
-    // // Execute Hashing SpGEMM
+    // // ************** Parallel Hashing SpGEMM **************
     // int *c_rowPtr, *c_colInd;
     // float *c_val;
     // double start = get_time();

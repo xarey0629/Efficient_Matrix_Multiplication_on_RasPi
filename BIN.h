@@ -12,6 +12,7 @@ using namespace std;
 #define HASHING_CONST           2654435761
 #define MIN_HASH_TABLE_SIZE     8
 
+// Memory allocation and free
 template <typename T>
 inline T *my_malloc(int arr_size)
 {
@@ -29,16 +30,22 @@ inline void my_free(T *p)
 {
     free(p);
 }
+// ----------------------------
 
+// my BIN class
 struct BIN {
     BIN(int rows, int ht_size = 8): total_intprod(0), max_intprod(0), max_nnz(0), num_of_threads(omp_get_max_threads()), min_hashTable_size(ht_size)
     {
         assert(rows != 0);
-        row_nnzflops = my_malloc<int>(rows);
-        thread_row_offsets = my_malloc<int>(num_of_threads + 1);
-        bin_size_leftShift_bits = my_malloc<char>(rows);
-        local_hash_table_idx = my_malloc<int *>(num_of_threads);
-        local_hash_table_val = my_malloc<double *>(num_of_threads);
+        // Symbolic phase
+        row_nnzflops =              my_malloc<int>(rows);
+        thread_row_offsets =        my_malloc<int>(num_of_threads + 1);
+        
+        // Hash table for each thread
+        bin_size_leftShift_bits =   my_malloc<char>(rows);
+        local_hash_table_idx =      my_malloc<int *>(num_of_threads);
+        local_hash_table_val =      my_malloc<double *>(num_of_threads);
+        
         // Matrix C
         c_row_nnz = my_malloc<int>(rows);
     }
@@ -58,12 +65,12 @@ struct BIN {
         my_free(c_row_nnz);
     }
 
-
-    long long int total_intprod;
-    long long int max_intprod;
-    int max_nnz;
+    // Variables
+    long long int total_intprod;        // Total number of floating operations
+    long long int max_intprod;          // Maximum number of floating operations
+    int max_nnz;                        // Maximum number of non-zero elements in matrix C
     int num_of_threads;
-    int min_hashTable_size;
+    int min_hashTable_size;             // Default minimum size of hash table
 
     // Symbolic phase
     int *row_nnzflops;                  // Number of floating operations for each row
@@ -83,8 +90,15 @@ struct BIN {
     void set_bin_leftShift_bits(const int rows, const int cols, const int min_ht_size);
 };
 
-// Compute the number of floating operations of each row
-// Then compute the total number of floating operations
+/*  
+    *************************** Functions start here ***************************
+*/
+
+/* 
+Set intermediate product number for each row
+* 1. Compute the number of floating operations of each row
+* 2. Then compute the total number of floating operations
+*/
 inline void BIN::set_intprod_num(const int *arpt, const int *acol, const int *brpt, const int rows)
 {
 #pragma omp parallel
@@ -116,8 +130,13 @@ void generateSequentialPrefixSum(int *in, int *out, int size)
     }
 } 
 
-// Get prefix sum of row_nnzflops and the average number of non-zero elements per thread.
-// Then distribute equal work to each thread.
+
+/* 
+Set the start row for each thread in order to distribute equal work to each thread.
+* 1. Get prefix sum of row_nnzflops
+* 2. Get the average number of non-zero elements per thread
+* 3. Distribute equal workload to each thread
+*/
 inline void BIN::set_thread_row_offsets(const int rows)
 {
     // Get prefix sum of row_nnzflops
@@ -140,8 +159,12 @@ inline void BIN::set_thread_row_offsets(const int rows)
     my_free(row_nnzflops_prefix_sum);
 }
 
-// Compute how many entries in the hash table for each row before the multiplication
-// The size of hash table is the power of 2. NOTE: The number of elements could be similar to the size of the hash table (lots of collisions).
+/*
+Set the number of bits to left shift the size of the hash table
+* 1. Compute how many entries in the hash table for each row before the multiplication
+* 2. The size of hash table is the power of 2. 
+NOTE: The number of elements could be similar to the size of the hash table (lots of collisions).
+*/
 inline void BIN::set_bin_leftShift_bits(const int rows, const int cols, const int min_ht_size)
 {
     #pragma omp parallel for
@@ -161,8 +184,12 @@ inline void BIN::set_bin_leftShift_bits(const int rows, const int cols, const in
     }    
 }
 
-
-// Grouping and preparing hash table based on the number of floating operations
+/*
+Grouping and preparing hash table based on the number of floating operations
+* 1. Set the number of floating operations for each row
+* 2. Set the start row for each thread in order to distribute equal work to each thread.
+* 3. Set the number of bits to left shift the size of the hash table
+*/
 inline void BIN::set_max_bin(const int *arpt, const int *acol, const int *brpt, const int rows, const int cols)
 {
     set_intprod_num(arpt, acol, brpt, rows);
@@ -170,7 +197,11 @@ inline void BIN::set_max_bin(const int *arpt, const int *acol, const int *brpt, 
     set_bin_leftShift_bits(rows, cols, min_hashTable_size);
 }
 
-// Allocate hash table for each thread
+/*
+Allocate hash table for each thread
+* 1. Get the size of hash table for each row
+* 2. Allocate hash table for each thread
+*/
 inline void BIN::allocate_hash_tables(const int cols)
 {
     #pragma omp parallel
@@ -191,8 +222,11 @@ inline void BIN::allocate_hash_tables(const int cols)
 }
 
 /* 
-* Sort the hash table by column indices and store the values back to CSR format
-* The reason why we need to sort the hash table by column indices is that the hash table is filled out in a random order, but CSR needs that order.
+Sort the hash table by column indices and store the values back to CSR format
+* 1. Create a pair vector to copy the column indices and values from the hash table
+* 2. Sort the pair vector by column indices
+* 3. Store the values back to CSR format
+NOTE: The reason why we need to sort the hash table by column indices is that the hash table is filled out in a random order, but CSR needs increasing order.
 */
 inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, float *cval_start, const int ht_size, const int vec_size, const bool SORT = true)
 {
@@ -227,6 +261,12 @@ inline void sort_and_storeToCSR(int *map, double *map_val, int *ccol_start, floa
     }
 }
 
+/*
+Hashing SpGEMM symbolic kernel --> Compute the number of non-zero elements for each row in matrix C
+* 1. Initialize hash table for each thread
+* 2. Fill out hash table row by row
+* 3. Compute the number of non-zero elements for each row in matrix C
+*/
 inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *brpt, const int *bcol, BIN &bin)
 {
     #pragma omp parallel
@@ -275,14 +315,24 @@ inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *br
     }
 }
 
-// Symbolic phase: Compute the number of non-zero elements for each row in matrix C
+/*
+Hashing SpGEMM symbolic phase execution
+* 1. Execute symbolic kernel
+* 2. Prefix sum up number of non-zero elements for each row in matrix C
+*/
 inline void hash_symbolic(const int *arpt, const int *acol, const int *brpt, const int *bcol, int *crpt, BIN &bin, const int nrow, int *c_nnz){
     hash_symbolic_kernel(arpt, acol, brpt, bcol, bin);
     generateSequentialPrefixSum(bin.c_row_nnz, crpt, nrow + 1);
     *c_nnz = crpt[nrow];  // Set the total number of non-zero elements in matrix C
 }
 
-// Numeric phase: Compute the actual values of matrix C
+/* 
+Hashing SpGEMM numeric phase execution
+* 1. Compute the actual values of matrix C
+* 2. Store the values back to CSR format
+* 3. Method 1: If the matrix C is in normal format, just fill out the values.
+* 4. Method 2: If the matrix C is in CSR format, we need to sort the hash table by column indices, then store values.
+*/
 inline void hash_numeric(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, int *crpt, int *ccol, float *cval, BIN &bin){
     #pragma omp parallel
     {
@@ -366,6 +416,10 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
     // Numeric phase
     hash_numeric(arpt, acol, aval, brpt, bcol, bval, crpt, ccol, cval, myBin);
 }
+
+/*  
+    *************************** Functions end here ***************************
+*/
 
 
 #endif // _BIN_H_
