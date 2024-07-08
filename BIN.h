@@ -103,7 +103,7 @@ inline void BIN::set_intprod_num(const int *arpt, const int *acol, const int *br
 {
 #pragma omp parallel
 {
-    int each_inter_prod = 0;
+    int each_inter_prod = 0;    // Number of floating operations for each thread
 #pragma omp for
     for(int i = 0; i < rows; i++)
     {
@@ -387,20 +387,25 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
     }
 }
 
+/*
+Main function to execute hashing SpGEMM execution
+* 1. Initialize BIN object
+* 2. Symbolic phase
+* 3. Numeric phase
+*/
 inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float *aval, 
                                         const int *brpt, const int *bcol, const float *bval, 
                                         int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol)
 {
-    BIN myBin(nrow, MIN_HASH_TABLE_SIZE);
-    // Load balancing and set the size of hash table, which is flops(row_i), for each row
-    myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);
-    // Allocate hash table for each thread
-    myBin.allocate_hash_tables(ncol);
+    // Initialize BIN object
+    BIN myBin(nrow, MIN_HASH_TABLE_SIZE);               // Create a BIN object.
+    myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);    // Load balancing and set the size of hash table, which is flops(row_i), for each row.
+    myBin.allocate_hash_tables(ncol);                   // Allocate hash table for each thread.
 
     // Symbolic phase
-    int c_nnz = 0;  // Total number of non-zero elements in matrix C
+    int c_nnz = 0;                                                          // nnz(C), dereferenced by hash_symbolic.
     crpt = my_malloc<int>(nrow + 1);
-    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz);
+    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz);       // Symbolic phase, and get nnz(C).
     ccol = my_malloc<int>(c_nnz);
     cval = my_malloc<float>(c_nnz);
 
