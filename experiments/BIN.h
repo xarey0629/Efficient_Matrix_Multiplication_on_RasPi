@@ -131,7 +131,7 @@ void generateSequentialPrefixSum(int *in, int *out, int size)
 } 
 
 
-/* 
+/* Load balancer
 Set the start row for each thread in order to distribute equal work to each thread.
 * 1. Get prefix sum of row_nnzflops
 * 2. Get the average number of non-zero elements per thread
@@ -399,14 +399,14 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
                                         int num_of_threads)
 {
     // Initialize BIN object
-    BIN myBin(nrow, MIN_HASH_TABLE_SIZE, num_of_threads);               // Create a BIN object.
-    myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);    // Load balancing and set the size of hash table, which is flops(row_i), for each row.
-    myBin.allocate_hash_tables(ncol);                   // Allocate hash table for each thread.
+    BIN myBin(nrow, MIN_HASH_TABLE_SIZE, num_of_threads);   // Create a BIN object.
+    myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);        // Load balancing and set the size of hash table, which is flops(row_i), for each row.
+    myBin.allocate_hash_tables(ncol);                       // Allocate hash table for each thread.
 
     // Symbolic phase
-    int c_nnz = 0;                                                          // nnz(C), dereferenced by hash_symbolic.
+    int c_nnz = 0;                                                                      // nnz(C), dereferenced by hash_symbolic.
     crpt = my_malloc<int>(nrow + 1);
-    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz, num_of_threads);       // Symbolic phase, and get nnz(C).
+    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz, num_of_threads);   // Symbolic phase, and get nnz(C).
     ccol = my_malloc<int>(c_nnz);
     cval = my_malloc<float>(c_nnz);
 

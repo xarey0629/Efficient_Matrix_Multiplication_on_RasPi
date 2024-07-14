@@ -1,0 +1,542 @@
+O(n^3) 32 0.10 
+         2,785,919      cycles                                                                
+         1,701,578      cache-references                                                      
+            22,725      cache-misses                     #    1.34% of all cache refs         
+         1,701,578      L1-dcache-loads                                                       
+            22,725      L1-dcache-load-misses            #    1.34% of all L1-dcache accesses 
+            36,292      LLC-loads                                                             
+            22,688      LLC-load-misses                  #   62.52% of all LL-cache accesses  
+       0.002197133 seconds time elapsed
+       0.002313000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 32 0.10 
+         2,650,936      cycles                                                                
+         1,161,721      cache-references                                                      
+            23,377      cache-misses                     #    2.01% of all cache refs         
+         1,161,721      L1-dcache-loads                                                       
+            23,377      L1-dcache-load-misses            #    2.01% of all L1-dcache accesses 
+            36,235      LLC-loads                                                             
+            22,088      LLC-load-misses                  #   60.96% of all LL-cache accesses  
+       0.001960707 seconds time elapsed
+       0.000000000 seconds user
+       0.002100000 seconds sys
+Multi_SpGEMM 32 0.10 
+         4,142,932      cycles                                                                
+         1,667,311      cache-references                                                      
+            30,796      cache-misses                     #    1.85% of all cache refs         
+         1,667,311      L1-dcache-loads                                                       
+            30,796      L1-dcache-load-misses            #    1.85% of all L1-dcache accesses 
+            58,911      LLC-loads                                                             
+            27,922      LLC-load-misses                  #   47.40% of all LL-cache accesses  
+       0.002178467 seconds time elapsed
+       0.000000000 seconds user
+       0.002812000 seconds sys
+
+O(n^3) 64 0.10 
+         6,398,576      cycles                                                                
+         7,413,144      cache-references                                                      
+            23,940      cache-misses                     #    0.32% of all cache refs         
+         7,413,144      L1-dcache-loads                                                       
+            23,940      L1-dcache-load-misses            #    0.32% of all L1-dcache accesses 
+            37,583      LLC-loads                                                             
+            22,672      LLC-load-misses                  #   60.33% of all LL-cache accesses  
+       0.004326711 seconds time elapsed
+       0.000000000 seconds user
+       0.004433000 seconds sys
+Single_SpGEMM 64 0.10 
+         4,274,369      cycles                                                                
+         2,849,827      cache-references                                                      
+            24,636      cache-misses                     #    0.86% of all cache refs         
+         2,849,827      L1-dcache-loads                                                       
+            24,636      L1-dcache-load-misses            #    0.86% of all L1-dcache accesses 
+            39,401      LLC-loads                                                             
+            22,721      LLC-load-misses                  #   57.67% of all LL-cache accesses  
+       0.002985746 seconds time elapsed
+       0.003106000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 64 0.10 
+         5,938,368      cycles                                                                
+         3,409,922      cache-references                                                      
+            32,424      cache-misses                     #    0.95% of all cache refs         
+         3,409,922      L1-dcache-loads                                                       
+            32,424      L1-dcache-load-misses            #    0.95% of all L1-dcache accesses 
+            61,354      LLC-loads                                                             
+            28,600      LLC-load-misses                  #   46.61% of all LL-cache accesses  
+       0.002547912 seconds time elapsed
+       0.003333000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 128 0.10 
+        35,072,307      cycles                                                                
+        52,327,021      cache-references                                                      
+           128,797      cache-misses                     #    0.25% of all cache refs         
+        52,327,021      L1-dcache-loads                                                       
+           128,797      L1-dcache-load-misses            #    0.25% of all L1-dcache accesses 
+            50,986      LLC-loads                                                             
+            24,722      LLC-load-misses                  #   48.49% of all LL-cache accesses  
+       0.022287949 seconds time elapsed
+       0.022348000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 128 0.10 
+        14,015,020      cycles                                                                
+        12,828,681      cache-references                                                      
+            30,736      cache-misses                     #    0.24% of all cache refs         
+        12,828,681      L1-dcache-loads                                                       
+            30,736      L1-dcache-load-misses            #    0.24% of all L1-dcache accesses 
+            53,138      LLC-loads                                                             
+            24,632      LLC-load-misses                  #   46.35% of all LL-cache accesses  
+       0.009165165 seconds time elapsed
+       0.009193000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 128 0.10 
+        15,662,373      cycles                                                                
+        13,566,622      cache-references                                                      
+            39,014      cache-misses                     #    0.29% of all cache refs         
+        13,566,622      L1-dcache-loads                                                       
+            39,014      L1-dcache-load-misses            #    0.29% of all L1-dcache accesses 
+            66,215      LLC-loads                                                             
+            29,703      LLC-load-misses                  #   44.86% of all LL-cache accesses  
+       0.004468174 seconds time elapsed
+       0.006739000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 256 0.10 
+       282,864,619      cycles                                                                
+       408,661,482      cache-references                                                      
+         8,524,985      cache-misses                     #    2.09% of all cache refs         
+       408,661,482      L1-dcache-loads                                                       
+         8,524,985      L1-dcache-load-misses            #    2.09% of all L1-dcache accesses 
+           190,330      LLC-loads                                                             
+            31,400      LLC-load-misses                  #   16.50% of all LL-cache accesses  
+       0.144481191 seconds time elapsed
+       0.144524000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 256 0.10 
+        66,502,038      cycles                                                                
+        65,615,689      cache-references                                                      
+            73,293      cache-misses                     #    0.11% of all cache refs         
+        65,615,689      L1-dcache-loads                                                       
+            73,293      L1-dcache-load-misses            #    0.11% of all L1-dcache accesses 
+           117,778      LLC-loads                                                             
+            32,548      LLC-load-misses                  #   27.64% of all LL-cache accesses  
+       0.028026866 seconds time elapsed
+       0.024073000 seconds user
+       0.004012000 seconds sys
+Multi_SpGEMM 256 0.10 
+        71,090,469      cycles                                                                
+        67,286,800      cache-references                                                      
+            82,738      cache-misses                     #    0.12% of all cache refs         
+        67,286,800      L1-dcache-loads                                                       
+            82,738      L1-dcache-load-misses            #    0.12% of all L1-dcache accesses 
+           152,376      LLC-loads                                                             
+            39,285      LLC-load-misses                  #   25.78% of all LL-cache accesses  
+       0.011119984 seconds time elapsed
+       0.029871000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 512 0.10 
+     2,614,570,392      cycles                                                                
+     3,249,946,113      cache-references                                                      
+       134,498,115      cache-misses                     #    4.14% of all cache refs         
+     3,249,946,113      L1-dcache-loads                                                       
+       134,498,115      L1-dcache-load-misses            #    4.14% of all L1-dcache accesses 
+       118,693,497      LLC-loads                                                             
+            90,076      LLC-load-misses                  #    0.08% of all LL-cache accesses  
+       1.089834799 seconds time elapsed
+       1.089798000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 512 0.10 
+       313,859,287      cycles                                                                
+       322,215,732      cache-references                                                      
+           447,435      cache-misses                     #    0.14% of all cache refs         
+       322,215,732      L1-dcache-loads                                                       
+           447,435      L1-dcache-load-misses            #    0.14% of all L1-dcache accesses 
+           353,574      LLC-loads                                                             
+            74,545      LLC-load-misses                  #   21.08% of all LL-cache accesses  
+       0.131080537 seconds time elapsed
+       0.131128000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 512 0.10 
+       317,516,847      cycles                                                                
+       323,455,487      cache-references                                                      
+           456,921      cache-misses                     #    0.14% of all cache refs         
+       323,455,487      L1-dcache-loads                                                       
+           456,921      L1-dcache-load-misses            #    0.14% of all L1-dcache accesses 
+           405,313      LLC-loads                                                             
+            85,632      LLC-load-misses                  #   21.13% of all LL-cache accesses  
+       0.043676525 seconds time elapsed
+       0.124674000 seconds user
+       0.004021000 seconds sys
+
+O(n^3) 1024 0.10 
+    62,369,090,050      cycles                                                                
+    25,883,433,411      cache-references                                                      
+     1,075,215,643      cache-misses                     #    4.15% of all cache refs         
+    25,883,433,411      L1-dcache-loads                                                       
+     1,075,215,643      L1-dcache-load-misses            #    4.15% of all L1-dcache accesses 
+     1,308,170,682      LLC-loads                                                             
+       702,092,543      LLC-load-misses                  #   53.67% of all LL-cache accesses  
+      25.988808844 seconds time elapsed
+      25.983686000 seconds user
+       0.003999000 seconds sys
+Single_SpGEMM 1024 0.10 
+     1,541,434,438      cycles                                                                
+     1,616,948,292      cache-references                                                      
+         2,731,300      cache-misses                     #    0.17% of all cache refs         
+     1,616,948,292      L1-dcache-loads                                                       
+         2,731,300      L1-dcache-load-misses            #    0.17% of all L1-dcache accesses 
+         3,863,699      LLC-loads                                                             
+           400,727      LLC-load-misses                  #   10.37% of all LL-cache accesses  
+       0.642841818 seconds time elapsed
+       0.638668000 seconds user
+       0.003991000 seconds sys
+Multi_SpGEMM 1024 0.10 
+     1,552,222,011      cycles                                                                
+     1,619,948,626      cache-references                                                      
+         2,736,442      cache-misses                     #    0.17% of all cache refs         
+     1,619,948,626      L1-dcache-loads                                                       
+         2,736,442      L1-dcache-load-misses            #    0.17% of all L1-dcache accesses 
+         4,188,804      LLC-loads                                                             
+           408,695      LLC-load-misses                  #    9.76% of all LL-cache accesses  
+       0.202351220 seconds time elapsed
+       0.638874000 seconds user
+       0.007985000 seconds sys
+
+O(n^3) 2048 0.10 
+   759,926,852,632      cycles                                                                
+   206,692,051,993      cache-references                                                      
+     8,600,842,892      cache-misses                     #    4.16% of all cache refs         
+   206,692,051,993      L1-dcache-loads                                                       
+     8,600,842,892      L1-dcache-load-misses            #    4.16% of all L1-dcache accesses 
+    10,241,673,674      LLC-loads                                                             
+     8,690,174,452      LLC-load-misses                  #   84.85% of all LL-cache accesses  
+     316.698127152 seconds time elapsed
+     316.662644000 seconds user
+       0.019999000 seconds sys
+Single_SpGEMM 2048 0.10 
+     8,516,089,669      cycles                                                                
+     8,907,972,169      cache-references                                                      
+        17,009,842      cache-misses                     #    0.19% of all cache refs         
+     8,907,972,169      L1-dcache-loads                                                       
+        17,009,842      L1-dcache-load-misses            #    0.19% of all L1-dcache accesses 
+        36,616,828      LLC-loads                                                             
+        13,117,734      LLC-load-misses                  #   35.82% of all LL-cache accesses  
+       3.549177123 seconds time elapsed
+       3.528790000 seconds user
+       0.019981000 seconds sys
+Multi_SpGEMM 2048 0.10 
+     8,603,970,824      cycles                                                                
+     8,912,796,281      cache-references                                                      
+        17,646,881      cache-misses                     #    0.20% of all cache refs         
+     8,912,796,281      L1-dcache-loads                                                       
+        17,646,881      L1-dcache-load-misses            #    0.20% of all L1-dcache accesses 
+        39,162,883      LLC-loads                                                             
+        12,158,676      LLC-load-misses                  #   31.05% of all LL-cache accesses  
+       1.073690099 seconds time elapsed
+       3.560863000 seconds user
+       0.024005000 seconds sys
+
+O(n^3) 4096 0.10 
+ 1,653,234,415,122      cache-references                                                      
+    68,821,395,746      cache-misses                     #    4.16% of all cache refs         
+ 1,653,234,415,122      L1-dcache-loads                                                       
+    68,821,395,746      L1-dcache-load-misses            #    4.16% of all L1-dcache accesses 
+    68,816,561,489      LLC-loads                                                             
+    67,828,870,319      LLC-load-misses                  #   98.56% of all LL-cache accesses  
+    5563.923378600 seconds time elapsed
+    5563.687202000 seconds user
+       0.123997000 seconds sys
+Single_SpGEMM 4096 0.10 
+    52,172,920,954      cycles                                                                
+    54,770,743,642      cache-references                                                      
+       195,123,864      cache-misses                     #    0.36% of all cache refs         
+    54,770,743,642      L1-dcache-loads                                                       
+       195,123,864      L1-dcache-load-misses            #    0.36% of all L1-dcache accesses 
+       230,187,898      LLC-loads                                                             
+       187,129,877      LLC-load-misses                  #   81.29% of all LL-cache accesses  
+      21.739923352 seconds time elapsed
+      21.643277000 seconds user
+       0.095996000 seconds sys
+Multi_SpGEMM 4096 0.10 
+    53,563,921,117      cycles                                                                
+    54,796,809,234      cache-references                                                      
+       206,593,089      cache-misses                     #    0.38% of all cache refs         
+    54,796,809,234      L1-dcache-loads                                                       
+       206,593,089      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses 
+       261,952,443      LLC-loads                                                             
+       196,616,408      LLC-load-misses                  #   75.06% of all LL-cache accesses  
+       6.635320838 seconds time elapsed
+      23.033776000 seconds user
+       0.111930000 seconds sys
+
+O(n^3) 32 0.25 
+         3,221,649      cycles                                                                
+         1,756,987      cache-references                                                      
+            23,503      cache-misses                     #    1.34% of all cache refs         
+         1,756,987      L1-dcache-loads                                                       
+            23,503      L1-dcache-load-misses            #    1.34% of all L1-dcache accesses 
+            36,094      LLC-loads                                                             
+            21,809      LLC-load-misses                  #   60.42% of all LL-cache accesses  
+       0.001555613 seconds time elapsed
+       0.001637000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 32 0.25 
+         3,737,850      cycles                                                                
+         1,801,958      cache-references                                                      
+            24,265      cache-misses                     #    1.35% of all cache refs         
+         1,801,958      L1-dcache-loads                                                       
+            24,265      L1-dcache-load-misses            #    1.35% of all L1-dcache accesses 
+            38,714      LLC-loads                                                             
+            22,141      LLC-load-misses                  #   57.19% of all LL-cache accesses  
+       0.001768483 seconds time elapsed
+       0.000000000 seconds user
+       0.001853000 seconds sys
+Multi_SpGEMM 32 0.25 
+         5,606,385      cycles                                                                
+         2,346,149      cache-references                                                      
+            31,582      cache-misses                     #    1.35% of all cache refs         
+         2,346,149      L1-dcache-loads                                                       
+            31,582      L1-dcache-load-misses            #    1.35% of all L1-dcache accesses 
+            59,050      LLC-loads                                                             
+            27,994      LLC-load-misses                  #   47.41% of all LL-cache accesses  
+       0.001952502 seconds time elapsed
+       0.002417000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 64 0.25 
+         7,098,648      cycles                                                                
+         7,634,930      cache-references                                                      
+            24,752      cache-misses                     #    0.32% of all cache refs         
+         7,634,930      L1-dcache-loads                                                       
+            24,752      L1-dcache-load-misses            #    0.32% of all L1-dcache accesses 
+            38,366      LLC-loads                                                             
+            21,757      LLC-load-misses                  #   56.71% of all LL-cache accesses  
+       0.003172577 seconds time elapsed
+       0.003253000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 64 0.25 
+         7,226,871      cycles                                                                
+         5,360,261      cache-references                                                      
+            25,530      cache-misses                     #    0.48% of all cache refs         
+         5,360,261      L1-dcache-loads                                                       
+            25,530      L1-dcache-load-misses            #    0.48% of all L1-dcache accesses 
+            39,618      LLC-loads                                                             
+            22,504      LLC-load-misses                  #   56.80% of all LL-cache accesses  
+       0.003268615 seconds time elapsed
+       0.003368000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 64 0.25 
+         8,912,359      cycles                                                                
+         6,006,500      cache-references                                                      
+            33,442      cache-misses                     #    0.56% of all cache refs         
+         6,006,500      L1-dcache-loads                                                       
+            33,442      L1-dcache-load-misses            #    0.56% of all L1-dcache accesses 
+            60,778      LLC-loads                                                             
+            27,541      LLC-load-misses                  #   45.31% of all LL-cache accesses  
+       0.002239539 seconds time elapsed
+       0.002963000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 128 0.25 
+        37,643,188      cycles                                                                
+        53,159,288      cache-references                                                      
+           118,129      cache-misses                     #    0.22% of all cache refs         
+        53,159,288      L1-dcache-loads                                                       
+           118,129      L1-dcache-load-misses            #    0.22% of all L1-dcache accesses 
+            67,491      LLC-loads                                                             
+            24,139      LLC-load-misses                  #   35.77% of all LL-cache accesses  
+       0.016001775 seconds time elapsed
+       0.016072000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 128 0.25 
+        25,153,512      cycles                                                                
+        22,693,907      cache-references                                                      
+            35,699      cache-misses                     #    0.16% of all cache refs         
+        22,693,907      L1-dcache-loads                                                       
+            35,699      L1-dcache-load-misses            #    0.16% of all L1-dcache accesses 
+            81,335      LLC-loads                                                             
+            23,834      LLC-load-misses                  #   29.30% of all LL-cache accesses  
+       0.010738288 seconds time elapsed
+       0.010835000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 128 0.25 
+        27,408,644      cycles                                                                
+        23,549,805      cache-references                                                      
+            45,009      cache-misses                     #    0.19% of all cache refs         
+        23,549,805      L1-dcache-loads                                                       
+            45,009      L1-dcache-load-misses            #    0.19% of all L1-dcache accesses 
+           106,868      LLC-loads                                                             
+            29,711      LLC-load-misses                  #   27.80% of all LL-cache accesses  
+       0.005289079 seconds time elapsed
+       0.007567000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 256 0.25 
+       295,571,634      cycles                                                                
+       411,935,728      cache-references                                                      
+         8,542,380      cache-misses                     #    2.07% of all cache refs         
+       411,935,728      L1-dcache-loads                                                       
+         8,542,380      L1-dcache-load-misses            #    2.07% of all L1-dcache accesses 
+           309,126      LLC-loads                                                             
+            31,616      LLC-load-misses                  #   10.23% of all LL-cache accesses  
+       0.123416491 seconds time elapsed
+       0.123473000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 256 0.25 
+       121,493,457      cycles                                                                
+       119,085,745      cache-references                                                      
+           198,344      cache-misses                     #    0.17% of all cache refs         
+       119,085,745      L1-dcache-loads                                                       
+           198,344      L1-dcache-load-misses            #    0.17% of all L1-dcache accesses 
+           248,125      LLC-loads                                                             
+            31,104      LLC-load-misses                  #   12.54% of all LL-cache accesses  
+       0.050842883 seconds time elapsed
+       0.050920000 seconds user
+       0.000000000 seconds sys
+Multi_SpGEMM 256 0.25 
+       125,257,192      cycles                                                                
+       120,263,812      cache-references                                                      
+           210,303      cache-misses                     #    0.17% of all cache refs         
+       120,263,812      L1-dcache-loads                                                       
+           210,303      L1-dcache-load-misses            #    0.17% of all L1-dcache accesses 
+           294,438      LLC-loads                                                             
+            39,255      LLC-load-misses                  #   13.33% of all LL-cache accesses  
+       0.020173520 seconds time elapsed
+       0.049271000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 512 0.25 
+     2,838,619,638      cycles                                                                
+     3,263,648,837      cache-references                                                      
+       134,604,705      cache-misses                     #    4.12% of all cache refs         
+     3,263,648,837      L1-dcache-loads                                                       
+       134,604,705      L1-dcache-load-misses            #    4.12% of all L1-dcache accesses 
+       137,459,603      LLC-loads                                                             
+            94,768      LLC-load-misses                  #    0.07% of all LL-cache accesses  
+       1.183124173 seconds time elapsed
+       1.183132000 seconds user
+       0.000000000 seconds sys
+Single_SpGEMM 512 0.25 
+       669,699,712      cycles                                                                
+       706,045,026      cache-references                                                      
+         1,468,552      cache-misses                     #    0.21% of all cache refs         
+       706,045,026      L1-dcache-loads                                                       
+         1,468,552      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses 
+         1,220,568      LLC-loads                                                             
+            92,109      LLC-load-misses                  #    7.55% of all LL-cache accesses  
+       0.279361569 seconds time elapsed
+       0.271413000 seconds user
+       0.007982000 seconds sys
+Multi_SpGEMM 512 0.25 
+       693,803,552      cycles                                                                
+       708,097,203      cache-references                                                      
+         1,475,723      cache-misses                     #    0.21% of all cache refs         
+       708,097,203      L1-dcache-loads                                                       
+         1,475,723      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses 
+         1,940,651      LLC-loads                                                             
+            99,768      LLC-load-misses                  #    5.14% of all LL-cache accesses  
+       0.097220131 seconds time elapsed
+       0.289351000 seconds user
+       0.000000000 seconds sys
+
+O(n^3) 1024 0.25 
+    52,725,579,861      cycles                                                                
+    25,945,020,395      cache-references                                                      
+     1,075,724,021      cache-misses                     #    4.15% of all cache refs         
+    25,945,020,395      L1-dcache-loads                                                       
+     1,075,724,021      L1-dcache-load-misses            #    4.15% of all L1-dcache accesses 
+     1,347,130,526      LLC-loads                                                             
+       723,783,317      LLC-load-misses                  #   53.73% of all LL-cache accesses  
+      21.983271471 seconds time elapsed
+      21.966030000 seconds user
+       0.003998000 seconds sys
+Single_SpGEMM 1024 0.25 
+     4,304,272,891      cycles                                                                
+     4,613,062,530      cache-references                                                      
+         9,184,640      cache-misses                     #    0.20% of all cache refs         
+     4,613,062,530      L1-dcache-loads                                                       
+         9,184,640      L1-dcache-load-misses            #    0.20% of all L1-dcache accesses 
+        21,670,010      LLC-loads                                                             
+           980,610      LLC-load-misses                  #    4.53% of all LL-cache accesses  
+       1.793767398 seconds time elapsed
+       1.781749000 seconds user
+       0.012011000 seconds sys
+Multi_SpGEMM 1024 0.25 
+     4,322,284,790      cycles                                                                
+     4,615,649,590      cache-references                                                      
+         9,228,813      cache-misses                     #    0.20% of all cache refs         
+     4,615,649,590      L1-dcache-loads                                                       
+         9,228,813      L1-dcache-load-misses            #    0.20% of all L1-dcache accesses 
+        21,831,217      LLC-loads                                                             
+         1,588,428      LLC-load-misses                  #    7.28% of all LL-cache accesses  
+       0.530551288 seconds time elapsed
+       1.797262000 seconds user
+       0.003985000 seconds sys
+
+O(n^3) 2048 0.25 
+   916,281,267,961      cycles                                                                
+   206,918,371,783      cache-references                                                      
+     8,602,724,998      cache-misses                     #    4.16% of all cache refs         
+   206,918,371,783      L1-dcache-loads                                                       
+     8,602,724,998      L1-dcache-load-misses            #    4.16% of all L1-dcache accesses 
+     9,731,283,036      LLC-loads                                                             
+     8,492,427,288      LLC-load-misses                  #   87.27% of all LL-cache accesses  
+     381.798111499 seconds time elapsed
+     381.763367000 seconds user
+       0.023999000 seconds sys
+Single_SpGEMM 2048 0.25 
+    30,739,237,099      cycles                                                                
+    32,615,762,317      cache-references                                                      
+        68,280,702      cache-misses                     #    0.21% of all cache refs         
+    32,615,762,317      L1-dcache-loads                                                       
+        68,280,702      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses 
+       149,628,811      LLC-loads                                                             
+       112,891,640      LLC-load-misses                  #   75.45% of all LL-cache accesses  
+      12.812997167 seconds time elapsed
+      12.780555000 seconds user
+       0.027992000 seconds sys
+Multi_SpGEMM 2048 0.25 
+    30,960,361,156      cycles                                                                
+    32,628,987,394      cache-references                                                      
+        70,862,749      cache-misses                     #    0.22% of all cache refs         
+    32,628,987,394      L1-dcache-loads                                                       
+        70,862,749      L1-dcache-load-misses            #    0.22% of all L1-dcache accesses 
+       158,532,827      LLC-loads                                                             
+        97,665,278      LLC-load-misses                  #   61.61% of all LL-cache accesses  
+       3.693554144 seconds time elapsed
+      13.115780000 seconds user
+       0.024014000 seconds sys
+
+O(n^3) 4096 0.25 
+ 1,654,035,631,365      cache-references                                                      
+    68,836,869,477      cache-misses                     #    4.16% of all cache refs         
+ 1,654,035,631,365      L1-dcache-loads                                                       
+    68,836,869,477      L1-dcache-load-misses            #    4.16% of all L1-dcache accesses 
+    68,816,902,746      LLC-loads                                                             
+    67,918,999,565      LLC-load-misses                  #   98.70% of all LL-cache accesses  
+    5440.308156785 seconds time elapsed
+    5440.122601000 seconds user
+       0.099998000 seconds sys
+Single_SpGEMM 4096 0.25 
+   242,882,210,542      cycles                                                                
+   243,413,819,796      cache-references                                                      
+     1,016,547,772      cache-misses                     #    0.42% of all cache refs         
+   243,413,819,796      L1-dcache-loads                                                       
+     1,016,547,772      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses 
+     1,105,030,436      LLC-loads                                                             
+     1,018,884,505      LLC-load-misses                  #   92.20% of all LL-cache accesses  
+     101.203909630 seconds time elapsed
+     101.089974000 seconds user
+       0.111997000 seconds sys
+Multi_SpGEMM 4096 0.25 
+   285,670,399,507      cycles                                                                
+   303,768,930,707      cache-references                                                      
+     1,191,060,174      cache-misses                     #    0.39% of all cache refs         
+   303,768,930,707      L1-dcache-loads                                                       
+     1,191,060,174      L1-dcache-load-misses            #    0.39% of all L1-dcache accesses 
+     1,394,452,553      LLC-loads                                                             
+     1,287,041,738      LLC-load-misses                  #   92.30% of all LL-cache accesses  
+      95.618225538 seconds time elapsed
+     118.909922000 seconds user
+       0.119981000 seconds sys
+

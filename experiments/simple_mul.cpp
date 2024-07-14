@@ -141,7 +141,7 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
     printf("********** ********** **********\n");
 }
 
-// Gustavson's algorithm
+
 void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
                 int rowPtr2[], int colInd2[], float val2[], 
                 float* matrixC, int M, int K, int N){ 
@@ -246,16 +246,6 @@ int main(int argc, char *argv[]){
     // Execute sparse matrix multiplication O(flops)
     // sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
-    // ************** Parallel Hashing SpGEMM **************
-    int *c_rowPtr, *c_colInd;
-    float *c_val;
-    int num_of_threads;
-
-    // Single-threaded
-    single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
-
-    // Multi-threaded
-    multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     
     return 0;
 }
