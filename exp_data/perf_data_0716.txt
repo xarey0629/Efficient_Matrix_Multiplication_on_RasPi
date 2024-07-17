@@ -1,0 +1,1368 @@
+Multi_Hashing_SpGEMM 32 0.01 
+         4,555,809      cycles                                                                
+         1,502,083      cache-references                                                      
+            30,649      cache-misses                     #    2.04% of all cache refs         
+         1,502,083      L1-dcache-loads                                                       
+            30,649      L1-dcache-load-misses            #    2.04% of all L1-dcache accesses 
+            56,893      LLC-loads                                                             
+            28,130      LLC-load-misses                  #   49.44% of all LL-cache accesses  
+       0.001618083 seconds time elapsed
+       0.002018000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 32 0.01 
+         2,726,072      cycles                                                                
+           940,845      cache-references                                                      
+            23,649      cache-misses                     #    2.51% of all cache refs         
+           940,845      L1-dcache-loads                                                       
+            23,649      L1-dcache-load-misses            #    2.51% of all L1-dcache accesses 
+            35,830      LLC-loads                                                             
+            20,949      LLC-load-misses                  #   58.47% of all LL-cache accesses  
+       0.001354834 seconds time elapsed
+       0.001447000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.01 
+         3,628,591      cycles                                                                  (43.93%)
+         1,619,044      cache-references                                                      
+            32,377      cache-misses                     #    2.00% of all cache refs         
+         1,619,044      L1-dcache-loads                                                       
+            32,377      L1-dcache-load-misses            #    2.00% of all L1-dcache accesses 
+            61,597      LLC-loads                                                             
+            28,767      LLC-load-misses                  #   46.70% of all LL-cache accesses  
+       0.001738449 seconds time elapsed
+       0.002226000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 64 0.01 
+         2,884,876      cycles                                                                
+         1,164,569      cache-references                                                      
+            24,703      cache-misses                     #    2.12% of all cache refs         
+         1,164,569      L1-dcache-loads                                                       
+            24,703      L1-dcache-load-misses            #    2.12% of all L1-dcache accesses 
+            35,899      LLC-loads                                                             
+            21,802      LLC-load-misses                  #   60.73% of all LL-cache accesses  
+       0.001413888 seconds time elapsed
+       0.001493000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.01 
+         6,078,053      cycles                                                                  (82.17%)
+         2,857,609      cache-references                                                      
+            34,916      cache-misses                     #    1.22% of all cache refs         
+         2,857,609      L1-dcache-loads                                                       
+            34,916      L1-dcache-load-misses            #    1.22% of all L1-dcache accesses 
+            64,947      LLC-loads                                                             
+            29,401      LLC-load-misses                  #   45.27% of all LL-cache accesses  
+       0.002031900 seconds time elapsed
+       0.001292000 seconds user
+       0.001292000 seconds sys
+Multi_spArr_SpGEMM 128 0.01 
+         3,696,671      cycles                                                                
+         2,040,136      cache-references                                                      
+            29,221      cache-misses                     #    1.43% of all cache refs         
+         2,040,136      L1-dcache-loads                                                       
+            29,221      L1-dcache-load-misses            #    1.43% of all L1-dcache accesses 
+            38,755      LLC-loads                                                             
+            22,924      LLC-load-misses                  #   59.15% of all LL-cache accesses  
+       0.001747782 seconds time elapsed
+       0.001836000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.01 
+         5,782,229      cycles                                                                  (47.90%)
+         4,852,209      cache-references                                                      
+            39,619      cache-misses                     #    0.82% of all cache refs         
+         4,852,209      L1-dcache-loads                                                       
+            39,619      L1-dcache-load-misses            #    0.82% of all L1-dcache accesses 
+            74,285      LLC-loads                                                             
+            32,811      LLC-load-misses                  #   44.17% of all LL-cache accesses  
+       0.002642042 seconds time elapsed
+       0.000000000 seconds user
+       0.003167000 seconds sys
+Multi_spArr_SpGEMM 256 0.01 
+         7,594,065      cycles                                                                  (80.01%)
+         5,509,540      cache-references                                                      
+            46,030      cache-misses                     #    0.84% of all cache refs         
+         5,509,540      L1-dcache-loads                                                       
+            46,030      L1-dcache-load-misses            #    0.84% of all L1-dcache accesses 
+            62,939      LLC-loads                                                             
+            31,036      LLC-load-misses                  #   49.31% of all LL-cache accesses  
+       0.003376420 seconds time elapsed
+       0.003464000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.01 
+        15,735,277      cycles                                                                  (40.98%)
+        20,383,095      cache-references                                                      
+            62,069      cache-misses                     #    0.30% of all cache refs         
+        20,383,095      L1-dcache-loads                                                       
+            62,069      L1-dcache-load-misses            #    0.30% of all L1-dcache accesses 
+           132,149      LLC-loads                                                             
+            57,131      LLC-load-misses                  #   43.23% of all LL-cache accesses  
+       0.006826484 seconds time elapsed
+       0.008635000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 512 0.01 
+        26,477,560      cycles                                                                  (32.55%)
+        16,098,200      cache-references                                                        (68.63%)
+           118,440      cache-misses                     #    0.74% of all cache refs         
+        19,762,931      L1-dcache-loads                                                       
+           118,440      L1-dcache-load-misses            #    0.60% of all L1-dcache accesses 
+           183,928      LLC-loads                                                             
+            81,970      LLC-load-misses                  #   44.57% of all LL-cache accesses  
+        27,780,911      dTLB-loads                                                              (31.37%)
+       0.011322266 seconds time elapsed
+       0.007611000 seconds user
+       0.003805000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.01 
+       133,163,140      cycles                                                                  (85.67%)
+       121,683,441      cache-references                                                        (85.64%)
+           157,367      cache-misses                     #    0.13% of all cache refs           (74.84%)
+       107,777,968      L1-dcache-loads                                                         (53.33%)
+           242,163      L1-dcache-load-misses            #    0.22% of all L1-dcache accesses   (56.50%)
+           353,003      LLC-loads                                                               (91.66%)
+           212,096      LLC-load-misses                  #   60.08% of all LL-cache accesses  
+       140,343,090      dTLB-loads                                                              (86.20%)
+             8,018      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (79.03%)
+       0.027752456 seconds time elapsed
+       0.049099000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 1024 0.01 
+       118,011,311      cycles                                                                  (67.62%)
+        70,335,435      cache-references                                                        (72.30%)
+           390,252      cache-misses                     #    0.55% of all cache refs           (80.38%)
+        79,462,044      L1-dcache-loads                                                         (83.83%)
+           386,262      L1-dcache-load-misses            #    0.49% of all L1-dcache accesses   (83.89%)
+           677,473      LLC-loads                                                               (83.83%)
+           459,306      LLC-load-misses                  #   67.80% of all LL-cache accesses    (83.79%)
+        85,640,487      dTLB-loads                                                              (60.03%)
+            18,597      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (51.94%)
+       0.049648517 seconds time elapsed
+       0.049677000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.01 
+       890,448,268      cycles                                                                  (77.83%)
+       887,373,555      cache-references                                                        (78.72%)
+         1,035,516      cache-misses                     #    0.12% of all cache refs           (78.71%)
+       885,044,203      L1-dcache-loads                                                         (78.71%)
+         1,055,217      L1-dcache-load-misses            #    0.12% of all L1-dcache accesses   (78.71%)
+         1,302,320      LLC-loads                                                               (78.70%)
+           848,642      LLC-load-misses                  #   65.16% of all LL-cache accesses    (78.71%)
+       914,569,261      dTLB-loads                                                              (64.15%)
+           122,806      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.71%)
+       0.148420201 seconds time elapsed
+       0.351586000 seconds user
+       0.023971000 seconds sys
+Multi_spArr_SpGEMM 2048 0.01 
+       564,914,680      cycles                                                                  (76.25%)
+       366,817,588      cache-references                                                        (76.25%)
+         1,664,920      cache-misses                     #    0.45% of all cache refs           (76.25%)
+       370,409,437      L1-dcache-loads                                                         (76.73%)
+         1,677,419      L1-dcache-load-misses            #    0.45% of all L1-dcache accesses   (78.41%)
+         2,549,709      LLC-loads                                                               (79.64%)
+         2,012,338      LLC-load-misses                  #   78.92% of all LL-cache accesses    (79.65%)
+       368,908,423      dTLB-loads                                                              (67.38%)
+           148,829      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (65.68%)
+       0.236024502 seconds time elapsed
+       0.220115000 seconds user
+       0.016008000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.01 
+     6,524,893,913      cycles                                                                  (77.76%)
+     6,747,567,212      cache-references                                                        (77.68%)
+        10,522,711      cache-misses                     #    0.16% of all cache refs           (77.79%)
+     6,712,034,795      L1-dcache-loads                                                         (77.80%)
+        10,464,785      L1-dcache-load-misses            #    0.16% of all L1-dcache accesses   (77.70%)
+         9,877,240      LLC-loads                                                               (77.71%)
+         4,050,068      LLC-load-misses                  #   41.00% of all LL-cache accesses    (77.70%)
+     6,698,188,316      dTLB-loads                                                              (66.91%)
+           804,173      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.99%)
+       0.904056520 seconds time elapsed
+       2.612167000 seconds user
+       0.107677000 seconds sys
+Multi_spArr_SpGEMM 4096 0.01 
+     2,675,566,662      cycles                                                                  (77.80%)
+     1,847,470,784      cache-references                                                        (77.80%)
+         7,946,365      cache-misses                     #    0.43% of all cache refs           (77.78%)
+     1,828,153,650      L1-dcache-loads                                                         (77.79%)
+         7,830,872      L1-dcache-load-misses            #    0.43% of all L1-dcache accesses   (77.78%)
+        13,082,399      LLC-loads                                                               (77.78%)
+         8,357,927      LLC-load-misses                  #   63.89% of all LL-cache accesses    (77.78%)
+     1,829,699,103      dTLB-loads                                                              (66.63%)
+           691,411      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (66.65%)
+       1.116710345 seconds time elapsed
+       0.944555000 seconds user
+       0.172101000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.01 
+    46,039,839,888      cycles                                                                  (77.74%)
+    47,991,950,058      cache-references                                                        (77.75%)
+       119,749,435      cache-misses                     #    0.25% of all cache refs           (77.75%)
+    47,995,944,278      L1-dcache-loads                                                         (77.77%)
+       119,879,507      L1-dcache-load-misses            #    0.25% of all L1-dcache accesses   (77.81%)
+        83,994,245      LLC-loads                                                               (77.83%)
+        37,013,063      LLC-load-misses                  #   44.07% of all LL-cache accesses    (77.84%)
+    47,934,363,332      dTLB-loads                                                              (66.67%)
+         4,693,715      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.62%)
+       5.717472001 seconds time elapsed
+      18.773620000 seconds user
+       0.451461000 seconds sys
+Multi_spArr_SpGEMM 8192 0.01 
+    13,108,394,787      cycles                                                                  (77.77%)
+     9,815,446,526      cache-references                                                        (77.77%)
+        45,174,129      cache-misses                     #    0.46% of all cache refs           (77.77%)
+     9,840,091,537      L1-dcache-loads                                                         (77.77%)
+        45,184,380      L1-dcache-load-misses            #    0.46% of all L1-dcache accesses   (77.80%)
+        62,559,893      LLC-loads                                                               (77.81%)
+        48,764,272      LLC-load-misses                  #   77.95% of all LL-cache accesses    (77.77%)
+     9,813,562,926      dTLB-loads                                                              (66.66%)
+         3,327,979      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (66.66%)
+       5.476079601 seconds time elapsed
+       4.825790000 seconds user
+       0.643705000 seconds sys
+
+Multi_Hashing_SpGEMM 32 0.025 
+         3,652,618      cycles                                                                  (57.85%)
+         1,491,160      cache-references                                                      
+            31,386      cache-misses                     #    2.10% of all cache refs         
+         1,491,160      L1-dcache-loads                                                       
+            31,386      L1-dcache-load-misses            #    2.10% of all L1-dcache accesses 
+            60,646      LLC-loads                                                             
+            27,884      LLC-load-misses                  #   45.98% of all LL-cache accesses  
+       0.001786187 seconds time elapsed
+       0.002265000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 32 0.025 
+         2,659,766      cycles                                                                
+           948,432      cache-references                                                      
+            23,619      cache-misses                     #    2.49% of all cache refs         
+           948,432      L1-dcache-loads                                                       
+            23,619      L1-dcache-load-misses            #    2.49% of all L1-dcache accesses 
+            35,491      LLC-loads                                                             
+            21,390      LLC-load-misses                  #   60.27% of all LL-cache accesses  
+       0.001330039 seconds time elapsed
+       0.001414000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.025 
+         5,024,257      cycles                                                                
+         1,739,237      cache-references                                                      
+            31,430      cache-misses                     #    1.81% of all cache refs         
+         1,739,237      L1-dcache-loads                                                       
+            31,430      L1-dcache-load-misses            #    1.81% of all L1-dcache accesses 
+            58,347      LLC-loads                                                             
+            27,190      LLC-load-misses                  #   46.60% of all LL-cache accesses  
+       0.001798558 seconds time elapsed
+       0.002094000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 64 0.025 
+         2,422,218      cycles                                                                  (2.95%)
+         1,209,279      cache-references                                                      
+            25,223      cache-misses                     #    2.09% of all cache refs         
+         1,209,279      L1-dcache-loads                                                       
+            25,223      L1-dcache-load-misses            #    2.09% of all L1-dcache accesses 
+            37,032      LLC-loads                                                             
+            22,398      LLC-load-misses                  #   60.48% of all LL-cache accesses  
+       0.001490921 seconds time elapsed
+       0.000000000 seconds user
+       0.001583000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.025 
+         6,460,764      cycles                                                                
+         3,129,912      cache-references                                                      
+            34,307      cache-misses                     #    1.10% of all cache refs         
+         3,129,912      L1-dcache-loads                                                       
+            34,307      L1-dcache-load-misses            #    1.10% of all L1-dcache accesses 
+            62,911      LLC-loads                                                             
+            29,106      LLC-load-misses                  #   46.27% of all LL-cache accesses  
+       0.002007216 seconds time elapsed
+       0.002359000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 128 0.025 
+         4,137,822      cycles                                                                  (22.62%)
+         2,247,591      cache-references                                                      
+            30,870      cache-misses                     #    1.37% of all cache refs         
+         2,247,591      L1-dcache-loads                                                       
+            30,870      L1-dcache-load-misses            #    1.37% of all L1-dcache accesses 
+            41,495      LLC-loads                                                             
+            22,644      LLC-load-misses                  #   54.57% of all LL-cache accesses  
+       0.001970124 seconds time elapsed
+       0.002053000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.025 
+         8,757,484      cycles                                                                  (55.31%)
+        12,498,585      cache-references                                                      
+            43,330      cache-misses                     #    0.35% of all cache refs         
+        12,498,585      L1-dcache-loads                                                       
+            43,330      L1-dcache-load-misses            #    0.35% of all L1-dcache accesses 
+            87,049      LLC-loads                                                             
+            32,983      LLC-load-misses                  #   37.89% of all LL-cache accesses  
+       0.003904806 seconds time elapsed
+       0.004260000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 256 0.025 
+         9,515,218      cycles                                                                  (45.21%)
+         6,811,154      cache-references                                                      
+            53,350      cache-misses                     #    0.78% of all cache refs         
+         6,811,154      L1-dcache-loads                                                       
+            53,350      L1-dcache-load-misses            #    0.78% of all L1-dcache accesses 
+            75,665      LLC-loads                                                             
+            29,000      LLC-load-misses                  #   38.33% of all LL-cache accesses  
+       0.004243459 seconds time elapsed
+       0.004352000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.025 
+        83,879,652      cycles                                                                  (59.06%)
+        50,072,091      cache-references                                                        (25.33%)
+           153,661      cache-misses                     #    0.31% of all cache refs           (47.02%)
+        72,160,005      L1-dcache-loads                                                         (96.29%)
+           101,788      L1-dcache-load-misses            #    0.14% of all L1-dcache accesses 
+           208,652      LLC-loads                                                             
+            59,468      LLC-load-misses                  #   28.50% of all LL-cache accesses  
+        86,651,020      dTLB-loads                                                              (86.42%)
+             4,643      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (56.88%)
+       0.014201392 seconds time elapsed
+       0.032520000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 512 0.025 
+        37,259,229      cycles                                                                  (48.62%)
+        23,186,300      cache-references                                                        (48.64%)
+           202,051      cache-misses                     #    0.87% of all cache refs           (66.66%)
+        28,391,756      L1-dcache-loads                                                         (92.26%)
+           165,828      L1-dcache-load-misses            #    0.58% of all L1-dcache accesses 
+           255,758      LLC-loads                                                             
+            77,396      LLC-load-misses                  #   30.26% of all LL-cache accesses  
+        33,725,792      dTLB-loads                                                              (59.10%)
+             6,480      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (33.34%)
+       0.015805494 seconds time elapsed
+       0.011912000 seconds user
+       0.003970000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.025 
+       527,388,092      cycles                                                                  (81.08%)
+       554,415,339      cache-references                                                        (82.11%)
+           598,828      cache-misses                     #    0.11% of all cache refs           (82.11%)
+       538,898,498      L1-dcache-loads                                                         (82.13%)
+           559,742      L1-dcache-load-misses            #    0.10% of all L1-dcache accesses   (81.81%)
+           698,877      LLC-loads                                                               (76.47%)
+           362,984      LLC-load-misses                  #   51.94% of all LL-cache accesses    (71.43%)
+       527,428,757      dTLB-loads                                                              (60.22%)
+            48,236      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (69.46%)
+       0.075856875 seconds time elapsed
+       0.212796000 seconds user
+       0.007599000 seconds sys
+Multi_spArr_SpGEMM 1024 0.025 
+       191,848,622      cycles                                                                  (71.91%)
+       158,198,697      cache-references                                                        (76.92%)
+           636,960      cache-misses                     #    0.40% of all cache refs           (80.08%)
+       135,696,206      L1-dcache-loads                                                         (80.04%)
+           670,729      L1-dcache-load-misses            #    0.49% of all L1-dcache accesses   (80.02%)
+           874,126      LLC-loads                                                               (80.03%)
+           570,383      LLC-load-misses                  #   65.25% of all LL-cache accesses    (80.05%)
+       149,103,667      dTLB-loads                                                              (63.01%)
+            50,431      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (59.85%)
+       0.080395860 seconds time elapsed
+       0.068354000 seconds user
+       0.012062000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.025 
+     3,367,636,394      cycles                                                                  (77.80%)
+     3,549,364,070      cache-references                                                        (77.80%)
+         5,261,472      cache-misses                     #    0.15% of all cache refs           (77.80%)
+     3,539,672,164      L1-dcache-loads                                                         (77.81%)
+         5,234,612      L1-dcache-load-misses            #    0.15% of all L1-dcache accesses   (77.81%)
+         4,609,486      LLC-loads                                                               (77.73%)
+         1,207,303      LLC-load-misses                  #   26.19% of all LL-cache accesses    (77.49%)
+     3,530,559,524      dTLB-loads                                                              (66.87%)
+           512,013      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.93%)
+       0.428214354 seconds time elapsed
+       1.377110000 seconds user
+       0.027860000 seconds sys
+Multi_spArr_SpGEMM 2048 0.025 
+       942,101,345      cycles                                                                  (77.63%)
+       758,049,301      cache-references                                                        (77.63%)
+         2,905,142      cache-misses                     #    0.38% of all cache refs           (77.62%)
+       753,600,987      L1-dcache-loads                                                         (77.62%)
+         2,885,064      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses   (77.62%)
+         4,916,383      LLC-loads                                                               (77.61%)
+         2,324,143      LLC-load-misses                  #   47.27% of all LL-cache accesses    (77.61%)
+       752,400,774      dTLB-loads                                                              (67.13%)
+           436,752      dTLB-load-misses                 #    0.06% of all dTLB cache accesses  (67.15%)
+       0.393399053 seconds time elapsed
+       0.353606000 seconds user
+       0.039731000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.025 
+    18,421,086,267      cycles                                                                  (77.78%)
+    19,532,700,969      cache-references                                                        (77.64%)
+        36,088,059      cache-misses                     #    0.18% of all cache refs           (77.64%)
+    19,517,192,648      L1-dcache-loads                                                         (77.63%)
+        35,997,400      L1-dcache-load-misses            #    0.18% of all L1-dcache accesses   (77.60%)
+        36,255,269      LLC-loads                                                               (77.79%)
+        14,227,303      LLC-load-misses                  #   39.24% of all LL-cache accesses    (78.03%)
+    19,503,504,618      dTLB-loads                                                              (66.98%)
+         2,207,994      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.78%)
+       2.231438801 seconds time elapsed
+       7.573031000 seconds user
+       0.115893000 seconds sys
+Multi_spArr_SpGEMM 4096 0.025 
+     4,734,505,903      cycles                                                                  (77.75%)
+     4,105,972,674      cache-references                                                        (77.75%)
+        14,567,502      cache-misses                     #    0.35% of all cache refs           (77.73%)
+     4,097,034,683      L1-dcache-loads                                                         (77.73%)
+        14,560,392      L1-dcache-load-misses            #    0.36% of all L1-dcache accesses   (77.73%)
+        28,029,587      LLC-loads                                                               (77.73%)
+        16,018,948      LLC-load-misses                  #   57.15% of all LL-cache accesses    (77.88%)
+     4,114,423,619      dTLB-loads                                                              (66.79%)
+         1,659,746      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (66.66%)
+       1.976560187 seconds time elapsed
+       1.780119000 seconds user
+       0.196013000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.025 
+    92,568,898,502      cycles                                                                  (77.79%)
+    95,668,442,149      cache-references                                                        (77.81%)
+       403,880,501      cache-misses                     #    0.42% of all cache refs           (77.82%)
+    95,657,192,004      L1-dcache-loads                                                         (77.81%)
+       403,556,433      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses   (77.73%)
+       244,771,022      LLC-loads                                                               (77.72%)
+       151,690,809      LLC-load-misses                  #   61.97% of all LL-cache accesses    (77.77%)
+    95,698,272,696      dTLB-loads                                                              (66.66%)
+         9,386,209      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.69%)
+      10.937071503 seconds time elapsed
+      38.197349000 seconds user
+       0.455920000 seconds sys
+Multi_spArr_SpGEMM 8192 0.025 
+    25,965,077,923      cycles                                                                  (77.77%)
+    24,651,824,153      cache-references                                                        (77.77%)
+       133,050,720      cache-misses                     #    0.54% of all cache refs           (77.74%)
+    24,634,555,773      L1-dcache-loads                                                         (77.75%)
+       132,938,584      L1-dcache-load-misses            #    0.54% of all L1-dcache accesses   (77.78%)
+       144,126,226      LLC-loads                                                               (77.77%)
+       121,020,388      LLC-load-misses                  #   83.97% of all LL-cache accesses    (77.79%)
+    24,635,015,189      dTLB-loads                                                              (66.71%)
+         7,284,792      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (66.69%)
+      10.835260316 seconds time elapsed
+      10.045256000 seconds user
+       0.788098000 seconds sys
+
+Multi_Hashing_SpGEMM 32 0.05 
+         4,587,596      cycles                                                                  (89.46%)
+         1,572,655      cache-references                                                      
+            32,203      cache-misses                     #    2.05% of all cache refs         
+         1,572,655      L1-dcache-loads                                                       
+            32,203      L1-dcache-load-misses            #    2.05% of all L1-dcache accesses 
+            60,453      LLC-loads                                                             
+            27,608      LLC-load-misses                  #   45.67% of all LL-cache accesses  
+       0.001698599 seconds time elapsed
+       0.001093000 seconds user
+       0.001093000 seconds sys
+Multi_spArr_SpGEMM 32 0.05 
+         2,780,887      cycles                                                                
+           962,563      cache-references                                                      
+            23,528      cache-misses                     #    2.44% of all cache refs         
+           962,563      L1-dcache-loads                                                       
+            23,528      L1-dcache-load-misses            #    2.44% of all L1-dcache accesses 
+            35,680      LLC-loads                                                             
+            21,096      LLC-load-misses                  #   59.13% of all LL-cache accesses  
+       0.001379389 seconds time elapsed
+       0.001450000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.05 
+         5,467,785      cycles                                                                
+         2,169,844      cache-references                                                      
+            32,502      cache-misses                     #    1.50% of all cache refs         
+         2,169,844      L1-dcache-loads                                                       
+            32,502      L1-dcache-load-misses            #    1.50% of all L1-dcache accesses 
+            59,543      LLC-loads                                                             
+            27,269      LLC-load-misses                  #   45.80% of all LL-cache accesses  
+       0.001813038 seconds time elapsed
+       0.002084000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 64 0.05 
+         3,172,437      cycles                                                                  (36.30%)
+         1,302,542      cache-references                                                      
+            25,206      cache-misses                     #    1.94% of all cache refs         
+         1,302,542      L1-dcache-loads                                                       
+            25,206      L1-dcache-load-misses            #    1.94% of all L1-dcache accesses 
+            37,994      LLC-loads                                                             
+            21,706      LLC-load-misses                  #   57.13% of all LL-cache accesses  
+       0.001553493 seconds time elapsed
+       0.001644000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.05 
+         9,715,679      cycles                                                                
+         6,309,587      cache-references                                                      
+            36,384      cache-misses                     #    0.58% of all cache refs         
+         6,309,587      L1-dcache-loads                                                       
+            36,384      L1-dcache-load-misses            #    0.58% of all L1-dcache accesses 
+            68,851      LLC-loads                                                             
+            28,926      LLC-load-misses                  #   42.01% of all LL-cache accesses  
+       0.002493252 seconds time elapsed
+       0.003326000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 128 0.05 
+         4,744,661      cycles                                                                  (11.16%)
+         2,832,358      cache-references                                                      
+            32,719      cache-misses                     #    1.16% of all cache refs         
+         2,832,358      L1-dcache-loads                                                       
+            32,719      L1-dcache-load-misses            #    1.16% of all L1-dcache accesses 
+            43,579      LLC-loads                                                             
+            22,694      LLC-load-misses                  #   52.08% of all LL-cache accesses  
+       0.002252336 seconds time elapsed
+       0.000000000 seconds user
+       0.002329000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.05 
+        14,128,203      cycles                                                                  (32.95%)
+        33,484,571      cache-references                                                      
+            54,912      cache-misses                     #    0.16% of all cache refs         
+        33,484,571      L1-dcache-loads                                                       
+            54,912      L1-dcache-load-misses            #    0.16% of all L1-dcache accesses 
+            99,621      LLC-loads                                                             
+            33,128      LLC-load-misses                  #   33.25% of all LL-cache accesses  
+       0.006291637 seconds time elapsed
+       0.009475000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 256 0.05 
+        13,704,900      cycles                                                                  (63.21%)
+        10,607,764      cache-references                                                      
+            63,584      cache-misses                     #    0.60% of all cache refs         
+        10,607,764      L1-dcache-loads                                                       
+            63,584      L1-dcache-load-misses            #    0.60% of all L1-dcache accesses 
+            93,398      LLC-loads                                                             
+            30,118      LLC-load-misses                  #   32.25% of all LL-cache accesses  
+       0.005940207 seconds time elapsed
+       0.006015000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.05 
+       204,673,063      cycles                                                                  (90.64%)
+       210,353,498      cache-references                                                        (76.93%)
+           240,946      cache-misses                     #    0.11% of all cache refs           (62.96%)
+       192,872,904      L1-dcache-loads                                                         (62.62%)
+           242,345      L1-dcache-load-misses            #    0.13% of all L1-dcache accesses   (62.69%)
+           395,802      LLC-loads                                                               (72.04%)
+            63,099      LLC-load-misses                  #   15.94% of all LL-cache accesses    (95.56%)
+       216,339,761      dTLB-loads                                                              (93.78%)
+             7,918      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (89.08%)
+       0.028921379 seconds time elapsed
+       0.067542000 seconds user
+       0.011919000 seconds sys
+Multi_spArr_SpGEMM 512 0.05 
+        63,588,713      cycles                                                                  (69.90%)
+        54,480,602      cache-references                                                        (69.91%)
+           204,094      cache-misses                     #    0.37% of all cache refs           (69.89%)
+        43,387,288      L1-dcache-loads                                                         (69.93%)
+           239,628      L1-dcache-load-misses            #    0.55% of all L1-dcache accesses   (69.96%)
+           397,952      LLC-loads                                                               (75.98%)
+            95,336      LLC-load-misses                  #   23.96% of all LL-cache accesses    (90.96%)
+        57,589,790      dTLB-loads                                                              (84.17%)
+             6,534      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (69.19%)
+       0.026817889 seconds time elapsed
+       0.026871000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.05 
+     1,074,152,585      cycles                                                                  (76.80%)
+     1,132,755,882      cache-references                                                        (76.81%)
+         1,495,432      cache-misses                     #    0.13% of all cache refs           (76.80%)
+     1,122,312,627      L1-dcache-loads                                                         (76.81%)
+         1,488,287      L1-dcache-load-misses            #    0.13% of all L1-dcache accesses   (76.81%)
+         1,329,256      LLC-loads                                                               (76.79%)
+           246,012      LLC-load-misses                  #   18.51% of all LL-cache accesses    (79.52%)
+     1,116,960,964      dTLB-loads                                                              (70.14%)
+           139,944      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (67.17%)
+       0.139188983 seconds time elapsed
+       0.434987000 seconds user
+       0.011863000 seconds sys
+Multi_spArr_SpGEMM 1024 0.05 
+       311,871,117      cycles                                                                  (75.43%)
+       274,553,394      cache-references                                                        (75.41%)
+         1,044,613      cache-misses                     #    0.38% of all cache refs           (75.42%)
+       271,268,022      L1-dcache-loads                                                         (75.42%)
+         1,030,884      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses   (78.01%)
+         1,439,487      LLC-loads                                                               (81.10%)
+           585,844      LLC-load-misses                  #   40.70% of all LL-cache accesses    (81.57%)
+       266,185,457      dTLB-loads                                                              (68.07%)
+           114,043      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (65.00%)
+       0.130388576 seconds time elapsed
+       0.118576000 seconds user
+       0.011857000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.05 
+     5,226,255,089      cycles                                                                  (77.76%)
+     5,525,456,744      cache-references                                                        (78.08%)
+         8,781,279      cache-misses                     #    0.16% of all cache refs           (78.18%)
+     5,539,472,950      L1-dcache-loads                                                         (78.18%)
+         8,791,085      L1-dcache-load-misses            #    0.16% of all L1-dcache accesses   (78.21%)
+        13,105,273      LLC-loads                                                               (78.22%)
+         2,133,211      LLC-load-misses                  #   16.28% of all LL-cache accesses    (78.08%)
+     5,514,964,431      dTLB-loads                                                              (65.74%)
+           836,381      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (65.64%)
+       0.660039316 seconds time elapsed
+       2.175458000 seconds user
+       0.023950000 seconds sys
+Multi_spArr_SpGEMM 2048 0.05 
+     1,645,358,136      cycles                                                                  (77.87%)
+     1,583,889,309      cache-references                                                        (77.88%)
+         4,715,201      cache-misses                     #    0.30% of all cache refs           (77.87%)
+     1,585,676,220      L1-dcache-loads                                                         (77.87%)
+         4,718,894      L1-dcache-load-misses            #    0.30% of all L1-dcache accesses   (77.87%)
+         9,901,787      LLC-loads                                                               (77.87%)
+         2,745,439      LLC-load-misses                  #   27.73% of all LL-cache accesses    (77.87%)
+     1,572,497,115      dTLB-loads                                                              (66.38%)
+           669,487      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (66.39%)
+       0.687118586 seconds time elapsed
+       0.650996000 seconds user
+       0.035944000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.05 
+    26,614,835,266      cycles                                                                  (77.79%)
+    27,683,976,573      cache-references                                                        (77.73%)
+        72,850,970      cache-misses                     #    0.26% of all cache refs           (77.64%)
+    27,678,862,546      L1-dcache-loads                                                         (77.71%)
+        72,771,845      L1-dcache-load-misses            #    0.26% of all L1-dcache accesses   (77.81%)
+        94,774,801      LLC-loads                                                               (77.85%)
+        54,935,360      LLC-load-misses                  #   57.96% of all LL-cache accesses    (77.85%)
+    27,703,696,536      dTLB-loads                                                              (66.76%)
+         4,078,505      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.72%)
+       3.274586268 seconds time elapsed
+      11.010659000 seconds user
+       0.099878000 seconds sys
+Multi_spArr_SpGEMM 4096 0.05 
+    10,056,464,003      cycles                                                                  (77.69%)
+    10,348,224,469      cache-references                                                        (77.69%)
+        29,069,366      cache-misses                     #    0.28% of all cache refs           (77.69%)
+    10,347,050,059      L1-dcache-loads                                                         (77.74%)
+        29,071,793      L1-dcache-load-misses            #    0.28% of all L1-dcache accesses   (77.84%)
+        61,896,236      LLC-loads                                                               (77.88%)
+        44,276,993      LLC-load-misses                  #   71.53% of all LL-cache accesses    (77.88%)
+    10,354,580,157      dTLB-loads                                                              (66.68%)
+         3,206,767      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (66.59%)
+       4.196293987 seconds time elapsed
+       4.000337000 seconds user
+       0.196016000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.05 
+   150,669,206,447      cycles                                                                  (77.77%)
+   150,945,387,240      cache-references                                                        (77.78%)
+     1,303,202,930      cache-misses                     #    0.86% of all cache refs           (77.79%)
+   150,912,626,989      L1-dcache-loads                                                         (77.79%)
+     1,304,706,749      L1-dcache-load-misses            #    0.86% of all L1-dcache accesses   (77.79%)
+       611,157,795      LLC-loads                                                               (77.79%)
+       471,067,033      LLC-load-misses                  #   77.08% of all LL-cache accesses    (77.79%)
+   150,958,419,847      dTLB-loads                                                              (66.64%)
+        18,388,695      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.64%)
+      17.753473898 seconds time elapsed
+      62.972064000 seconds user
+       0.595735000 seconds sys
+Multi_spArr_SpGEMM 8192 0.05 
+    68,344,879,576      cycles                                                                  (77.78%)
+    73,717,680,798      cache-references                                                        (77.78%)
+       379,788,730      cache-misses                     #    0.52% of all cache refs           (77.78%)
+    73,722,220,266      L1-dcache-loads                                                         (77.78%)
+       379,587,249      L1-dcache-load-misses            #    0.51% of all L1-dcache accesses   (77.77%)
+       319,508,706      LLC-loads                                                               (77.78%)
+       288,372,592      LLC-load-misses                  #   90.26% of all LL-cache accesses    (77.78%)
+    73,689,519,749      dTLB-loads                                                              (66.67%)
+        14,329,751      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.67%)
+      28.509118921 seconds time elapsed
+      27.794889000 seconds user
+       0.711971000 seconds sys
+
+Multi_Hashing_SpGEMM 32 0.075 
+         4,830,888      cycles                                                                  (95.38%)
+         1,668,350      cache-references                                                      
+            31,735      cache-misses                     #    1.90% of all cache refs         
+         1,668,350      L1-dcache-loads                                                       
+            31,735      L1-dcache-load-misses            #    1.90% of all L1-dcache accesses 
+            60,583      LLC-loads                                                             
+            27,791      LLC-load-misses                  #   45.87% of all LL-cache accesses  
+       0.001694580 seconds time elapsed
+       0.000000000 seconds user
+       0.002561000 seconds sys
+Multi_spArr_SpGEMM 32 0.075 
+         2,808,647      cycles                                                                
+           988,024      cache-references                                                      
+            23,364      cache-misses                     #    2.36% of all cache refs         
+           988,024      L1-dcache-loads                                                       
+            23,364      L1-dcache-load-misses            #    2.36% of all L1-dcache accesses 
+            35,265      LLC-loads                                                             
+            20,874      LLC-load-misses                  #   59.19% of all LL-cache accesses  
+       0.001408203 seconds time elapsed
+       0.001480000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.075 
+         5,960,228      cycles                                                                
+         2,782,385      cache-references                                                      
+            32,609      cache-misses                     #    1.17% of all cache refs         
+         2,782,385      L1-dcache-loads                                                       
+            32,609      L1-dcache-load-misses            #    1.17% of all L1-dcache accesses 
+            60,999      LLC-loads                                                             
+            27,725      LLC-load-misses                  #   45.45% of all LL-cache accesses  
+       0.001853778 seconds time elapsed
+       0.002453000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 64 0.075 
+         3,329,292      cycles                                                                  (34.65%)
+         1,424,142      cache-references                                                      
+            25,505      cache-misses                     #    1.79% of all cache refs         
+         1,424,142      L1-dcache-loads                                                       
+            25,505      L1-dcache-load-misses            #    1.79% of all L1-dcache accesses 
+            38,041      LLC-loads                                                             
+            21,742      LLC-load-misses                  #   57.15% of all LL-cache accesses  
+       0.001625528 seconds time elapsed
+       0.001717000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.075 
+        13,339,692      cycles                                                                  (99.49%)
+        10,177,394      cache-references                                                      
+            38,310      cache-misses                     #    0.38% of all cache refs         
+        10,177,394      L1-dcache-loads                                                       
+            38,310      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses 
+            70,932      LLC-loads                                                             
+            29,367      LLC-load-misses                  #   41.40% of all LL-cache accesses  
+       0.002925180 seconds time elapsed
+       0.000000000 seconds user
+       0.003249000 seconds sys
+Multi_spArr_SpGEMM 128 0.075 
+         5,657,178      cycles                                                                
+         3,616,328      cache-references                                                      
+            33,283      cache-misses                     #    0.92% of all cache refs         
+         3,616,328      L1-dcache-loads                                                       
+            33,283      L1-dcache-load-misses            #    0.92% of all L1-dcache accesses 
+            43,807      LLC-loads                                                             
+            23,143      LLC-load-misses                  #   52.83% of all LL-cache accesses  
+       0.002580805 seconds time elapsed
+       0.002662000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.075 
+        21,409,122      cycles                                                                  (11.62%)
+        19,768,183      cache-references                                                        (66.49%)
+            67,853      cache-misses                     #    0.34% of all cache refs           (99.47%)
+        54,051,126      L1-dcache-loads                                                       
+            69,202      L1-dcache-load-misses            #    0.13% of all L1-dcache accesses 
+           142,414      LLC-loads                                                             
+            35,928      LLC-load-misses                  #   25.23% of all LL-cache accesses  
+        61,864,907      dTLB-loads                                                              (66.12%)
+            57,844      dTLB-load-misses                 #    0.09% of all dTLB cache accesses  (1.04%)
+       0.009271613 seconds time elapsed
+       0.008407000 seconds user
+       0.004203000 seconds sys
+Multi_spArr_SpGEMM 256 0.075 
+        18,624,528      cycles                                                                  (45.79%)
+        14,872,673      cache-references                                                        (97.14%)
+            72,052      cache-misses                     #    0.48% of all cache refs         
+        14,649,915      L1-dcache-loads                                                       
+            72,052      L1-dcache-load-misses            #    0.49% of all L1-dcache accesses 
+           117,401      LLC-loads                                                             
+            31,437      LLC-load-misses                  #   26.78% of all LL-cache accesses  
+         7,083,535      dTLB-loads                                                              (2.86%)
+       0.008001423 seconds time elapsed
+       0.004027000 seconds user
+       0.004027000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.075 
+       276,964,033      cycles                                                                  (93.12%)
+       287,859,656      cache-references                                                        (84.71%)
+           352,211      cache-misses                     #    0.12% of all cache refs           (74.36%)
+       269,947,539      L1-dcache-loads                                                         (72.38%)
+           360,021      L1-dcache-load-misses            #    0.13% of all L1-dcache accesses   (72.41%)
+           530,268      LLC-loads                                                               (72.41%)
+            96,053      LLC-load-misses                  #   18.11% of all LL-cache accesses    (72.36%)
+       285,568,860      dTLB-loads                                                              (72.45%)
+             7,918      dTLB-load-misses                 #    0.00% of all dTLB cache accesses  (86.88%)
+       0.038396584 seconds time elapsed
+       0.112789000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 512 0.075 
+        88,607,006      cycles                                                                  (76.21%)
+        82,001,787      cache-references                                                        (78.48%)
+           276,540      cache-misses                     #    0.34% of all cache refs           (78.43%)
+        72,096,359      L1-dcache-loads                                                         (78.47%)
+           305,114      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses   (78.45%)
+           551,812      LLC-loads                                                               (78.38%)
+           126,031      LLC-load-misses                  #   22.84% of all LL-cache accesses    (78.37%)
+        78,075,426      dTLB-loads                                                              (64.67%)
+             7,626      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (64.74%)
+       0.037321034 seconds time elapsed
+       0.029821000 seconds user
+       0.007455000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.075 
+     1,311,196,633      cycles                                                                  (77.89%)
+     1,375,297,930      cache-references                                                        (75.69%)
+         2,052,422      cache-misses                     #    0.15% of all cache refs           (75.18%)
+     1,379,146,173      L1-dcache-loads                                                         (75.17%)
+         2,051,430      L1-dcache-load-misses            #    0.15% of all L1-dcache accesses   (76.51%)
+         2,295,670      LLC-loads                                                               (80.09%)
+           384,575      LLC-load-misses                  #   16.75% of all LL-cache accesses    (80.94%)
+     1,356,874,943      dTLB-loads                                                              (70.30%)
+           236,187      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (67.91%)
+       0.170990884 seconds time elapsed
+       0.531467000 seconds user
+       0.011987000 seconds sys
+Multi_spArr_SpGEMM 1024 0.075 
+       457,730,408      cycles                                                                  (75.04%)
+       449,378,913      cache-references                                                        (77.12%)
+         1,326,812      cache-misses                     #    0.30% of all cache refs           (79.05%)
+       441,658,165      L1-dcache-loads                                                         (79.05%)
+         1,338,859      L1-dcache-load-misses            #    0.30% of all L1-dcache accesses   (79.07%)
+         2,035,065      LLC-loads                                                               (79.06%)
+           675,280      LLC-load-misses                  #   33.18% of all LL-cache accesses    (79.05%)
+       422,720,956      dTLB-loads                                                              (64.77%)
+           177,991      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (62.82%)
+       0.191210783 seconds time elapsed
+       0.179074000 seconds user
+       0.012209000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.075 
+     6,630,387,594      cycles                                                                  (78.00%)
+     6,930,925,712      cache-references                                                        (77.81%)
+        12,718,995      cache-misses                     #    0.18% of all cache refs           (77.87%)
+     6,920,210,335      L1-dcache-loads                                                         (77.84%)
+        12,703,961      L1-dcache-load-misses            #    0.18% of all L1-dcache accesses   (77.83%)
+        25,193,617      LLC-loads                                                               (77.83%)
+         5,431,325      LLC-load-misses                  #   21.56% of all LL-cache accesses    (77.83%)
+     6,926,605,991      dTLB-loads                                                              (66.58%)
+         1,279,542      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.83%)
+       0.839345134 seconds time elapsed
+       2.750526000 seconds user
+       0.028025000 seconds sys
+Multi_spArr_SpGEMM 2048 0.075 
+     2,781,919,106      cycles                                                                  (77.26%)
+     2,887,093,591      cache-references                                                        (77.55%)
+         7,243,023      cache-misses                     #    0.25% of all cache refs           (77.89%)
+     2,878,411,851      L1-dcache-loads                                                         (77.95%)
+         7,213,498      L1-dcache-load-misses            #    0.25% of all L1-dcache accesses   (77.96%)
+        17,446,522      LLC-loads                                                               (77.96%)
+         5,590,478      LLC-load-misses                  #   32.04% of all LL-cache accesses    (77.95%)
+     2,884,035,102      dTLB-loads                                                              (66.54%)
+         1,046,575      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (66.19%)
+       1.161370644 seconds time elapsed
+       1.125314000 seconds user
+       0.035914000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.075 
+    38,253,230,445      cycles                                                                  (77.79%)
+    39,042,341,652      cache-references                                                        (77.81%)
+       128,461,634      cache-misses                     #    0.33% of all cache refs           (77.84%)
+    39,027,801,483      L1-dcache-loads                                                         (77.83%)
+       128,511,262      L1-dcache-load-misses            #    0.33% of all L1-dcache accesses   (77.75%)
+       170,191,477      LLC-loads                                                               (77.73%)
+       119,514,630      LLC-load-misses                  #   70.22% of all LL-cache accesses    (77.76%)
+    39,025,514,875      dTLB-loads                                                              (66.65%)
+         5,858,389      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.68%)
+       4.593641262 seconds time elapsed
+      15.850039000 seconds user
+       0.119954000 seconds sys
+Multi_spArr_SpGEMM 4096 0.075 
+    18,794,165,812      cycles                                                                  (77.76%)
+    20,592,879,790      cache-references                                                        (77.76%)
+        49,977,655      cache-misses                     #    0.24% of all cache refs           (77.76%)
+    20,595,161,461      L1-dcache-loads                                                         (77.76%)
+        49,983,487      L1-dcache-load-misses            #    0.24% of all L1-dcache accesses   (77.78%)
+       103,256,167      LLC-loads                                                               (77.78%)
+        82,517,914      LLC-load-misses                  #   79.92% of all LL-cache accesses    (77.79%)
+    20,578,978,977      dTLB-loads                                                              (66.71%)
+         4,689,310      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.68%)
+       7.842547662 seconds time elapsed
+       7.652190000 seconds user
+       0.187906000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.075 
+   458,764,013,600      cycles                                                                  (77.77%)
+   478,450,622,257      cache-references                                                        (77.77%)
+     5,504,058,722      cache-misses                     #    1.15% of all cache refs           (77.78%)
+   478,455,024,224      L1-dcache-loads                                                         (77.79%)
+     5,503,999,420      L1-dcache-load-misses            #    1.15% of all L1-dcache accesses   (77.78%)
+     1,983,437,267      LLC-loads                                                               (77.78%)
+     1,611,356,899      LLC-load-misses                  #   81.24% of all LL-cache accesses    (77.78%)
+   478,398,556,251      dTLB-loads                                                              (66.66%)
+        44,050,511      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.66%)
+      97.142534042 seconds time elapsed
+     190.912419000 seconds user
+       0.483970000 seconds sys
+Multi_spArr_SpGEMM 8192 0.075 
+   140,018,819,112      cycles                                                                  (77.77%)
+   155,139,425,071      cache-references                                                        (77.77%)
+       649,070,141      cache-misses                     #    0.42% of all cache refs           (77.77%)
+   155,123,559,264      L1-dcache-loads                                                         (77.78%)
+       649,271,268      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses   (77.78%)
+       639,766,408      LLC-loads                                                               (77.78%)
+       592,325,737      LLC-load-misses                  #   92.58% of all LL-cache accesses    (77.78%)
+   155,128,648,899      dTLB-loads                                                              (66.66%)
+        21,854,652      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.66%)
+      58.410562276 seconds time elapsed
+      57.719241000 seconds user
+       0.675850000 seconds sys
+
+Multi_Hashing_SpGEMM 32 0.10 
+         3,352,530      cycles                                                                  (9.00%)
+         1,747,911      cache-references                                                      
+            32,329      cache-misses                     #    1.85% of all cache refs         
+         1,747,911      L1-dcache-loads                                                       
+            32,329      L1-dcache-load-misses            #    1.85% of all L1-dcache accesses 
+            61,022      LLC-loads                                                             
+            28,262      LLC-load-misses                  #   46.31% of all LL-cache accesses  
+       0.001682801 seconds time elapsed
+       0.002005000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 32 0.10 
+         2,825,061      cycles                                                                
+         1,008,542      cache-references                                                      
+            23,555      cache-misses                     #    2.34% of all cache refs         
+         1,008,542      L1-dcache-loads                                                       
+            23,555      L1-dcache-load-misses            #    2.34% of all L1-dcache accesses 
+            35,369      LLC-loads                                                             
+            20,980      LLC-load-misses                  #   59.32% of all LL-cache accesses  
+       0.001392700 seconds time elapsed
+       0.001486000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.10 
+         4,205,518      cycles                                                                  (54.35%)
+         3,508,616      cache-references                                                      
+            33,330      cache-misses                     #    0.95% of all cache refs         
+         3,508,616      L1-dcache-loads                                                       
+            33,330      L1-dcache-load-misses            #    0.95% of all L1-dcache accesses 
+            62,318      LLC-loads                                                             
+            28,081      LLC-load-misses                  #   45.06% of all LL-cache accesses  
+       0.001974791 seconds time elapsed
+       0.000000000 seconds user
+       0.002271000 seconds sys
+Multi_spArr_SpGEMM 64 0.10 
+         3,379,719      cycles                                                                
+         1,569,364      cache-references                                                      
+            25,058      cache-misses                     #    1.60% of all cache refs         
+         1,569,364      L1-dcache-loads                                                       
+            25,058      L1-dcache-load-misses            #    1.60% of all L1-dcache accesses 
+            36,413      LLC-loads                                                             
+            21,659      LLC-load-misses                  #   59.48% of all LL-cache accesses  
+       0.001620846 seconds time elapsed
+       0.001704000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.10 
+         7,369,730      cycles                                                                  (39.27%)
+        13,633,190      cache-references                                                      
+            40,678      cache-misses                     #    0.30% of all cache refs         
+        13,633,190      L1-dcache-loads                                                       
+            40,678      L1-dcache-load-misses            #    0.30% of all L1-dcache accesses 
+            70,088      LLC-loads                                                             
+            30,384      LLC-load-misses                  #   43.35% of all LL-cache accesses  
+       0.003335227 seconds time elapsed
+       0.004891000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 128 0.10 
+         6,164,830      cycles                                                                  (71.22%)
+         4,369,338      cache-references                                                      
+            34,152      cache-misses                     #    0.78% of all cache refs         
+         4,369,338      L1-dcache-loads                                                       
+            34,152      L1-dcache-load-misses            #    0.78% of all L1-dcache accesses 
+            43,714      LLC-loads                                                             
+            23,607      LLC-load-misses                  #   54.00% of all LL-cache accesses  
+       0.002789863 seconds time elapsed
+       0.002871000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.10 
+        25,101,031      cycles                                                                  (28.14%)
+        38,311,509      cache-references                                                        (80.29%)
+            83,659      cache-misses                     #    0.22% of all cache refs         
+        66,916,725      L1-dcache-loads                                                       
+            83,659      L1-dcache-load-misses            #    0.13% of all L1-dcache accesses 
+           152,531      LLC-loads                                                             
+            37,048      LLC-load-misses                  #   24.29% of all LL-cache accesses  
+        74,216,102      dTLB-loads                                                              (48.72%)
+       0.010818805 seconds time elapsed
+       0.022299000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 256 0.10 
+        24,172,165      cycles                                                                  (39.48%)
+        17,402,054      cache-references                                                        (79.08%)
+            79,652      cache-misses                     #    0.46% of all cache refs         
+        19,067,242      L1-dcache-loads                                                       
+            79,652      L1-dcache-load-misses            #    0.42% of all L1-dcache accesses 
+           158,162      LLC-loads                                                             
+            32,690      LLC-load-misses                  #   20.67% of all LL-cache accesses  
+        25,363,630      dTLB-loads                                                              (20.92%)
+       0.010433763 seconds time elapsed
+       0.006936000 seconds user
+       0.003468000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.10 
+       264,378,030      cycles                                                                  (85.52%)
+       307,986,913      cache-references                                                        (90.07%)
+           433,822      cache-misses                     #    0.14% of all cache refs           (89.68%)
+       324,157,169      L1-dcache-loads                                                         (80.88%)
+           478,257      L1-dcache-load-misses            #    0.15% of all L1-dcache accesses   (76.17%)
+           659,645      LLC-loads                                                               (76.17%)
+            93,898      LLC-load-misses                  #   14.23% of all LL-cache accesses    (76.17%)
+       318,824,336      dTLB-loads                                                              (60.63%)
+            21,276      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (61.56%)
+       0.045209228 seconds time elapsed
+       0.122675000 seconds user
+       0.003833000 seconds sys
+Multi_spArr_SpGEMM 512 0.10 
+       117,433,676      cycles                                                                  (67.38%)
+       110,531,948      cache-references                                                        (72.05%)
+           323,561      cache-misses                     #    0.29% of all cache refs           (80.23%)
+       102,136,332      L1-dcache-loads                                                         (83.72%)
+           368,653      L1-dcache-load-misses            #    0.36% of all L1-dcache accesses   (83.70%)
+           610,277      LLC-loads                                                               (83.68%)
+           133,890      LLC-load-misses                  #   21.94% of all LL-cache accesses    (83.68%)
+       111,788,829      dTLB-loads                                                              (60.54%)
+            11,556      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (52.39%)
+       0.049262048 seconds time elapsed
+       0.045200000 seconds user
+       0.004109000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.10 
+     1,549,184,507      cycles                                                                  (76.15%)
+     1,612,046,036      cache-references                                                        (77.76%)
+         2,757,818      cache-misses                     #    0.17% of all cache refs           (77.05%)
+     1,610,737,148      L1-dcache-loads                                                         (77.63%)
+         2,772,662      L1-dcache-load-misses            #    0.17% of all L1-dcache accesses   (79.13%)
+         4,123,330      LLC-loads                                                               (79.17%)
+           484,918      LLC-load-misses                  #   11.76% of all LL-cache accesses    (79.00%)
+     1,632,402,728      dTLB-loads                                                              (66.00%)
+           284,118      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (65.40%)
+       0.203142090 seconds time elapsed
+       0.637741000 seconds user
+       0.008124000 seconds sys
+Multi_spArr_SpGEMM 1024 0.10 
+       649,182,228      cycles                                                                  (76.39%)
+       661,406,317      cache-references                                                        (76.39%)
+         1,713,455      cache-misses                     #    0.26% of all cache refs           (76.38%)
+       677,988,907      L1-dcache-loads                                                         (77.58%)
+         1,802,153      L1-dcache-load-misses            #    0.27% of all L1-dcache accesses   (79.07%)
+         3,117,102      LLC-loads                                                               (79.35%)
+           778,736      LLC-load-misses                  #   24.98% of all LL-cache accesses    (79.34%)
+       670,213,677      dTLB-loads                                                              (66.68%)
+           258,314      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (65.20%)
+       0.271197782 seconds time elapsed
+       0.255190000 seconds user
+       0.015949000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.10 
+     8,638,476,137      cycles                                                                  (78.05%)
+     8,917,764,151      cache-references                                                        (78.05%)
+        17,372,676      cache-misses                     #    0.19% of all cache refs           (77.82%)
+     8,916,960,558      L1-dcache-loads                                                         (77.34%)
+        17,438,241      L1-dcache-load-misses            #    0.20% of all L1-dcache accesses   (77.26%)
+        39,823,915      LLC-loads                                                               (77.65%)
+        12,894,047      LLC-load-misses                  #   32.38% of all LL-cache accesses    (77.90%)
+     8,936,030,112      dTLB-loads                                                              (67.06%)
+         1,581,792      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (67.07%)
+       1.080319234 seconds time elapsed
+       3.578261000 seconds user
+       0.028049000 seconds sys
+Multi_spArr_SpGEMM 2048 0.10 
+     4,322,529,124      cycles                                                                  (77.73%)
+     4,679,868,667      cache-references                                                        (77.82%)
+        10,400,865      cache-misses                     #    0.22% of all cache refs           (77.82%)
+     4,675,228,323      L1-dcache-loads                                                         (77.82%)
+        10,406,878      L1-dcache-load-misses            #    0.22% of all L1-dcache accesses   (77.83%)
+        25,989,032      LLC-loads                                                               (77.83%)
+        10,520,973      LLC-load-misses                  #   40.48% of all LL-cache accesses    (77.83%)
+     4,705,440,563      dTLB-loads                                                              (66.53%)
+         1,294,348      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (66.52%)
+       1.804290242 seconds time elapsed
+       1.747767000 seconds user
+       0.055992000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.10 
+    53,888,385,622      cycles                                                                  (77.83%)
+    54,821,727,174      cache-references                                                        (77.76%)
+       206,183,290      cache-misses                     #    0.38% of all cache refs           (77.74%)
+    54,834,234,528      L1-dcache-loads                                                         (77.74%)
+       206,158,004      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses   (77.74%)
+       260,935,347      LLC-loads                                                               (77.78%)
+       196,697,181      LLC-load-misses                  #   75.38% of all LL-cache accesses    (77.79%)
+    54,838,784,026      dTLB-loads                                                              (66.73%)
+         7,968,321      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.75%)
+       6.416926366 seconds time elapsed
+      22.393435000 seconds user
+       0.107872000 seconds sys
+Multi_spArr_SpGEMM 4096 0.10 
+    31,017,983,912      cycles                                                                  (77.74%)
+    34,891,285,766      cache-references                                                        (77.74%)
+        77,691,682      cache-misses                     #    0.22% of all cache refs           (77.75%)
+    34,880,781,412      L1-dcache-loads                                                         (77.78%)
+        77,844,469      L1-dcache-load-misses            #    0.22% of all L1-dcache accesses   (77.81%)
+       151,400,475      LLC-loads                                                               (77.81%)
+       127,201,524      LLC-load-misses                  #   84.02% of all LL-cache accesses    (77.81%)
+    34,897,517,051      dTLB-loads                                                              (66.67%)
+         6,385,396      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.64%)
+      12.939773527 seconds time elapsed
+      12.732959000 seconds user
+       0.203951000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.10 
+   530,170,305,431      cycles                                                                  (77.78%)
+   547,868,668,201      cache-references                                                        (77.78%)
+     7,231,275,681      cache-misses                     #    1.32% of all cache refs           (77.78%)
+   547,966,526,275      L1-dcache-loads                                                         (77.78%)
+     7,226,296,908      L1-dcache-load-misses            #    1.32% of all L1-dcache accesses   (77.78%)
+     2,450,987,003      LLC-loads                                                               (77.78%)
+     2,208,576,900      LLC-load-misses                  #   90.11% of all LL-cache accesses    (77.78%)
+   547,964,512,377      dTLB-loads                                                              (66.66%)
+        49,885,800      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.67%)
+     148.267803045 seconds time elapsed
+     220.738214000 seconds user
+       0.451914000 seconds sys
+Multi_spArr_SpGEMM 8192 0.10 
+   236,915,692,254      cycles                                                                  (77.77%)
+   268,713,843,043      cache-references                                                        (77.77%)
+       962,131,869      cache-misses                     #    0.36% of all cache refs           (77.77%)
+   268,710,756,783      L1-dcache-loads                                                         (77.77%)
+       962,034,515      L1-dcache-load-misses            #    0.36% of all L1-dcache accesses   (77.78%)
+     1,059,403,047      LLC-loads                                                               (77.78%)
+       999,076,755      LLC-load-misses                  #   94.31% of all LL-cache accesses    (77.78%)
+   268,700,872,256      dTLB-loads                                                              (66.67%)
+        30,133,337      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.67%)
+      98.806514523 seconds time elapsed
+      98.083336000 seconds user
+       0.719965000 seconds sys
+
+Multi_Hashing_SpGEMM 32 0.125 
+         4,955,854      cycles                                                                
+         1,860,226      cache-references                                                      
+            31,630      cache-misses                     #    1.70% of all cache refs         
+         1,860,226      L1-dcache-loads                                                       
+            31,630      L1-dcache-load-misses            #    1.70% of all L1-dcache accesses 
+            58,649      LLC-loads                                                             
+            27,059      LLC-load-misses                  #   46.14% of all LL-cache accesses  
+       0.001693594 seconds time elapsed
+       0.002123000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 32 0.125 
+         2,916,317      cycles                                                                
+         1,038,103      cache-references                                                      
+            23,750      cache-misses                     #    2.29% of all cache refs         
+         1,038,103      L1-dcache-loads                                                       
+            23,750      L1-dcache-load-misses            #    2.29% of all L1-dcache accesses 
+            36,020      LLC-loads                                                             
+            21,234      LLC-load-misses                  #   58.95% of all LL-cache accesses  
+       0.001445332 seconds time elapsed
+       0.000000000 seconds user
+       0.001536000 seconds sys
+
+Multi_Hashing_SpGEMM 64 0.125 
+         7,360,468      cycles                                                                
+         4,181,395      cache-references                                                      
+            33,130      cache-misses                     #    0.79% of all cache refs         
+         4,181,395      L1-dcache-loads                                                       
+            33,130      L1-dcache-load-misses            #    0.79% of all L1-dcache accesses 
+            61,103      LLC-loads                                                             
+            28,279      LLC-load-misses                  #   46.28% of all LL-cache accesses  
+       0.002045969 seconds time elapsed
+       0.002685000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 64 0.125 
+         3,718,590      cycles                                                                  (33.59%)
+         1,731,280      cache-references                                                      
+            26,341      cache-misses                     #    1.52% of all cache refs         
+         1,731,280      L1-dcache-loads                                                       
+            26,341      L1-dcache-load-misses            #    1.52% of all L1-dcache accesses 
+            40,760      LLC-loads                                                             
+            22,652      LLC-load-misses                  #   55.57% of all LL-cache accesses  
+       0.001902707 seconds time elapsed
+       0.001870000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 128 0.125 
+        13,103,054      cycles                                                                  (81.89%)
+        16,616,733      cache-references                                                      
+            42,281      cache-misses                     #    0.25% of all cache refs         
+        16,616,733      L1-dcache-loads                                                       
+            42,281      L1-dcache-load-misses            #    0.25% of all L1-dcache accesses 
+            79,979      LLC-loads                                                             
+            31,259      LLC-load-misses                  #   39.08% of all LL-cache accesses  
+       0.003795175 seconds time elapsed
+       0.006800000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 128 0.125 
+         7,398,474      cycles                                                                  (86.98%)
+         5,155,007      cache-references                                                      
+            34,855      cache-misses                     #    0.68% of all cache refs         
+         5,155,007      L1-dcache-loads                                                       
+            34,855      L1-dcache-load-misses            #    0.68% of all L1-dcache accesses 
+            53,478      LLC-loads                                                             
+            23,745      LLC-load-misses                  #   44.40% of all LL-cache accesses  
+       0.003306558 seconds time elapsed
+       0.003387000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 256 0.125 
+        79,168,448      cycles                                                                  (21.75%)
+        55,163,209      cache-references                                                        (43.12%)
+            96,913      cache-misses                     #    0.18% of all cache refs           (96.17%)
+        75,778,302      L1-dcache-loads                                                       
+           103,716      L1-dcache-load-misses            #    0.14% of all L1-dcache accesses 
+           181,396      LLC-loads                                                             
+            36,826      LLC-load-misses                  #   20.30% of all LL-cache accesses  
+        85,571,311      dTLB-loads                                                              (60.76%)
+            11,870      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (12.50%)
+       0.012413204 seconds time elapsed
+       0.031398000 seconds user
+       0.000000000 seconds sys
+Multi_spArr_SpGEMM 256 0.125 
+        29,384,719      cycles                                                                  (34.88%)
+        15,837,091      cache-references                                                        (52.82%)
+            88,713      cache-misses                     #    0.56% of all cache refs           (85.39%)
+        24,246,154      L1-dcache-loads                                                       
+            92,891      L1-dcache-load-misses            #    0.38% of all L1-dcache accesses 
+           167,385      LLC-loads                                                             
+            31,962      LLC-load-misses                  #   19.09% of all LL-cache accesses  
+        33,662,175      dTLB-loads                                                              (47.18%)
+             8,247      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (14.61%)
+       0.012495538 seconds time elapsed
+       0.012575000 seconds user
+       0.000000000 seconds sys
+
+Multi_Hashing_SpGEMM 512 0.125 
+       363,932,075      cycles                                                                  (73.75%)
+       377,476,717      cache-references                                                        (73.69%)
+           555,779      cache-misses                     #    0.15% of all cache refs           (80.75%)
+       359,477,109      L1-dcache-loads                                                         (84.90%)
+           587,750      L1-dcache-load-misses            #    0.16% of all L1-dcache accesses   (78.99%)
+           741,464      LLC-loads                                                               (78.96%)
+            98,273      LLC-load-misses                  #   13.25% of all LL-cache accesses    (78.95%)
+       364,860,791      dTLB-loads                                                              (64.94%)
+            27,753      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (62.31%)
+       0.051546206 seconds time elapsed
+       0.139167000 seconds user
+       0.011283000 seconds sys
+Multi_spArr_SpGEMM 512 0.125 
+       151,887,846      cycles                                                                  (74.78%)
+       154,425,259      cache-references                                                        (74.76%)
+           442,022      cache-misses                     #    0.29% of all cache refs           (74.75%)
+       136,851,465      L1-dcache-loads                                                         (74.74%)
+           405,627      L1-dcache-load-misses            #    0.30% of all L1-dcache accesses   (74.79%)
+           672,240      LLC-loads                                                               (78.21%)
+           124,569      LLC-load-misses                  #   18.53% of all LL-cache accesses    (84.48%)
+       145,865,843      dTLB-loads                                                              (72.30%)
+            21,451      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (65.99%)
+       0.063642183 seconds time elapsed
+       0.059694000 seconds user
+       0.003979000 seconds sys
+
+Multi_Hashing_SpGEMM 1024 0.125 
+     1,856,649,708      cycles                                                                  (77.28%)
+     1,950,925,181      cache-references                                                        (77.29%)
+         3,604,492      cache-misses                     #    0.18% of all cache refs           (77.28%)
+     1,939,890,081      L1-dcache-loads                                                         (77.85%)
+         3,600,985      L1-dcache-load-misses            #    0.19% of all L1-dcache accesses   (78.25%)
+         6,439,293      LLC-loads                                                               (78.36%)
+           526,860      LLC-load-misses                  #    8.18% of all LL-cache accesses    (78.33%)
+     1,948,291,649      dTLB-loads                                                              (66.80%)
+           311,445      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.28%)
+       0.239903917 seconds time elapsed
+       0.766735000 seconds user
+       0.008028000 seconds sys
+Multi_spArr_SpGEMM 1024 0.125 
+       904,395,456      cycles                                                                  (76.68%)
+       965,789,138      cache-references                                                        (76.68%)
+         2,345,969      cache-misses                     #    0.24% of all cache refs           (76.67%)
+       950,642,417      L1-dcache-loads                                                         (77.71%)
+         2,388,399      L1-dcache-load-misses            #    0.25% of all L1-dcache accesses   (78.78%)
+         4,631,432      LLC-loads                                                               (78.80%)
+           767,990      LLC-load-misses                  #   16.58% of all LL-cache accesses    (78.80%)
+       975,328,505      dTLB-loads                                                              (66.81%)
+           296,504      dTLB-load-misses                 #    0.03% of all dTLB cache accesses  (65.75%)
+       0.377567973 seconds time elapsed
+       0.361696000 seconds user
+       0.015898000 seconds sys
+
+Multi_Hashing_SpGEMM 2048 0.125 
+    11,098,751,157      cycles                                                                  (77.86%)
+    11,486,266,579      cache-references                                                        (77.79%)
+        23,729,776      cache-misses                     #    0.21% of all cache refs           (77.80%)
+    11,468,882,363      L1-dcache-loads                                                         (77.91%)
+        23,667,511      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses   (77.87%)
+        54,842,906      LLC-loads                                                               (77.67%)
+        22,720,362      LLC-load-misses                  #   41.43% of all LL-cache accesses    (77.71%)
+    11,482,838,412      dTLB-loads                                                              (66.69%)
+         1,967,206      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.77%)
+       1.373492357 seconds time elapsed
+       4.597903000 seconds user
+       0.031985000 seconds sys
+Multi_spArr_SpGEMM 2048 0.125 
+     6,307,161,896      cycles                                                                  (77.75%)
+     7,010,656,719      cache-references                                                        (77.80%)
+        14,460,284      cache-misses                     #    0.21% of all cache refs           (77.81%)
+     6,989,113,598      L1-dcache-loads                                                         (77.81%)
+        14,383,158      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses   (77.81%)
+        35,756,250      LLC-loads                                                               (77.80%)
+        18,661,937      LLC-load-misses                  #   52.19% of all LL-cache accesses    (77.81%)
+     7,001,206,116      dTLB-loads                                                              (66.58%)
+         1,624,957      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.58%)
+       2.631624336 seconds time elapsed
+       2.583388000 seconds user
+       0.047988000 seconds sys
+
+Multi_Hashing_SpGEMM 4096 0.125 
+    74,009,177,608      cycles                                                                  (77.74%)
+    75,101,310,861      cache-references                                                        (77.76%)
+       301,072,608      cache-misses                     #    0.40% of all cache refs           (77.81%)
+    75,111,790,239      L1-dcache-loads                                                         (77.82%)
+       299,992,344      L1-dcache-load-misses            #    0.40% of all L1-dcache accesses   (77.82%)
+       378,857,156      LLC-loads                                                               (77.79%)
+       290,108,171      LLC-load-misses                  #   76.57% of all LL-cache accesses    (77.76%)
+    75,095,344,577      dTLB-loads                                                              (66.63%)
+         9,957,069      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.62%)
+       8.625168053 seconds time elapsed
+      30.787707000 seconds user
+       0.111969000 seconds sys
+Multi_spArr_SpGEMM 4096 0.125 
+    46,268,421,084      cycles                                                                  (77.74%)
+    53,217,439,679      cache-references                                                        (77.75%)
+       111,373,121      cache-misses                     #    0.21% of all cache refs           (77.77%)
+    53,203,751,116      L1-dcache-loads                                                         (77.79%)
+       111,423,201      L1-dcache-load-misses            #    0.21% of all L1-dcache accesses   (77.80%)
+       211,473,892      LLC-loads                                                               (77.80%)
+       182,562,701      LLC-load-misses                  #   86.33% of all LL-cache accesses    (77.80%)
+    53,186,060,695      dTLB-loads                                                              (66.66%)
+         7,997,412      dTLB-load-misses                 #    0.02% of all dTLB cache accesses  (66.63%)
+      19.310366046 seconds time elapsed
+      19.124633000 seconds user
+       0.171897000 seconds sys
+
+Multi_Hashing_SpGEMM 8192 0.125 
+   509,548,553,921      cycles                                                                  (77.78%)
+   528,181,773,517      cache-references                                                        (77.78%)
+     7,518,350,641      cache-misses                     #    1.42% of all cache refs           (77.77%)
+   528,189,849,250      L1-dcache-loads                                                         (77.77%)
+     7,521,704,728      L1-dcache-load-misses            #    1.42% of all L1-dcache accesses   (77.77%)
+     2,320,953,177      LLC-loads                                                               (77.78%)
+     2,147,025,712      LLC-load-misses                  #   92.51% of all LL-cache accesses    (77.78%)
+   528,204,336,501      dTLB-loads                                                              (66.67%)
+        49,902,126      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.67%)
+     108.939238467 seconds time elapsed
+     211.947360000 seconds user
+       0.579965000 seconds sys
+Multi_spArr_SpGEMM 8192 0.125 
+   361,324,412,213      cycles                                                                  (77.78%)
+   414,698,374,109      cache-references                                                        (77.78%)
+     1,365,221,567      cache-misses                     #    0.33% of all cache refs           (77.78%)
+   414,714,950,344      L1-dcache-loads                                                         (77.78%)
+     1,365,078,401      L1-dcache-load-misses            #    0.33% of all L1-dcache accesses   (77.78%)
+     1,537,774,562      LLC-loads                                                               (77.78%)
+     1,464,530,764      LLC-load-misses                  #   95.24% of all LL-cache accesses    (77.78%)
+   414,698,160,034      dTLB-loads                                                              (66.67%)
+        38,459,162      dTLB-load-misses                 #    0.01% of all dTLB cache accesses  (66.67%)
+     150.696400715 seconds time elapsed
+     149.961905000 seconds user
+       0.723951000 seconds sys
+

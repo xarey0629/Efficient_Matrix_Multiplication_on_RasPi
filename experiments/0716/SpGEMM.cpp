@@ -250,7 +250,7 @@ int main(int argc, char *argv[]){
     // int num_of_threads;
 
     // Single-threaded
-    // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
     // Multi-threaded
     multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);

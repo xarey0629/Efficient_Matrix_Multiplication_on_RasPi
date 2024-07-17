@@ -179,18 +179,18 @@ void single_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, cons
     double start = get_time();
     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     double end = get_time();
-    printf("Single-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
+    printf("Single-threaded --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
 void multi_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
                             const int *rowPtrB, const int *colIndB, const float *valB, 
                             int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            int num_of_threads = omp_get_max_threads()){
+                            int num_of_threads = omp_get_num_threads()){
     double start = get_time();
     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     double end = get_time();
-    printf("Multi-threaded Hashing SpGEMM--> Time: %.3f\n", end - start);
+    printf("Multi-threaded --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
@@ -242,7 +242,7 @@ int main(int argc, char *argv[]){
     // Reset matrix C
     // zeroizeMatrix(matrixC, M, N);
     // Execute sparse matrix multiplication O(flops)
-    sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
+    // sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
     // ************** Parallel Hashing SpGEMM **************
     int *c_rowPtr, *c_colInd;
@@ -253,14 +253,12 @@ int main(int argc, char *argv[]){
     // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
     // Multi-threaded
-    multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
     // ************** SpArr SpGEMM **************
-    double start = get_time();
+    // printf("SpArr SpGEMM\n");
     execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
-    double end = get_time();
-    printf("SpArr SpGEMM --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
+    // showCSR(M, N, c_rowPtr, c_colInd, c_val);
     
     return 0;
 }

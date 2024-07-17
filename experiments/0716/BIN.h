@@ -239,7 +239,7 @@ inline void BIN::allocate_hash_tables()
 inline void BIN::allocate_spArrs(){
     local_spArr_mat.resize(rows);
     for(int i = 0; i < local_spArr_mat.size(); i++){
-        local_spArr_mat[i].resize(cols, 0);
+        local_spArr_mat[i].resize(cols);
     }
 
 }
@@ -409,9 +409,6 @@ inline void hash_numeric(const int *arpt, const int *acol, const float *aval, co
             }
         }
     }
-    // TODO: Avoid the second hashing.
-    // May try to allocate memory for C here.
-    // and then sort_and_storeToCSR().
 }
 
 /*
@@ -495,9 +492,7 @@ inline void spArr_SpGEMM_store(const int *crpt, int *ccol, float *cval, BIN &bin
                     cnt++;
                 }
             }
-            // assert(cnt == row_nz);
-            // printf("Counted Nnz of row %d: %d\n", i, cnt);
-            // printf("Predicted Nnz of row %d: %d\n", i, bin.c_row_nnz[i]);
+            assert(cnt == row_nz);
         }
     }
 }
@@ -511,7 +506,7 @@ Main function to execute spArr SpGEMM execution
 inline void execute_spArr_SpGEMM(const int *arpt, const int *acol, const float *aval, 
                                         const int *brpt, const int *bcol, const float *bval, 
                                         int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol,
-                                        int num_of_threads = omp_get_max_threads())
+                                        int num_of_threads = omp_get_num_threads())
 {
     // Initialize BIN object
     BIN myBin(nrow, ncol, num_of_threads);   // Create a BIN object.

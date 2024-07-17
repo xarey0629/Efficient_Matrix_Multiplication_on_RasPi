@@ -1,5 +1,5 @@
-// gcc -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128 0.25
-// g++ -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128 0.25
+// gcc -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128
+// g++ -fopenmp -o SpGEMM SpGEMM.cpp && ./SpGEMM 128
 
 
 #include <stdio.h>
@@ -141,7 +141,7 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
     printf("********** ********** **********\n");
 }
 
-// Gustavson's algorithm
+
 void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
                 int rowPtr2[], int colInd2[], float val2[], 
                 float* matrixC, int M, int K, int N){ 
@@ -175,22 +175,23 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
 void single_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
                             const int *rowPtrB, const int *colIndB, const float *valB, 
                             int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            int num_of_threads = 1){
+                            int num_of_threads){
     double start = get_time();
+    num_of_threads = 1;
     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     double end = get_time();
-    printf("Single-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
+    printf("Single-threaded --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
 void multi_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
                             const int *rowPtrB, const int *colIndB, const float *valB, 
-                            int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            int num_of_threads = omp_get_max_threads()){
+                            int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N){
     double start = get_time();
+    int num_of_threads = omp_get_num_threads();
     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     double end = get_time();
-    printf("Multi-threaded Hashing SpGEMM--> Time: %.3f\n", end - start);
+    printf("Multi-threaded --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
@@ -242,25 +243,18 @@ int main(int argc, char *argv[]){
     // Reset matrix C
     // zeroizeMatrix(matrixC, M, N);
     // Execute sparse matrix multiplication O(flops)
-    sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
+    // sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
     // ************** Parallel Hashing SpGEMM **************
     int *c_rowPtr, *c_colInd;
     float *c_val;
-    // int num_of_threads;
+    int num_of_threads;
 
     // Single-threaded
-    // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
 
     // Multi-threaded
     multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
-
-    // ************** SpArr SpGEMM **************
-    double start = get_time();
-    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
-    double end = get_time();
-    printf("SpArr SpGEMM --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
     
     return 0;
 }

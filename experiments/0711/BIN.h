@@ -26,25 +26,21 @@ inline T *my_malloc(int arr_size)
 }
 
 template <typename T>
-inline void my_free(T *p)
+inline void my_free(T* p)
 {
+    if(p == nullptr) return;
     free(p);
 }
 // ----------------------------
 
 // my BIN class
 struct BIN {
-    BIN(int rows, int ht_size, int num_of_threads): total_intprod(0), max_intprod(0), max_nnz(0), num_of_threads(num_of_threads), min_hashTable_size(ht_size)
+    BIN(int rows, int cols, int num_of_threads): rows(rows), cols(cols), total_intprod(0), max_intprod(0), c_nnz(0), num_of_threads(num_of_threads), min_hashTable_size(MIN_HASH_TABLE_SIZE)
     {
         assert(rows != 0);
-        // Symbolic phase
+        // Symbolic and Load balancing
         row_nnzflops =              my_malloc<int>(rows);
         thread_row_offsets =        my_malloc<int>(num_of_threads + 1);
-        
-        // Hash table for each thread
-        bin_size_leftShift_bits =   my_malloc<char>(rows);
-        local_hash_table_idx =      my_malloc<int *>(num_of_threads);
-        local_hash_table_val =      my_malloc<double *>(num_of_threads);
         
         // Matrix C
         c_row_nnz = my_malloc<int>(rows);
@@ -54,40 +50,53 @@ struct BIN {
         my_free(row_nnzflops);
         my_free(thread_row_offsets);
         my_free(bin_size_leftShift_bits);
-        #pragma omp parallel num_threads(num_of_threads)
+        if(local_hash_table_idx != nullptr)
         {
-            int tid = omp_get_thread_num();
-            my_free(local_hash_table_idx[tid]);
-            my_free(local_hash_table_val[tid]);
+            #pragma omp parallel num_threads(num_of_threads)
+            {
+                int tid = omp_get_thread_num();
+                my_free(local_hash_table_idx[tid]);
+                my_free(local_hash_table_val[tid]);
+            }
         }
         my_free(local_hash_table_idx);
         my_free(local_hash_table_val);
         my_free(c_row_nnz);
     }
 
+    // Matrix Info
+    int rows;                           // Number of rows
+    int cols;                           // Number of columns
+
     // Variables
     long long int total_intprod;        // Total number of floating operations
     long long int max_intprod;          // Maximum number of floating operations
-    int max_nnz;                        // Maximum number of non-zero elements in matrix C
+    int c_nnz;                          // Maximum number of non-zero elements in matrix C
     int num_of_threads;
     int min_hashTable_size;             // Default minimum size of hash table
 
-    // Symbolic phase
+    // Load balancing
     int *row_nnzflops;                  // Number of floating operations for each row
     int *thread_row_offsets;            // Indices of rows for each thread to start.
-    char *bin_size_leftShift_bits;      // The number of bits to left shift the size of the hash table (We need only 1 byte to store). NOTE: 0 is saved for the empty row.
-    int **local_hash_table_idx;         // Hash table for each thread: idx
-    double **local_hash_table_val;      // Hash table for each thread: val
+    // Symbolic phase
+    char *bin_size_leftShift_bits = nullptr;      // The number of bits to left shift the size of the hash table (We need only 1 byte to store). NOTE: 0 is saved for the empty row.
+    int **local_hash_table_idx = nullptr;         // Hash table for each thread: idx
+    double **local_hash_table_val = nullptr;      // Hash table for each thread: val
+    // SpArr
+    vector<vector<double>> local_spArr_mat; // A 2D-vector to store the values of matrix C
     
     // Output of Matrix C
     int *c_row_nnz;                     // Number of non-zero elements for each row in matrix C
 
     // Functions
     void set_max_bin(const int *arpt, const int *acol, const int *brpt, const int rows, const int cols);
-    void allocate_hash_tables(const int cols);
     void set_intprod_num(const int *arpt, const int *acol, const int *brpt, const int rows);
     void set_thread_row_offsets(const int rows);
-    void set_bin_leftShift_bits(const int rows, const int cols, const int min_ht_size);
+    /* Hashing */
+    void set_bin_leftShift_bits();
+    void allocate_hash_tables();
+    /* SpArr */
+    void allocate_spArrs();
 };
 
 /*  
@@ -165,8 +174,9 @@ Set the number of bits to left shift the size of the hash table
 * 2. The size of hash table is the power of 2. 
 NOTE: The number of elements could be similar to the size of the hash table (lots of collisions).
 */
-inline void BIN::set_bin_leftShift_bits(const int rows, const int cols, const int min_ht_size)
+inline void BIN::set_bin_leftShift_bits()
 {
+    bin_size_leftShift_bits = my_malloc<char>(this->rows);
     #pragma omp parallel for num_threads(num_of_threads)
     for(int i = 0; i < rows; i++)
     {
@@ -176,7 +186,7 @@ inline void BIN::set_bin_leftShift_bits(const int rows, const int cols, const in
         else
         {
             int j = 0;
-            while(actual_size > (min_ht_size << j)){
+            while(actual_size > (min_hashTable_size << j)){
                 j++;
             }
             bin_size_leftShift_bits[i] = j + 1; // 0 is saved for the empty row, minus 1 when retrieving the size.
@@ -194,7 +204,7 @@ inline void BIN::set_max_bin(const int *arpt, const int *acol, const int *brpt, 
 {
     set_intprod_num(arpt, acol, brpt, rows);
     set_thread_row_offsets(rows);
-    set_bin_leftShift_bits(rows, cols, min_hashTable_size);
+    set_bin_leftShift_bits();
 }
 
 /*
@@ -202,8 +212,12 @@ Allocate hash table for each thread
 * 1. Get the size of hash table for each row
 * 2. Allocate hash table for each thread
 */
-inline void BIN::allocate_hash_tables(const int cols)
+inline void BIN::allocate_hash_tables()
 {
+    // Hash table for each thread
+    local_hash_table_idx = my_malloc<int *>(num_of_threads);
+    local_hash_table_val = my_malloc<double *>(num_of_threads);
+
     #pragma omp parallel num_threads(num_of_threads)
     {
         int tid = omp_get_thread_num();
@@ -219,6 +233,15 @@ inline void BIN::allocate_hash_tables(const int cols)
         local_hash_table_val[tid] = my_malloc<double>(ht_size);
         // printf("Thread %d: Allocate hash table with size %d\n", tid, ht_size);
     }    
+}
+
+/* Resize the size of rows (num of columns) in local_spArr_mat */
+inline void BIN::allocate_spArrs(){
+    local_spArr_mat.resize(rows);
+    for(int i = 0; i < local_spArr_mat.size(); i++){
+        local_spArr_mat[i].resize(cols);
+    }
+
 }
 
 /* 
@@ -267,9 +290,9 @@ Hashing SpGEMM symbolic kernel --> Compute the number of non-zero elements for e
 * 2. Fill out hash table row by row
 * 3. Compute the number of non-zero elements for each row in matrix C
 */
-inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *brpt, const int *bcol, BIN &bin, int num_of_threads)
+inline void hash_symbolic_kernel(const int *arpt, const int *acol, const int *brpt, const int *bcol, BIN &bin)
 {
-    #pragma omp parallel num_threads(num_of_threads)
+    #pragma omp parallel num_threads(bin.num_of_threads)
     {
         int tid = omp_get_thread_num();
         int *map = bin.local_hash_table_idx[tid];
@@ -320,10 +343,11 @@ Hashing SpGEMM symbolic phase execution
 * 1. Execute symbolic kernel
 * 2. Prefix sum up number of non-zero elements for each row in matrix C
 */
-inline void hash_symbolic(const int *arpt, const int *acol, const int *brpt, const int *bcol, int *crpt, BIN &bin, const int nrow, int *c_nnz, int num_of_threads){
-    hash_symbolic_kernel(arpt, acol, brpt, bcol, bin, num_of_threads);
+inline void hash_symbolic(const int *arpt, const int *acol, const int *brpt, const int *bcol, int *crpt, BIN &bin, const int nrow){
+    hash_symbolic_kernel(arpt, acol, brpt, bcol, bin);
     generateSequentialPrefixSum(bin.c_row_nnz, crpt, nrow + 1);
-    *c_nnz = crpt[nrow];  // Set the total number of non-zero elements in matrix C
+    // *c_nnz = crpt[nrow];  // Set the total number of non-zero elements in matrix C
+    bin.c_nnz = crpt[nrow]; // Set the maximum number of non-zero elements in matrix C
 }
 
 /* 
@@ -333,8 +357,8 @@ Hashing SpGEMM numeric phase execution
 * 3. Method 1: If the matrix C is in normal format, just fill out the values.
 * 4. Method 2: If the matrix C is in CSR format, we need to sort the hash table by column indices, then store values.
 */
-inline void hash_numeric(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, int *crpt, int *ccol, float *cval, BIN &bin, int num_of_threads){
-    #pragma omp parallel num_threads(num_of_threads)
+inline void hash_numeric(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, int *crpt, int *ccol, float *cval, BIN &bin){
+    #pragma omp parallel num_threads(bin.num_of_threads)
     {
         int tid = omp_get_thread_num();
         int *map = bin.local_hash_table_idx[tid];
@@ -399,16 +423,16 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
                                         int num_of_threads)
 {
     // Initialize BIN object
-    BIN myBin(nrow, MIN_HASH_TABLE_SIZE, num_of_threads);   // Create a BIN object.
+    BIN myBin(nrow, ncol, num_of_threads);   // Create a BIN object.
     myBin.set_max_bin(arpt, acol, brpt, nrow, ncol);        // Load balancing and set the size of hash table, which is flops(row_i), for each row.
-    myBin.allocate_hash_tables(ncol);                       // Allocate hash table for each thread.
+    myBin.allocate_hash_tables();                       // Allocate hash table for each thread.
 
     // Symbolic phase
     int c_nnz = 0;                                                                      // nnz(C), dereferenced by hash_symbolic.
     crpt = my_malloc<int>(nrow + 1);
-    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow, &c_nnz, num_of_threads);   // Symbolic phase, and get nnz(C).
-    ccol = my_malloc<int>(c_nnz);
-    cval = my_malloc<float>(c_nnz);
+    hash_symbolic(arpt, acol, brpt, bcol, crpt, myBin, nrow);   // Symbolic phase, and get nnz(C).
+    ccol = my_malloc<int>(myBin.c_nnz);
+    cval = my_malloc<float>(myBin.c_nnz);
 
     // // print each row's nnz
     // for(int i = 0; i < nrow; i++){
@@ -420,7 +444,87 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
     // }
 
     // Numeric phase
-    hash_numeric(arpt, acol, aval, brpt, bcol, bval, crpt, ccol, cval, myBin, num_of_threads);
+    hash_numeric(arpt, acol, aval, brpt, bcol, bval, crpt, ccol, cval, myBin);
+}
+
+
+/* spArr_SpGEMM kernel*/
+inline void spArr_SpGEMM_kernel(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, BIN &bin)
+{
+    #pragma omp parallel num_threads(bin.num_of_threads)
+    {
+        int tid = omp_get_thread_num();
+        for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++)
+        {
+            int row_nz = 0;
+            for(int j = arpt[i]; j < arpt[i + 1]; j++)
+            {
+                int aCol = acol[j];
+                for(int k = brpt[aCol]; k < brpt[aCol + 1]; k++)
+                {
+                    int bCol = bcol[k];
+                    if(bin.local_spArr_mat[i][bCol] == 0) row_nz++;
+                    bin.local_spArr_mat[i][bCol] += aval[j] * bval[k];
+                }
+            }
+            bin.c_row_nnz[i] = row_nz;
+        }
+    }
+}
+
+/* Scan matrix and store it into CST*/
+inline void spArr_SpGEMM_store(const int *crpt, int *ccol, float *cval, BIN &bin)
+{
+    #pragma omp parallel num_threads(bin.num_of_threads)
+    {
+        int tid = omp_get_thread_num();
+        for(int i = bin.thread_row_offsets[tid]; i < bin.thread_row_offsets[tid + 1]; i++)
+        {
+            int idx_offset = crpt[i];
+            int row_nz = bin.c_row_nnz[i];
+            int cnt = 0;
+            for(int j = 0; j < bin.local_spArr_mat[i].size(); j++)
+            {
+                if(bin.local_spArr_mat[i][j] != 0)
+                {
+                    ccol[idx_offset + cnt] = j;
+                    cval[idx_offset + cnt] = bin.local_spArr_mat[i][j];
+                    cnt++;
+                }
+            }
+            assert(cnt == row_nz);
+        }
+    }
+}
+
+/*
+Main function to execute spArr SpGEMM execution
+* 1. Initialize BIN object
+* 2. spArr kernel
+* 3. Store
+*/
+inline void execute_spArr_SpGEMM(const int *arpt, const int *acol, const float *aval, 
+                                        const int *brpt, const int *bcol, const float *bval, 
+                                        int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol,
+                                        int num_of_threads = omp_get_num_threads())
+{
+    // Initialize BIN object
+    BIN myBin(nrow, ncol, num_of_threads);   // Create a BIN object.
+    myBin.set_intprod_num(arpt, acol, brpt, nrow);
+    myBin.set_thread_row_offsets(nrow);
+    myBin.allocate_spArrs();                            // Allocate a 2D-vector in size of rows x cols.
+
+    // spArr kernel
+    spArr_SpGEMM_kernel(arpt, acol, aval, brpt, bcol, bval, myBin);
+    
+    crpt = my_malloc<int>(nrow + 1);
+    generateSequentialPrefixSum(myBin.c_row_nnz, crpt, nrow + 1);
+    myBin.c_nnz = crpt[nrow];
+    ccol = my_malloc<int>(crpt[nrow]);
+    cval = my_malloc<float>(crpt[nrow]);
+
+    // Store
+    spArr_SpGEMM_store(crpt, ccol, cval, myBin);
 }
 
 /*  

@@ -253,14 +253,14 @@ int main(int argc, char *argv[]){
     // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
     // Multi-threaded
-    multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
     // ************** SpArr SpGEMM **************
-    double start = get_time();
-    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
-    double end = get_time();
-    printf("SpArr SpGEMM --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
+    // double start = get_time();
+    // execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // double end = get_time();
+    // printf("SpArr SpGEMM --> Time: %.3f\n", end - start);
+    // showCSR(M, N, c_rowPtr, c_colInd, c_val);
     
     return 0;
 }
