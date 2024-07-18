@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/opt/libomp/include"
+                "/usr/local/opt/libomp/include",
             ],
             "defines": [],
             "macFrameworkPath": [
