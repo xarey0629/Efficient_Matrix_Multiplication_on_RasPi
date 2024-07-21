@@ -190,7 +190,19 @@ void multi_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const
     double start = get_time();
     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
     double end = get_time();
-    printf("Multi-threaded Hashing SpGEMM--> Time: %.3f\n", end - start);
+    printf("Multi-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
+    showCSR(M, N, c_rowPtr, c_colInd, c_val);
+}
+
+void spArr_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
+                            const int *rowPtrB, const int *colIndB, const float *valB, 
+                            int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
+                            bool neon = false){
+    double start = get_time();
+    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, neon);
+    double end = get_time();
+    if(neon) printf("SpArr SpGEMM (NEON ON) --> Time: %.3f\n", end - start);
+    else printf("SpArr SpGEMM (NEON OFF) --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
@@ -247,7 +259,6 @@ int main(int argc, char *argv[]){
     // ************** Parallel Hashing SpGEMM **************
     int *c_rowPtr, *c_colInd;
     float *c_val;
-    // int num_of_threads;
 
     // Single-threaded
     // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
@@ -255,18 +266,9 @@ int main(int argc, char *argv[]){
     // Multi-threaded
     multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
 
-    // ************** SpArr SpGEMM **************
-    double start = get_time();
-    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false);
-    double end = get_time();
-    printf("SpArr SpGEMM (NEON OFF) --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
-
-    start = get_time();
-    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true);
-    end = get_time();
-    printf("SpArr SpGEMM (NEON ON) --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
+    // ************** Parallel SpArr SpGEMM (with or without NEON)**************
+    spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false);   // NEON OFF
+    spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true);    // NEON ON
     
     return 0;
 }

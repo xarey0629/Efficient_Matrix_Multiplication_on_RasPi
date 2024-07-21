@@ -4,6 +4,8 @@
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>
+#include <ctime>
 #include <algorithm>
 #include <assert.h>
 #include <vector>
@@ -34,6 +36,13 @@ inline void my_free(T* p)
     free(p);
 }
 // ----------------------------
+
+// Get time in seconds
+double get_time(){
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    return (double)tv.tv_sec + (double)1e-6 * tv.tv_usec; // tv.tv_usec is the number of microsecond since last second.
+}
 
 // my BIN class
 struct BIN {
