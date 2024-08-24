@@ -601,7 +601,7 @@ Main function to execute hashing SpGEMM execution
 inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float *aval, 
                                         const int *brpt, const int *bcol, const float *bval, 
                                         int *&crpt, int *&ccol, float *&cval, const int nrow, const int ncol,
-                                        int num_of_threads, bool NEON = true)
+                                        bool NEON, int num_of_threads = omp_get_max_threads())
 {
     // Initialize BIN object
     BIN myBin(nrow, ncol, num_of_threads);   // Create a BIN object.
@@ -627,7 +627,6 @@ inline void execute_hashing_SpGEMM(const int *arpt, const int *acol, const float
     // Numeric phase
     hash_numeric(arpt, acol, aval, brpt, bcol, bval, crpt, ccol, cval, myBin, NEON);
 }
-
 
 /* spArr_SpGEMM kernel*/
 inline void spArr_SpGEMM_kernel(const int *arpt, const int *acol, const float *aval, const int *brpt, const int *bcol, const float *bval, BIN &bin)

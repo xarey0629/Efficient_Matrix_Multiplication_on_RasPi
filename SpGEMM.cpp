@@ -122,7 +122,7 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
                             int M, int K, int N){
 
     printf("********** ********** **********\n");
-    printf("Simple Multiplicaiton: \n");
+    printf("Simple Multiplicaiton O(n^3): \n");
     printf("- M x K x N = %d x %d x %d\n", M, K, N);
     printf("- Number of non-zero elements in A: %d, in B: %d\n", (int)(M * K * RATIO), (int)(K * N * RATIO));
     double start = get_time();
@@ -142,8 +142,8 @@ void simpleMatrixMultiplication(float* matrixA, float* matrixB, float* matrixC,
 }
 
 // Gustavson's algorithm
-void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
-                int rowPtr2[], int colInd2[], float val2[], 
+void sparse_matrix_mul(int rowPtrA[], int colIndA[], float valA[],
+                int rowPtrB[], int colIndB[], float valB[], 
                 float* matrixC, int M, int K, int N){ 
     
     printf("********** ********** **********\n");
@@ -154,13 +154,11 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
     double start = get_time();
     // #pragma omp parallel for num_threads(threads)
     for(int m = 0; m < M; m++){
-        int row_start1 = rowPtr1[m];
-        int row_end1 = rowPtr1[m + 1];
-        for(int idx1 = row_start1; idx1 < row_end1; idx1++){
-            int col_1 = colInd1[idx1];            
-            for(int idx2 = rowPtr2[col_1]; idx2 < rowPtr2[col_1 + 1]; idx2++){
+        for(int idx_A = rowPtrA[m]; idx_A < rowPtrA[m + 1]; idx_A++){
+            int col_A = colIndA[idx_A];            
+            for(int idx_B = rowPtrB[col_A]; idx_B < rowPtrB[col_A + 1]; idx_B++){
                 // Size of matrixC is M x N
-                matrixC[m * N + colInd2[idx2]] += val1[idx1] * val2[idx2];
+                matrixC[m * N + colIndB[idx_B]] += valA[idx_A] * valB[idx_B];
             }
         }
     }
@@ -172,37 +170,48 @@ void sparse_matrix_mul(int rowPtr1[], int colInd1[], float val1[],
 }
 
 
-void single_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
-                            const int *rowPtrB, const int *colIndB, const float *valB, 
-                            int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            int num_of_threads = 1){
-    double start = get_time();
-    execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
-    double end = get_time();
-    printf("Single-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
-    showCSR(M, N, c_rowPtr, c_colInd, c_val);
-}
+// void single_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
+//                             const int *rowPtrB, const int *colIndB, const float *valB, 
+//                             int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
+//                             int num_of_threads = 1){
+//     double start = get_time();
+//     execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
+//     double end = get_time();
+//     printf("Single-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
+//     showCSR(M, N, c_rowPtr, c_colInd, c_val);
+// }
 
-void multi_threaded_hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
+void hashing_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
                             const int *rowPtrB, const int *colIndB, const float *valB, 
                             int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            int num_of_threads = omp_get_max_threads()){
+                            bool NEON, int num_of_threads = omp_get_max_threads()){
     double start = get_time();
-    execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, num_of_threads);
+    execute_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, NEON, num_of_threads);
     double end = get_time();
-    printf("Multi-threaded Hashing SpGEMM --> Time: %.3f\n", end - start);
+
+    if(NEON) 
+        printf("Multi-threaded Hashing SpGEMM (NEON ON) --> Time: %.3f\n", end - start);
+    else
+        printf("Multi-threaded Hashing SpGEMM (NEON Off) --> Time: %.3f\n", end - start);
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
 void spArr_SpGEMM(const int *rowPtrA, const int *colIndA, const float *valA, 
                             const int *rowPtrB, const int *colIndB, const float *valB, 
                             int *&c_rowPtr, int *&c_colInd, float *&c_val, const int M, const int N,
-                            bool neon = false){
+                            bool NEON, bool indBuf, int num_of_threads = omp_get_max_threads()){
     double start = get_time();
-    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, neon);
+    execute_spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, NEON, indBuf, num_of_threads);
     double end = get_time();
-    if(neon) printf("SpArr SpGEMM (NEON ON) --> Time: %.3f\n", end - start);
-    else printf("SpArr SpGEMM (NEON OFF) --> Time: %.3f\n", end - start);
+
+    if(NEON)
+        printf("SpArr SpGEMM (NEON ON) --> Time: %.3f\n", end - start);
+    else{
+        if(indBuf)
+            printf("SpArr SpGEMM (NEON OFF, indBuf ON) --> Time: %.3f\n", end - start);
+        else
+            printf("SpArr SpGEMM (NEON OFF, indBuf OFF) --> Time: %.3f\n", end - start);
+    }
     showCSR(M, N, c_rowPtr, c_colInd, c_val);
 }
 
@@ -251,24 +260,35 @@ int main(int argc, char *argv[]){
 
     // Execute simple matrix multiplication O(n^3)
     // simpleMatrixMultiplication(matrixA, matrixB, matrixC, M, K, N);
+
     // Reset matrix C
     // zeroizeMatrix(matrixC, M, N);
+
     // Execute sparse matrix multiplication O(flops)
     sparse_matrix_mul(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, matrixC, M, K, N);
    
-    // ************** Parallel Hashing SpGEMM **************
+    // ************** Memory Allocation for output C (in CSR) **************
     int *c_rowPtr, *c_colInd;
     float *c_val;
 
-    // Single-threaded
-    // single_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // ************** Hashing SpGEMM **************
+    /* Single-threaded */
+    // hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false, 1);     // NEON OFF
+    // hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true, 1);      // NEON ON
+    /* Multi-threaded */
+    hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false);           // NEON OFF
+    // hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true);            // NEON ON
 
-    // Multi-threaded
-    multi_threaded_hashing_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N);
+    // ************** SpArr SpGEMM **************
+    /* Single-threaded */
+    // spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false, 1);       // NEON OFF
+    // spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true, 1);        // NEON ON
+    /* Multi-threaded */
+    // spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false, false);          // NEON OFF, indBuf OFF
+    spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false, true);           // NEON OFF, indBuf ON
+    // spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true, true);            // NEON ON,  indBuf ON
 
-    // ************** Parallel SpArr SpGEMM (with or without NEON)**************
-    spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, false);   // NEON OFF
-    spArr_SpGEMM(rowPtrA, colIndA, valA, rowPtrB, colIndB, valB, c_rowPtr, c_colInd, c_val, M, N, true);    // NEON ON
+    
     
     return 0;
 }

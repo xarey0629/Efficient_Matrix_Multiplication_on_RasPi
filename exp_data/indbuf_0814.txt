@@ -1,0 +1,1188 @@
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00016
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00015
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00002
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00002
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00002
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00002
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00002
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00003
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00012
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00006
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00012
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00006
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00012
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00006
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00006
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00012
+Size: 32, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00006
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00012
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00014
+Size: 32, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00013
+Size: 32, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00008
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00021
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00022
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00021
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00021
+Size: 64, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00005
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00022
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00007
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00021
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00021
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00022
+Size: 64, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00020
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00009
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00024
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00020
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00010
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00018
+Size: 64, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00010
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00018
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00018
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00012
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00017
+Size: 64, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00017
+Size: 64, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00010
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00016
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00017
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00018
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00019
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00012
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00017
+Size: 64, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00011
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00042
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00012
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00041
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00012
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00044
+Size: 128, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00012
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00033
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00016
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00035
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00016
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00033
+Size: 128, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00015
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00033
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00017
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00018
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00018
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00021
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00043
+Size: 128, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00028
+Size: 128, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00019
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00034
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00021
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00020
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00029
+Size: 128, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00021
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00033
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00020
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00021
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00029
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00021
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00023
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00032
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00023
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00031
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00022
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00048
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00023
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00030
+Size: 128, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00023
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00094
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00048
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00095
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00045
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00093
+Size: 256, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00039
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00078
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00044
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00084
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00044
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00079
+Size: 256, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00045
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00082
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00049
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00085
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00042
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00076
+Size: 256, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00044
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00081
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00053
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00076
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00046
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00073
+Size: 256, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00048
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00089
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00049
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00076
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00055
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00082
+Size: 256, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00049
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00075
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00055
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00078
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00054
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00074
+Size: 256, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00056
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00077
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00054
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00079
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00054
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00076
+Size: 256, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00056
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00095
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00058
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00083
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00059
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00081
+Size: 256, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00061
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00086
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00061
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00083
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00057
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00091
+Size: 256, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00062
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00084
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00065
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00082
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00065
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00080
+Size: 256, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00058
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00084
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00067
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00080
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00066
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00093
+Size: 256, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00068
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00279
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00157
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00277
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00150
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.00312
+Size: 512, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00146
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00325
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00153
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00300
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00145
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.00285
+Size: 512, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00160
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00296
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00162
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00317
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00163
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.00319
+Size: 512, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00156
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00317
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00170
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00327
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00161
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.00337
+Size: 512, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00175
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00337
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00183
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00314
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00177
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.00327
+Size: 512, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.00180
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00310
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00209
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00337
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00187
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.00355
+Size: 512, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.00207
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00362
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00212
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00367
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00229
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.00329
+Size: 512, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.00220
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00337
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00237
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00371
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00246
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.00336
+Size: 512, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.00225
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00390
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00264
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00370
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00246
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.00365
+Size: 512, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.00254
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00356
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00261
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00387
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00272
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.00393
+Size: 512, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.00252
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00364
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00289
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00390
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00290
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.00390
+Size: 512, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.00277
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.01198
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00738
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.01206
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00676
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.01212
+Size: 1024, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.00748
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.01228
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00756
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.01218
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00701
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.01165
+Size: 1024, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.00699
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.01265
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00806
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.01282
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00792
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.01291
+Size: 1024, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.00789
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.01412
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00971
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.01357
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00968
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.01357
+Size: 1024, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.00968
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.01488
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.01157
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.01485
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.01219
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.01476
+Size: 1024, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.01150
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.01534
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.01344
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.01593
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.01250
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.01589
+Size: 1024, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.01262
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.01661
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.01355
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.01686
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.01360
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.01660
+Size: 1024, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.01362
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.01724
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.01471
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.01732
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.01544
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.01648
+Size: 1024, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.01461
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.01776
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.01574
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.01750
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.01653
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.01781
+Size: 1024, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.01582
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.01814
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.01760
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.01795
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.01674
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.01853
+Size: 1024, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.01665
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.01934
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.01788
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.01886
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.01863
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.01982
+Size: 1024, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.01785
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.04782
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.02486
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.04855
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.02711
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.04870
+Size: 2048, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.02501
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.04908
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.02701
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.04993
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.02763
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.04930
+Size: 2048, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.02710
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.05384
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.03603
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.05283
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.03611
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.05384
+Size: 2048, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.03583
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.05948
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.04574
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.06095
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.04601
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.06005
+Size: 2048, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.04575
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.07685
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.06114
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.06605
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.05529
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.06559
+Size: 2048, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.05546
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.07221
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.06251
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.07166
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.06269
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.07360
+Size: 2048, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.06556
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.07667
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.06946
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.07653
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.06974
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.07786
+Size: 2048, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.07239
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.08221
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.07623
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.08143
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.07682
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.08201
+Size: 2048, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.07594
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.08520
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.08144
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.08742
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.08521
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.08680
+Size: 2048, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.08499
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.08928
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.08796
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.09145
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.09156
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.09038
+Size: 2048, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.08812
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.09471
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.09769
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.09336
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.09533
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.09356
+Size: 2048, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.09794
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.19691
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.10631
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.18985
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.09426
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.19385
+Size: 4096, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.10551
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.20687
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.12371
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.20415
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.12316
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.20305
+Size: 4096, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.11204
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.23107
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.16743
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.23859
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.17884
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 0.23887
+Size: 4096, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.17915
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.27100
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.22941
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.27622
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.24007
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 0.27178
+Size: 4096, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 0.22911
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.31214
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.29383
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.30976
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.29289
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 0.30939
+Size: 4096, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 0.28082
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.34023
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.33570
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.33262
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.32243
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 0.33799
+Size: 4096, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 0.33504
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.36655
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.37241
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.36745
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.37132
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 0.36662
+Size: 4096, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 0.37200
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.38866
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.41681
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.38327
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.40468
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 0.39033
+Size: 4096, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 0.41689
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.40486
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.44588
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.41070
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.49244
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 0.40949
+Size: 4096, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 0.45824
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.42689
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.48015
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.42477
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.47807
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 0.43255
+Size: 4096, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 0.49134
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.45950
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.51935
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.45092
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.53083
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 0.45284
+Size: 4096, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 0.51731
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.76630
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.40206
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.76730
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.40123
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_OFF) 0.76323
+Size: 8192, Ratio: 0.001000
+SpArr_SpGEMM(indBuf_ON) 0.40157
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.84590
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.53628
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.83101
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.50131
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_OFF) 0.82957
+Size: 8192, Ratio: 0.002000
+SpArr_SpGEMM(indBuf_ON) 0.52512
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 1.05892
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.89287
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 1.05681
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.89418
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_OFF) 1.06828
+Size: 8192, Ratio: 0.004000
+SpArr_SpGEMM(indBuf_ON) 0.86792
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 1.29721
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 1.21053
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 1.27333
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 1.21017
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_OFF) 1.26893
+Size: 8192, Ratio: 0.006000
+SpArr_SpGEMM(indBuf_ON) 1.21150
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 1.43287
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 1.46408
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 1.44447
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 1.45920
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_OFF) 1.45675
+Size: 8192, Ratio: 0.008000
+SpArr_SpGEMM(indBuf_ON) 1.46087
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 1.58485
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 1.73760
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 1.60462
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 1.74288
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_OFF) 1.59557
+Size: 8192, Ratio: 0.010000
+SpArr_SpGEMM(indBuf_ON) 1.73350
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 1.71769
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 1.95382
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 1.72869
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 1.93662
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_OFF) 1.71589
+Size: 8192, Ratio: 0.012000
+SpArr_SpGEMM(indBuf_ON) 1.96137
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 1.87324
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 2.18040
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 1.87044
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 2.17537
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_OFF) 1.86256
+Size: 8192, Ratio: 0.014000
+SpArr_SpGEMM(indBuf_ON) 2.17703
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 2.02231
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 2.37266
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 2.02657
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 2.35539
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_OFF) 2.02202
+Size: 8192, Ratio: 0.016000
+SpArr_SpGEMM(indBuf_ON) 2.42609
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 2.22082
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 2.59196
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 2.20949
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 2.60099
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_OFF) 2.19933
+Size: 8192, Ratio: 0.018000
+SpArr_SpGEMM(indBuf_ON) 2.59588
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 2.38613
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 2.80554
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 2.37448
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 2.79563
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_OFF) 2.35876
+Size: 8192, Ratio: 0.020000
+SpArr_SpGEMM(indBuf_ON) 2.76081

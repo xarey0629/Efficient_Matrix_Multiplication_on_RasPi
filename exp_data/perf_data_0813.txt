@@ -1,0 +1,1242 @@
+hashing_SpGEMM 32 0.01 
+         4,756,527      cycles                                                                
+         1,482,063      cache-references                                                      
+            30,543      cache-misses                     #    2.06% of all cache refs         
+            58,202      LLC-loads                                                             
+            29,023      LLC-load-misses                  #   49.87% of all LL-cache accesses  
+         1,482,093      dTLB-loads                                                            
+             5,037      dTLB-load-misses                 #    0.34% of all dTLB cache accesses
+       0.001719262 seconds time elapsed
+       0.002185000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 32 0.01 
+         4,488,174      cycles                                                                
+         1,469,564      cache-references                                                      
+            28,746      cache-misses                     #    1.96% of all cache refs         
+            51,909      LLC-loads                                                             
+            27,099      LLC-load-misses                  #   52.20% of all LL-cache accesses  
+         1,469,601      dTLB-loads                                                            
+             4,827      dTLB-load-misses                 #    0.33% of all dTLB cache accesses
+       0.001667873 seconds time elapsed
+       0.001924000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.01 
+         4,944,745      cycles                                                                
+         1,593,754      cache-references                                                      
+            31,399      cache-misses                     #    1.97% of all cache refs         
+            60,575      LLC-loads                                                             
+            28,724      LLC-load-misses                  #   47.42% of all LL-cache accesses  
+         1,593,791      dTLB-loads                                                            
+             5,531      dTLB-load-misses                 #    0.35% of all dTLB cache accesses
+       0.001761873 seconds time elapsed
+       0.002130000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 64 0.01 
+         5,076,135      cycles                                                                
+         1,808,014      cache-references                                                      
+            31,532      cache-misses                     #    1.74% of all cache refs         
+            58,085      LLC-loads                                                             
+            27,684      LLC-load-misses                  #   47.66% of all LL-cache accesses  
+         1,808,046      dTLB-loads                                                            
+             5,386      dTLB-load-misses                 #    0.30% of all dTLB cache accesses
+       0.001693465 seconds time elapsed
+       0.002105000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.01 
+         5,537,768      cycles                                                                
+         2,091,765      cache-references                                                      
+            33,037      cache-misses                     #    1.58% of all cache refs         
+            63,568      LLC-loads                                                             
+            28,475      LLC-load-misses                  #   44.79% of all LL-cache accesses  
+         2,091,806      dTLB-loads                                                            
+             5,715      dTLB-load-misses                 #    0.27% of all dTLB cache accesses
+       0.001964596 seconds time elapsed
+       0.002337000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 128 0.01 
+         6,207,580      cycles                                                                
+         2,683,269      cache-references                                                      
+            35,109      cache-misses                     #    1.31% of all cache refs         
+            61,417      LLC-loads                                                             
+            28,393      LLC-load-misses                  #   46.23% of all LL-cache accesses  
+         2,683,300      dTLB-loads                                                            
+             5,446      dTLB-load-misses                 #    0.20% of all dTLB cache accesses
+       0.001923373 seconds time elapsed
+       0.002502000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 256 0.01 
+         8,426,312      cycles                                                                
+         4,811,037      cache-references                                                      
+            38,492      cache-misses                     #    0.80% of all cache refs         
+            74,210      LLC-loads                                                             
+            31,575      LLC-load-misses                  #   42.55% of all LL-cache accesses  
+         4,811,080      dTLB-loads                                                            
+             5,925      dTLB-load-misses                 #    0.12% of all dTLB cache accesses
+       0.002727189 seconds time elapsed
+       0.003239000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 256 0.01 
+        10,359,111      cycles                                                                
+         5,728,922      cache-references                                                      
+            51,559      cache-misses                     #    0.90% of all cache refs         
+            82,160      LLC-loads                                                             
+            34,446      LLC-load-misses                  #   41.93% of all LL-cache accesses  
+         5,728,992      dTLB-loads                                                            
+             6,301      dTLB-load-misses                 #    0.11% of all dTLB cache accesses
+       0.002869837 seconds time elapsed
+       0.004210000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 512 0.01 
+        25,310,454      cycles                                                                
+        20,311,328      cache-references                                                      
+            61,236      cache-misses                     #    0.30% of all cache refs         
+           128,644      LLC-loads                                                             
+            55,531      LLC-load-misses                  #   43.17% of all LL-cache accesses  
+        20,311,370      dTLB-loads                                                            
+             8,865      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.006559991 seconds time elapsed
+       0.008306000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 512 0.01 
+        29,986,236      cycles                                                                
+        16,365,092      cache-references                                                      
+           128,263      cache-misses                     #    0.78% of all cache refs         
+           197,325      LLC-loads                                                             
+            88,579      LLC-load-misses                  #   44.89% of all LL-cache accesses  
+        16,365,162      dTLB-loads                                                            
+            11,347      dTLB-load-misses                 #    0.07% of all dTLB cache accesses
+       0.008638975 seconds time elapsed
+       0.010279000 seconds user
+       0.002055000 seconds sys
+
+hashing_SpGEMM 1024 0.01 
+       135,710,064      cycles                                                                
+       124,397,703      cache-references                                                      
+           183,035      cache-misses                     #    0.15% of all cache refs         
+           384,208      LLC-loads                                                             
+           224,986      LLC-load-misses                  #   58.56% of all LL-cache accesses  
+       124,397,825      dTLB-loads                                                            
+            30,050      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.028631873 seconds time elapsed
+       0.037369000 seconds user
+       0.016986000 seconds sys
+spArr_SpGEMM 1024 0.01 
+       129,119,753      cycles                                                                
+        61,846,348      cache-references                                                      
+           445,958      cache-misses                     #    0.72% of all cache refs         
+           718,964      LLC-loads                                                             
+           528,975      LLC-load-misses                  #   73.57% of all LL-cache accesses  
+        61,846,424      dTLB-loads                                                            
+            37,163      dTLB-load-misses                 #    0.06% of all dTLB cache accesses
+       0.034036381 seconds time elapsed
+       0.039123000 seconds user
+       0.014671000 seconds sys
+
+hashing_SpGEMM 2048 0.01 
+       905,141,496      cycles                                                                
+       895,745,393      cache-references                                                      
+           929,543      cache-misses                     #    0.10% of all cache refs         
+         1,312,752      LLC-loads                                                             
+           861,907      LLC-load-misses                  #   65.66% of all LL-cache accesses  
+       895,745,851      dTLB-loads                                                            
+           120,923      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.150119711 seconds time elapsed
+       0.356839000 seconds user
+       0.019824000 seconds sys
+spArr_SpGEMM 2048 0.01 
+       625,139,085      cycles                                                                
+       290,516,606      cache-references                                                      
+         2,022,490      cache-misses                     #    0.70% of all cache refs         
+         2,753,388      LLC-loads                                                             
+         2,125,236      LLC-load-misses                  #   77.19% of all LL-cache accesses  
+       290,516,926      dTLB-loads                                                            
+           149,343      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.145291612 seconds time elapsed
+       0.204668000 seconds user
+       0.055103000 seconds sys
+
+hashing_SpGEMM 4096 0.01 
+     6,495,831,512      cycles                                                                
+     6,715,437,668      cache-references                                                      
+         7,350,880      cache-misses                     #    0.11% of all cache refs         
+         9,201,764      LLC-loads                                                             
+         3,805,456      LLC-load-misses                  #   41.36% of all LL-cache accesses  
+     6,715,440,506      dTLB-loads                                                            
+           797,697      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.897665503 seconds time elapsed
+       2.618895000 seconds user
+       0.087962000 seconds sys
+spArr_SpGEMM 4096 0.01 
+     3,270,907,237      cycles                                                                
+     1,611,052,138      cache-references                                                      
+        10,538,167      cache-misses                     #    0.65% of all cache refs         
+        14,411,572      LLC-loads                                                             
+         9,753,449      LLC-load-misses                  #   67.68% of all LL-cache accesses  
+     1,611,053,957      dTLB-loads                                                            
+           865,064      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.704999491 seconds time elapsed
+       1.222595000 seconds user
+       0.138931000 seconds sys
+
+hashing_SpGEMM 8192 0.01 
+    45,612,689,485      cycles                                                                
+    47,955,056,058      cache-references                                                      
+        72,632,863      cache-misses                     #    0.15% of all cache refs         
+        62,578,301      LLC-loads                                                             
+        32,445,798      LLC-load-misses                  #   51.85% of all LL-cache accesses  
+    47,955,077,598      dTLB-loads                                                            
+         4,241,603      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       5.631617250 seconds time elapsed
+      18.632680000 seconds user
+       0.371774000 seconds sys
+spArr_SpGEMM 8192 0.01 
+    17,255,237,183      cycles                                                                
+     9,857,803,492      cache-references                                                      
+        70,333,856      cache-misses                     #    0.71% of all cache refs         
+        80,014,413      LLC-loads                                                             
+        58,054,739      LLC-load-misses                  #   72.56% of all LL-cache accesses  
+     9,857,810,925      dTLB-loads                                                            
+         3,926,090      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       3.079895498 seconds time elapsed
+       6.503738000 seconds user
+       0.684393000 seconds sys
+
+hashing_SpGEMM 32 0.025 
+         4,643,974      cycles                                                                
+         1,486,444      cache-references                                                      
+            31,463      cache-misses                     #    2.12% of all cache refs         
+            60,362      LLC-loads                                                             
+            27,251      LLC-load-misses                  #   45.15% of all LL-cache accesses  
+         1,486,478      dTLB-loads                                                            
+             5,548      dTLB-load-misses                 #    0.37% of all dTLB cache accesses
+       0.001647983 seconds time elapsed
+       0.000000000 seconds user
+       0.001958000 seconds sys
+spArr_SpGEMM 32 0.025 
+         4,828,854      cycles                                                                
+         1,572,949      cache-references                                                      
+            30,560      cache-misses                     #    1.94% of all cache refs         
+            57,565      LLC-loads                                                             
+            27,183      LLC-load-misses                  #   47.22% of all LL-cache accesses  
+         1,572,976      dTLB-loads                                                            
+             5,235      dTLB-load-misses                 #    0.33% of all dTLB cache accesses
+       0.001719855 seconds time elapsed
+       0.002080000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.025 
+         5,058,973      cycles                                                                
+         1,747,677      cache-references                                                      
+            32,167      cache-misses                     #    1.84% of all cache refs         
+            61,930      LLC-loads                                                             
+            27,854      LLC-load-misses                  #   44.98% of all LL-cache accesses  
+         1,747,740      dTLB-loads                                                            
+             5,838      dTLB-load-misses                 #    0.33% of all dTLB cache accesses
+       0.001719762 seconds time elapsed
+       0.001547000 seconds user
+       0.000515000 seconds sys
+spArr_SpGEMM 64 0.025 
+         5,235,727      cycles                                                                
+         1,927,282      cache-references                                                      
+            32,338      cache-misses                     #    1.68% of all cache refs         
+            59,219      LLC-loads                                                             
+            27,436      LLC-load-misses                  #   46.33% of all LL-cache accesses  
+         1,927,307      dTLB-loads                                                            
+             5,425      dTLB-load-misses                 #    0.28% of all dTLB cache accesses
+       0.001728095 seconds time elapsed
+       0.002120000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.025 
+         6,625,024      cycles                                                                
+         3,166,655      cache-references                                                      
+            34,450      cache-misses                     #    1.09% of all cache refs         
+            66,484      LLC-loads                                                             
+            28,636      LLC-load-misses                  #   43.07% of all LL-cache accesses  
+         3,166,708      dTLB-loads                                                            
+             5,849      dTLB-load-misses                 #    0.18% of all dTLB cache accesses
+       0.002033040 seconds time elapsed
+       0.002741000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 128 0.025 
+         6,797,702      cycles                                                                
+         3,169,101      cache-references                                                      
+            38,255      cache-misses                     #    1.21% of all cache refs         
+            64,997      LLC-loads                                                             
+            28,988      LLC-load-misses                  #   44.60% of all LL-cache accesses  
+         3,169,130      dTLB-loads                                                            
+             5,694      dTLB-load-misses                 #    0.18% of all dTLB cache accesses
+       0.002032651 seconds time elapsed
+       0.002570000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 256 0.025 
+        15,632,422      cycles                                                                
+        12,287,922      cache-references                                                      
+            43,943      cache-misses                     #    0.36% of all cache refs         
+            79,539      LLC-loads                                                             
+            32,030      LLC-load-misses                  #   40.27% of all LL-cache accesses  
+        12,287,967      dTLB-loads                                                            
+             6,384      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.003531671 seconds time elapsed
+       0.000000000 seconds user
+       0.004908000 seconds sys
+spArr_SpGEMM 256 0.025 
+        12,614,826      cycles                                                                
+         7,834,330      cache-references                                                      
+            69,233      cache-misses                     #    0.88% of all cache refs         
+            96,270      LLC-loads                                                             
+            36,068      LLC-load-misses                  #   37.47% of all LL-cache accesses  
+         7,834,373      dTLB-loads                                                            
+             6,728      dTLB-load-misses                 #    0.09% of all dTLB cache accesses
+       0.003303412 seconds time elapsed
+       0.004404000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 512 0.025 
+        81,847,332      cycles                                                                
+        77,917,958      cache-references                                                      
+            96,738      cache-misses                     #    0.12% of all cache refs         
+           193,254      LLC-loads                                                             
+            57,945      LLC-load-misses                  #   29.98% of all LL-cache accesses  
+        77,918,023      dTLB-loads                                                            
+            13,073      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.013638871 seconds time elapsed
+       0.023609000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 512 0.025 
+        42,708,513      cycles                                                                
+        28,464,958      cache-references                                                      
+           203,045      cache-misses                     #    0.71% of all cache refs         
+           285,061      LLC-loads                                                             
+           101,591      LLC-load-misses                  #   35.64% of all LL-cache accesses  
+        28,465,007      dTLB-loads                                                            
+            15,774      dTLB-load-misses                 #    0.06% of all dTLB cache accesses
+       0.010946812 seconds time elapsed
+       0.012167000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 1024 0.025 
+       535,907,907      cycles                                                                
+       544,653,135      cache-references                                                      
+           489,436      cache-misses                     #    0.09% of all cache refs         
+           618,544      LLC-loads                                                             
+           266,958      LLC-load-misses                  #   43.16% of all LL-cache accesses  
+       544,653,449      dTLB-loads                                                            
+            66,617      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.075265810 seconds time elapsed
+       0.214361000 seconds user
+       0.003969000 seconds sys
+spArr_SpGEMM 1024 0.025 
+       220,040,864      cycles                                                                
+       146,003,916      cache-references                                                      
+           817,421      cache-misses                     #    0.56% of all cache refs         
+         1,007,531      LLC-loads                                                             
+           650,155      LLC-load-misses                  #   64.53% of all LL-cache accesses  
+       146,004,032      dTLB-loads                                                            
+            74,959      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.048658310 seconds time elapsed
+       0.078905000 seconds user
+       0.013150000 seconds sys
+
+hashing_SpGEMM 2048 0.025 
+     3,348,295,885      cycles                                                                
+     3,535,807,028      cache-references                                                      
+         3,479,556      cache-misses                     #    0.10% of all cache refs         
+         4,323,479      LLC-loads                                                             
+         1,152,748      LLC-load-misses                  #   26.66% of all LL-cache accesses  
+     3,535,808,483      dTLB-loads                                                            
+           405,612      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.425963784 seconds time elapsed
+       1.366750000 seconds user
+       0.027974000 seconds sys
+spArr_SpGEMM 2048 0.025 
+     1,144,148,952      cycles                                                                
+       848,828,528      cache-references                                                      
+         3,978,071      cache-misses                     #    0.47% of all cache refs         
+         5,737,295      LLC-loads                                                             
+         2,788,982      LLC-load-misses                  #   48.61% of all LL-cache accesses  
+       848,829,152      dTLB-loads                                                            
+           422,268      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.222923758 seconds time elapsed
+       0.423737000 seconds user
+       0.053481000 seconds sys
+
+hashing_SpGEMM 4096 0.025 
+    18,255,451,238      cycles                                                                
+    19,516,558,501      cache-references                                                      
+        22,129,399      cache-misses                     #    0.11% of all cache refs         
+        31,831,250      LLC-loads                                                             
+        12,649,611      LLC-load-misses                  #   39.74% of all LL-cache accesses  
+    19,516,566,732      dTLB-loads                                                            
+         2,120,609      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       2.208229198 seconds time elapsed
+       7.478864000 seconds user
+       0.127843000 seconds sys
+spArr_SpGEMM 4096 0.025 
+     6,179,660,065      cycles                                                                
+     4,860,382,947      cache-references                                                      
+        21,458,486      cache-misses                     #    0.44% of all cache refs         
+        33,591,218      LLC-loads                                                             
+        18,619,358      LLC-load-misses                  #   55.43% of all LL-cache accesses  
+     4,860,385,915      dTLB-loads                                                            
+         1,893,880      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       1.048686234 seconds time elapsed
+       2.368085000 seconds user
+       0.207307000 seconds sys
+
+hashing_SpGEMM 8192 0.025 
+    90,703,304,248      cycles                                                                
+    95,592,225,952      cache-references                                                      
+       205,798,729      cache-misses                     #    0.22% of all cache refs         
+       209,344,437      LLC-loads                                                             
+       136,949,713      LLC-load-misses                  #   65.42% of all LL-cache accesses  
+    95,592,268,434      dTLB-loads                                                            
+         9,259,152      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+      10.751914220 seconds time elapsed
+      37.449449000 seconds user
+       0.435737000 seconds sys
+spArr_SpGEMM 8192 0.025 
+    33,691,474,113      cycles                                                                
+    28,156,727,464      cache-references                                                      
+       179,911,954      cache-misses                     #    0.64% of all cache refs         
+       182,125,012      LLC-loads                                                             
+       133,606,834      LLC-load-misses                  #   73.36% of all LL-cache accesses  
+    28,156,742,721      dTLB-loads                                                            
+         7,892,623      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       5.128084884 seconds time elapsed
+      13.277003000 seconds user
+       0.767595000 seconds sys
+
+hashing_SpGEMM 32 0.05 
+         4,612,832      cycles                                                                
+         1,527,947      cache-references                                                      
+            31,386      cache-misses                     #    2.05% of all cache refs         
+            59,949      LLC-loads                                                             
+            27,263      LLC-load-misses                  #   45.48% of all LL-cache accesses  
+         1,528,002      dTLB-loads                                                            
+             5,446      dTLB-load-misses                 #    0.36% of all dTLB cache accesses
+       0.001648466 seconds time elapsed
+       0.000000000 seconds user
+       0.002008000 seconds sys
+spArr_SpGEMM 32 0.05 
+         4,671,027      cycles                                                                
+         1,608,203      cache-references                                                      
+            30,635      cache-misses                     #    1.90% of all cache refs         
+            58,394      LLC-loads                                                             
+            27,100      LLC-load-misses                  #   46.41% of all LL-cache accesses  
+         1,608,231      dTLB-loads                                                            
+             5,147      dTLB-load-misses                 #    0.32% of all dTLB cache accesses
+       0.001629447 seconds time elapsed
+       0.001960000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.05 
+         5,321,382      cycles                                                                
+         2,113,585      cache-references                                                      
+            32,191      cache-misses                     #    1.52% of all cache refs         
+            61,041      LLC-loads                                                             
+            27,827      LLC-load-misses                  #   45.59% of all LL-cache accesses  
+         2,113,626      dTLB-loads                                                            
+             5,621      dTLB-load-misses                 #    0.27% of all dTLB cache accesses
+       0.001785465 seconds time elapsed
+       0.000000000 seconds user
+       0.002076000 seconds sys
+spArr_SpGEMM 64 0.05 
+         5,304,104      cycles                                                                
+         2,086,693      cache-references                                                      
+            32,564      cache-misses                     #    1.56% of all cache refs         
+            59,938      LLC-loads                                                             
+            26,889      LLC-load-misses                  #   44.86% of all LL-cache accesses  
+         2,086,720      dTLB-loads                                                            
+             5,323      dTLB-load-misses                 #    0.26% of all dTLB cache accesses
+       0.001738132 seconds time elapsed
+       0.002114000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.05 
+         9,406,130      cycles                                                                
+         6,182,200      cache-references                                                      
+            36,354      cache-misses                     #    0.59% of all cache refs         
+            66,412      LLC-loads                                                             
+            28,838      LLC-load-misses                  #   43.42% of all LL-cache accesses  
+         6,182,244      dTLB-loads                                                            
+             5,809      dTLB-load-misses                 #    0.09% of all dTLB cache accesses
+       0.002494541 seconds time elapsed
+       0.000000000 seconds user
+       0.002660000 seconds sys
+spArr_SpGEMM 128 0.05 
+         7,664,403      cycles                                                                
+         4,036,297      cache-references                                                      
+            42,362      cache-misses                     #    1.05% of all cache refs         
+            68,175      LLC-loads                                                             
+            29,219      LLC-load-misses                  #   42.86% of all LL-cache accesses  
+         4,036,337      dTLB-loads                                                            
+             5,599      dTLB-load-misses                 #    0.14% of all dTLB cache accesses
+       0.002198762 seconds time elapsed
+       0.000000000 seconds user
+       0.002745000 seconds sys
+
+hashing_SpGEMM 256 0.05 
+        37,641,574      cycles                                                                
+        33,803,265      cache-references                                                      
+            55,213      cache-misses                     #    0.16% of all cache refs         
+           113,647      LLC-loads                                                             
+            34,812      LLC-load-misses                  #   30.63% of all LL-cache accesses  
+        33,803,563      dTLB-loads                                                            
+             7,026      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.006566602 seconds time elapsed
+       0.007102000 seconds user
+       0.001775000 seconds sys
+spArr_SpGEMM 256 0.05 
+        18,932,650      cycles                                                                
+        13,010,134      cache-references                                                      
+            85,439      cache-misses                     #    0.66% of all cache refs         
+           131,114      LLC-loads                                                             
+            38,927      LLC-load-misses                  #   29.69% of all LL-cache accesses  
+        13,010,174      dTLB-loads                                                            
+             7,084      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.004599655 seconds time elapsed
+       0.000000000 seconds user
+       0.005720000 seconds sys
+
+hashing_SpGEMM 512 0.05 
+       204,056,108      cycles                                                                
+       205,483,871      cache-references                                                      
+           186,858      cache-misses                     #    0.09% of all cache refs         
+           309,681      LLC-loads                                                             
+            71,089      LLC-load-misses                  #   22.96% of all LL-cache accesses  
+       205,484,009      dTLB-loads                                                            
+            21,084      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.028778614 seconds time elapsed
+       0.080372000 seconds user
+       0.003653000 seconds sys
+spArr_SpGEMM 512 0.05 
+        81,466,529      cycles                                                                
+        60,902,273      cache-references                                                      
+           287,561      cache-misses                     #    0.47% of all cache refs         
+           420,862      LLC-loads                                                             
+           135,924      LLC-load-misses                  #   32.30% of all LL-cache accesses  
+        60,902,352      dTLB-loads                                                            
+            23,096      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.017420247 seconds time elapsed
+       0.019824000 seconds user
+       0.007929000 seconds sys
+
+hashing_SpGEMM 1024 0.05 
+     1,071,814,535      cycles                                                                
+     1,122,894,909      cache-references                                                      
+         1,141,425      cache-misses                     #    0.10% of all cache refs         
+         1,286,444      LLC-loads                                                             
+           329,578      LLC-load-misses                  #   25.62% of all LL-cache accesses  
+     1,122,895,551      dTLB-loads                                                            
+           130,131      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.139530623 seconds time elapsed
+       0.442731000 seconds user
+       0.003952000 seconds sys
+spArr_SpGEMM 1024 0.05 
+       373,289,240      cycles                                                                
+       322,279,245      cache-references                                                      
+         1,273,069      cache-misses                     #    0.40% of all cache refs         
+         1,693,614      LLC-loads                                                             
+           755,786      LLC-load-misses                  #   44.63% of all LL-cache accesses  
+       322,279,451      dTLB-loads                                                            
+           134,209      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.071334711 seconds time elapsed
+       0.135954000 seconds user
+       0.019993000 seconds sys
+
+hashing_SpGEMM 2048 0.05 
+     5,244,457,331      cycles                                                                
+     5,529,140,245      cache-references                                                      
+         6,656,394      cache-misses                     #    0.12% of all cache refs         
+        11,978,599      LLC-loads                                                             
+         2,926,577      LLC-load-misses                  #   24.43% of all LL-cache accesses  
+     5,529,143,032      dTLB-loads                                                            
+           810,561      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.657170240 seconds time elapsed
+       2.159032000 seconds user
+       0.023989000 seconds sys
+spArr_SpGEMM 2048 0.05 
+     1,958,141,056      cycles                                                                
+     1,810,367,199      cache-references                                                      
+         5,956,180      cache-misses                     #    0.33% of all cache refs         
+        11,392,251      LLC-loads                                                             
+         4,460,757      LLC-load-misses                  #   39.16% of all LL-cache accesses  
+     1,810,368,082      dTLB-loads                                                            
+           735,611      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.338912940 seconds time elapsed
+       0.764657000 seconds user
+       0.051773000 seconds sys
+
+hashing_SpGEMM 4096 0.05 
+    26,242,979,067      cycles                                                                
+    27,672,191,037      cache-references                                                      
+        42,520,776      cache-misses                     #    0.15% of all cache refs         
+        87,232,666      LLC-loads                                                             
+        50,804,151      LLC-load-misses                  #   58.24% of all LL-cache accesses  
+    27,672,202,739      dTLB-loads                                                            
+         3,911,944      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       3.226108709 seconds time elapsed
+      10.827283000 seconds user
+       0.120036000 seconds sys
+spArr_SpGEMM 4096 0.05 
+    11,696,573,731      cycles                                                                
+    11,252,777,941      cache-references                                                      
+        37,433,035      cache-misses                     #    0.33% of all cache refs         
+        72,682,392      LLC-loads                                                             
+        45,645,110      LLC-load-misses                  #   62.80% of all LL-cache accesses  
+    11,252,783,285      dTLB-loads                                                            
+         3,367,507      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       1.779195561 seconds time elapsed
+       4.674589000 seconds user
+       0.211393000 seconds sys
+
+hashing_SpGEMM 8192 0.05 
+   147,074,064,107      cycles                                                                
+   150,870,219,362      cache-references                                                      
+       599,662,673      cache-misses                     #    0.40% of all cache refs         
+       565,119,670      LLC-loads                                                             
+       441,949,765      LLC-load-misses                  #   78.20% of all LL-cache accesses  
+   150,870,288,365      dTLB-loads                                                            
+        17,958,109      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+      17.823230959 seconds time elapsed
+      63.471733000 seconds user
+       0.423811000 seconds sys
+spArr_SpGEMM 8192 0.05 
+    76,143,114,816      cycles                                                                
+    77,235,291,442      cache-references                                                      
+       443,828,261      cache-misses                     #    0.57% of all cache refs         
+       433,557,707      LLC-loads                                                             
+       339,072,130      LLC-load-misses                  #   78.21% of all LL-cache accesses  
+    77,235,327,525      dTLB-loads                                                            
+        14,992,511      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+      10.594028378 seconds time elapsed
+      32.745280000 seconds user
+       0.791837000 seconds sys
+
+hashing_SpGEMM 32 0.075 
+         4,608,276      cycles                                                                
+         1,637,322      cache-references                                                      
+            31,260      cache-misses                     #    1.91% of all cache refs         
+            59,465      LLC-loads                                                             
+            28,052      LLC-load-misses                  #   47.17% of all LL-cache accesses  
+         1,637,352      dTLB-loads                                                            
+             5,466      dTLB-load-misses                 #    0.33% of all dTLB cache accesses
+       0.001681799 seconds time elapsed
+       0.000000000 seconds user
+       0.002125000 seconds sys
+spArr_SpGEMM 32 0.075 
+         4,600,201      cycles                                                                
+         1,647,437      cache-references                                                      
+            31,117      cache-misses                     #    1.89% of all cache refs         
+            58,270      LLC-loads                                                             
+            27,235      LLC-load-misses                  #   46.74% of all LL-cache accesses  
+         1,647,470      dTLB-loads                                                            
+             5,213      dTLB-load-misses                 #    0.32% of all dTLB cache accesses
+       0.001683724 seconds time elapsed
+       0.002228000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.075 
+         5,694,210      cycles                                                                
+         2,733,183      cache-references                                                      
+            32,477      cache-misses                     #    1.19% of all cache refs         
+            59,287      LLC-loads                                                             
+            27,079      LLC-load-misses                  #   45.67% of all LL-cache accesses  
+         2,733,213      dTLB-loads                                                            
+             5,658      dTLB-load-misses                 #    0.21% of all dTLB cache accesses
+       0.001910948 seconds time elapsed
+       0.000000000 seconds user
+       0.002372000 seconds sys
+spArr_SpGEMM 64 0.075 
+         5,569,420      cycles                                                                
+         2,283,445      cache-references                                                      
+            33,257      cache-misses                     #    1.46% of all cache refs         
+            59,935      LLC-loads                                                             
+            27,732      LLC-load-misses                  #   46.27% of all LL-cache accesses  
+         2,283,473      dTLB-loads                                                            
+             5,360      dTLB-load-misses                 #    0.23% of all dTLB cache accesses
+       0.001966410 seconds time elapsed
+       0.002437000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.075 
+        13,522,740      cycles                                                                
+        10,247,246      cache-references                                                      
+            37,273      cache-misses                     #    0.36% of all cache refs         
+            70,374      LLC-loads                                                             
+            29,422      LLC-load-misses                  #   41.81% of all LL-cache accesses  
+        10,247,279      dTLB-loads                                                            
+             5,543      dTLB-load-misses                 #    0.05% of all dTLB cache accesses
+       0.002949690 seconds time elapsed
+       0.004096000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 128 0.075 
+         9,531,857      cycles                                                                
+         5,289,743      cache-references                                                      
+            45,467      cache-misses                     #    0.86% of all cache refs         
+            77,631      LLC-loads                                                             
+            31,565      LLC-load-misses                  #   40.66% of all LL-cache accesses  
+         5,289,787      dTLB-loads                                                            
+             5,847      dTLB-load-misses                 #    0.11% of all dTLB cache accesses
+       0.002549226 seconds time elapsed
+       0.000000000 seconds user
+       0.003421000 seconds sys
+
+hashing_SpGEMM 256 0.075 
+        56,813,001      cycles                                                                
+        53,995,422      cache-references                                                      
+            67,239      cache-misses                     #    0.12% of all cache refs         
+           126,422      LLC-loads                                                             
+            37,831      LLC-load-misses                  #   29.92% of all LL-cache accesses  
+        53,995,560      dTLB-loads                                                            
+             7,231      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.008939531 seconds time elapsed
+       0.018121000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 256 0.075 
+        26,352,539      cycles                                                                
+        19,223,031      cache-references                                                      
+            96,417      cache-misses                     #    0.50% of all cache refs         
+           164,575      LLC-loads                                                             
+            43,578      LLC-load-misses                  #   26.48% of all LL-cache accesses  
+        19,223,108      dTLB-loads                                                            
+             7,929      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.006053230 seconds time elapsed
+       0.007117000 seconds user
+       0.001779000 seconds sys
+
+hashing_SpGEMM 512 0.075 
+       276,842,127      cycles                                                                
+       280,397,035      cache-references                                                      
+           296,760      cache-misses                     #    0.11% of all cache refs         
+           404,526      LLC-loads                                                             
+            77,575      LLC-load-misses                  #   19.18% of all LL-cache accesses  
+       280,397,267      dTLB-loads                                                            
+            27,427      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.038638925 seconds time elapsed
+       0.115556000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 512 0.075 
+       110,601,724      cycles                                                                
+        91,838,089      cache-references                                                      
+           365,075      cache-misses                     #    0.40% of all cache refs         
+           488,293      LLC-loads                                                             
+           152,873      LLC-load-misses                  #   31.31% of all LL-cache accesses  
+        91,838,169      dTLB-loads                                                            
+            29,247      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.021774994 seconds time elapsed
+       0.046167000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 1024 0.075 
+     1,304,637,475      cycles                                                                
+     1,371,519,676      cache-references                                                      
+         1,670,373      cache-misses                     #    0.12% of all cache refs         
+         2,243,439      LLC-loads                                                             
+           376,869      LLC-load-misses                  #   16.80% of all LL-cache accesses  
+     1,371,520,312      dTLB-loads                                                            
+           221,522      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.173549559 seconds time elapsed
+       0.558696000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 1024 0.075 
+       517,821,473      cycles                                                                
+       500,906,328      cache-references                                                      
+         1,559,793      cache-misses                     #    0.31% of all cache refs         
+         2,218,258      LLC-loads                                                             
+           797,839      LLC-load-misses                  #   35.97% of all LL-cache accesses  
+       500,906,629      dTLB-loads                                                            
+           220,249      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.090098683 seconds time elapsed
+       0.199896000 seconds user
+       0.015678000 seconds sys
+
+hashing_SpGEMM 2048 0.075 
+     6,576,162,161      cycles                                                                
+     6,924,022,806      cache-references                                                      
+        10,249,493      cache-misses                     #    0.15% of all cache refs         
+        23,323,527      LLC-loads                                                             
+         4,334,616      LLC-load-misses                  #   18.58% of all LL-cache accesses  
+     6,924,026,108      dTLB-loads                                                            
+         1,195,803      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.851993091 seconds time elapsed
+       2.814658000 seconds user
+       0.019990000 seconds sys
+spArr_SpGEMM 2048 0.075 
+     3,110,432,513      cycles                                                                
+     3,113,597,180      cache-references                                                      
+         8,405,273      cache-misses                     #    0.27% of all cache refs         
+        19,046,675      LLC-loads                                                             
+         5,692,131      LLC-load-misses                  #   29.89% of all LL-cache accesses  
+     3,113,598,929      dTLB-loads                                                            
+         1,058,920      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.535066625 seconds time elapsed
+       1.241712000 seconds user
+       0.059506000 seconds sys
+
+hashing_SpGEMM 4096 0.075 
+    37,422,016,498      cycles                                                                
+    39,017,229,403      cache-references                                                      
+        72,392,095      cache-misses                     #    0.19% of all cache refs         
+       158,196,795      LLC-loads                                                             
+       112,064,573      LLC-load-misses                  #   70.84% of all LL-cache accesses  
+    39,017,247,335      dTLB-loads                                                            
+         5,786,046      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       4.657493624 seconds time elapsed
+      16.139638000 seconds user
+       0.103971000 seconds sys
+spArr_SpGEMM 4096 0.075 
+    20,602,108,009      cycles                                                                
+    21,492,360,334      cache-references                                                      
+        57,834,873      cache-misses                     #    0.27% of all cache refs         
+       119,563,710      LLC-loads                                                             
+        85,846,138      LLC-load-misses                  #   71.80% of all LL-cache accesses  
+    21,492,370,333      dTLB-loads                                                            
+         4,891,754      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       2.910080086 seconds time elapsed
+       8.610346000 seconds user
+       0.224061000 seconds sys
+
+hashing_SpGEMM 8192 0.075 
+   339,287,960,723      cycles                                                                
+   359,614,685,709      cache-references                                                      
+     1,729,968,110      cache-misses                     #    0.48% of all cache refs         
+     1,477,811,989      LLC-loads                                                             
+     1,144,910,360      LLC-load-misses                  #   77.47% of all LL-cache accesses  
+   359,614,831,735      dTLB-loads                                                            
+        35,516,099      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+      95.211440883 seconds time elapsed
+     140.967703000 seconds user
+       0.407952000 seconds sys
+spArr_SpGEMM 8192 0.075 
+     9,018,311,050      cycles                                                                
+     3,791,789,824      cache-references                                                      
+        21,689,037      cache-misses                     #    0.57% of all cache refs         
+        33,458,283      LLC-loads                                                             
+        25,286,471      LLC-load-misses                  #   75.58% of all LL-cache accesses  
+     3,791,795,161      dTLB-loads                                                            
+        10,937,069      dTLB-load-misses                 #    0.29% of all dTLB cache accesses
+       3.722350975 seconds time elapsed
+       3.154555000 seconds user
+       0.603723000 seconds sys
+
+hashing_SpGEMM 32 0.1 
+         5,207,542      cycles                                                                
+         1,746,054      cache-references                                                      
+            31,347      cache-misses                     #    1.80% of all cache refs         
+            60,034      LLC-loads                                                             
+            28,125      LLC-load-misses                  #   46.85% of all LL-cache accesses  
+         1,746,088      dTLB-loads                                                            
+             5,633      dTLB-load-misses                 #    0.32% of all dTLB cache accesses
+       0.001835132 seconds time elapsed
+       0.000000000 seconds user
+       0.002149000 seconds sys
+spArr_SpGEMM 32 0.1 
+         4,979,537      cycles                                                                
+         1,699,893      cache-references                                                      
+            30,911      cache-misses                     #    1.82% of all cache refs         
+            57,786      LLC-loads                                                             
+            27,147      LLC-load-misses                  #   46.98% of all LL-cache accesses  
+         1,699,920      dTLB-loads                                                            
+             5,123      dTLB-load-misses                 #    0.30% of all dTLB cache accesses
+       0.001771132 seconds time elapsed
+       0.002117000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.1 
+         6,931,688      cycles                                                                
+         3,475,181      cache-references                                                      
+            33,610      cache-misses                     #    0.97% of all cache refs         
+            63,817      LLC-loads                                                             
+            28,567      LLC-load-misses                  #   44.76% of all LL-cache accesses  
+         3,475,222      dTLB-loads                                                            
+             5,756      dTLB-load-misses                 #    0.17% of all dTLB cache accesses
+       0.002102929 seconds time elapsed
+       0.002665000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 64 0.1 
+         5,832,422      cycles                                                                
+         2,553,205      cache-references                                                      
+            34,074      cache-misses                     #    1.33% of all cache refs         
+            60,434      LLC-loads                                                             
+            28,204      LLC-load-misses                  #   46.67% of all LL-cache accesses  
+         2,553,231      dTLB-loads                                                            
+             5,282      dTLB-load-misses                 #    0.21% of all dTLB cache accesses
+       0.001834040 seconds time elapsed
+       0.002233000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.1 
+        16,478,671      cycles                                                                
+        13,448,387      cache-references                                                      
+            38,816      cache-misses                     #    0.29% of all cache refs         
+            68,927      LLC-loads                                                             
+            30,679      LLC-load-misses                  #   44.51% of all LL-cache accesses  
+        13,448,422      dTLB-loads                                                            
+             5,928      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.003344190 seconds time elapsed
+       0.003601000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 128 0.1 
+        10,148,338      cycles                                                                
+         6,292,366      cache-references                                                      
+            46,916      cache-misses                     #    0.75% of all cache refs         
+            72,682      LLC-loads                                                             
+            31,430      LLC-load-misses                  #   43.24% of all LL-cache accesses  
+         6,292,408      dTLB-loads                                                            
+             5,668      dTLB-load-misses                 #    0.09% of all dTLB cache accesses
+       0.002653300 seconds time elapsed
+       0.003848000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 256 0.1 
+        70,323,444      cycles                                                                
+        67,178,123      cache-references                                                      
+            79,615      cache-misses                     #    0.12% of all cache refs         
+           150,897      LLC-loads                                                             
+            38,715      LLC-load-misses                  #   25.66% of all LL-cache accesses  
+        67,178,203      dTLB-loads                                                            
+             7,371      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.010916442 seconds time elapsed
+       0.025926000 seconds user
+       0.003240000 seconds sys
+spArr_SpGEMM 256 0.1 
+        31,661,225      cycles                                                                
+        24,816,158      cache-references                                                      
+           103,982      cache-misses                     #    0.42% of all cache refs         
+           164,410      LLC-loads                                                             
+            46,201      LLC-load-misses                  #   28.10% of all LL-cache accesses  
+        24,816,202      dTLB-loads                                                            
+             7,235      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.006963806 seconds time elapsed
+       0.009936000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 512 0.1 
+       316,088,448      cycles                                                                
+       324,409,845      cache-references                                                      
+           405,829      cache-misses                     #    0.13% of all cache refs         
+           410,679      LLC-loads                                                             
+            89,166      LLC-load-misses                  #   21.71% of all LL-cache accesses  
+       324,410,019      dTLB-loads                                                            
+            33,220      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.043414173 seconds time elapsed
+       0.127829000 seconds user
+       0.004123000 seconds sys
+spArr_SpGEMM 512 0.1 
+       132,282,754      cycles                                                                
+       123,806,510      cache-references                                                      
+           424,206      cache-misses                     #    0.34% of all cache refs         
+           366,735      LLC-loads                                                             
+           169,591      LLC-load-misses                  #   46.24% of all LL-cache accesses  
+       123,806,578      dTLB-loads                                                            
+            34,837      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.023164958 seconds time elapsed
+       0.050608000 seconds user
+       0.004600000 seconds sys
+
+hashing_SpGEMM 1024 0.1 
+     1,537,575,412      cycles                                                                
+     1,620,290,929      cache-references                                                      
+         2,374,017      cache-misses                     #    0.15% of all cache refs         
+         3,821,339      LLC-loads                                                             
+           418,135      LLC-load-misses                  #   10.94% of all LL-cache accesses  
+     1,620,291,649      dTLB-loads                                                            
+           283,918      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.200773395 seconds time elapsed
+       0.629127000 seconds user
+       0.008014000 seconds sys
+spArr_SpGEMM 1024 0.1 
+       728,963,921      cycles                                                                
+       731,235,389      cache-references                                                      
+         2,035,316      cache-misses                     #    0.28% of all cache refs         
+         3,654,106      LLC-loads                                                             
+           843,571      LLC-load-misses                  #   23.09% of all LL-cache accesses  
+       731,235,738      dTLB-loads                                                            
+           284,132      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.121878098 seconds time elapsed
+       0.291476000 seconds user
+       0.012144000 seconds sys
+
+hashing_SpGEMM 2048 0.1 
+     8,534,083,168      cycles                                                                
+     8,919,313,111      cache-references                                                      
+        14,891,335      cache-misses                     #    0.17% of all cache refs         
+        37,454,144      LLC-loads                                                             
+        11,306,327      LLC-load-misses                  #   30.19% of all LL-cache accesses  
+     8,919,317,007      dTLB-loads                                                            
+         1,574,395      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       1.067392642 seconds time elapsed
+       3.528199000 seconds user
+       0.028033000 seconds sys
+spArr_SpGEMM 2048 0.1 
+     4,743,964,749      cycles                                                                
+     4,920,198,950      cache-references                                                      
+        11,594,862      cache-misses                     #    0.24% of all cache refs         
+        28,418,626      LLC-loads                                                             
+        10,314,283      LLC-load-misses                  #   36.29% of all LL-cache accesses  
+     4,920,201,299      dTLB-loads                                                            
+         1,379,249      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.700801085 seconds time elapsed
+       1.927910000 seconds user
+       0.047602000 seconds sys
+
+hashing_SpGEMM 4096 0.1 
+    52,636,753,506      cycles                                                                
+    54,818,918,227      cache-references                                                      
+       112,135,472      cache-misses                     #    0.20% of all cache refs         
+       241,505,406      LLC-loads                                                             
+       185,204,505      LLC-load-misses                  #   76.69% of all LL-cache accesses  
+    54,818,942,970      dTLB-loads                                                            
+         7,728,902      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       6.268892306 seconds time elapsed
+      21.813009000 seconds user
+       0.119917000 seconds sys
+spArr_SpGEMM 4096 0.1 
+    33,114,938,837      cycles                                                                
+    35,778,311,708      cache-references                                                      
+        85,554,030      cache-misses                     #    0.24% of all cache refs         
+       176,797,183      LLC-loads                                                             
+       134,886,581      LLC-load-misses                  #   76.29% of all LL-cache accesses  
+    35,778,327,367      dTLB-loads                                                            
+         6,517,960      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       4.295511734 seconds time elapsed
+      13.578968000 seconds user
+       0.216047000 seconds sys
+
+hashing_SpGEMM 8192 0.1 
+   686,336,146,415      cycles                                                                
+   729,264,813,985      cache-references                                                      
+     3,906,547,914      cache-misses                     #    0.54% of all cache refs         
+     3,209,960,914      LLC-loads                                                             
+     2,049,877,152      LLC-load-misses                  #   63.86% of all LL-cache accesses  
+   729,265,111,366      dTLB-loads                                                            
+        61,000,485      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+     144.886252525 seconds time elapsed
+     285.524349000 seconds user
+       0.455962000 seconds sys
+spArr_SpGEMM 8192 0.1 
+    10,891,611,673      cycles                                                                
+     4,319,743,972      cache-references                                                      
+        24,756,023      cache-misses                     #    0.57% of all cache refs         
+        36,829,906      LLC-loads                                                             
+        28,893,649      LLC-load-misses                  #   78.45% of all LL-cache accesses  
+     4,319,748,685      dTLB-loads                                                            
+        14,602,727      dTLB-load-misses                 #    0.34% of all dTLB cache accesses
+       4.507133359 seconds time elapsed
+       3.993807000 seconds user
+       0.544792000 seconds sys
+
+hashing_SpGEMM 32 0.125 
+         5,226,384      cycles                                                                
+         1,877,624      cache-references                                                      
+            31,177      cache-misses                     #    1.66% of all cache refs         
+            60,303      LLC-loads                                                             
+            27,384      LLC-load-misses                  #   45.41% of all LL-cache accesses  
+         1,877,665      dTLB-loads                                                            
+             5,348      dTLB-load-misses                 #    0.28% of all dTLB cache accesses
+       0.001839595 seconds time elapsed
+       0.000000000 seconds user
+       0.002240000 seconds sys
+spArr_SpGEMM 32 0.125 
+         4,996,321      cycles                                                                
+         1,817,842      cache-references                                                      
+            31,629      cache-misses                     #    1.74% of all cache refs         
+            58,689      LLC-loads                                                             
+            28,068      LLC-load-misses                  #   47.82% of all LL-cache accesses  
+         1,817,872      dTLB-loads                                                            
+             5,225      dTLB-load-misses                 #    0.29% of all dTLB cache accesses
+       0.001658873 seconds time elapsed
+       0.002115000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 64 0.125 
+         7,378,263      cycles                                                                
+         4,045,398      cache-references                                                      
+            33,000      cache-misses                     #    0.82% of all cache refs         
+            62,048      LLC-loads                                                             
+            27,946      LLC-load-misses                  #   45.04% of all LL-cache accesses  
+         4,045,438      dTLB-loads                                                            
+             5,694      dTLB-load-misses                 #    0.14% of all dTLB cache accesses
+       0.002110410 seconds time elapsed
+       0.000000000 seconds user
+       0.002811000 seconds sys
+spArr_SpGEMM 64 0.125 
+         5,954,800      cycles                                                                
+         2,756,962      cache-references                                                      
+            34,056      cache-misses                     #    1.24% of all cache refs         
+            60,268      LLC-loads                                                             
+            27,867      LLC-load-misses                  #   46.24% of all LL-cache accesses  
+         2,756,992      dTLB-loads                                                            
+             5,318      dTLB-load-misses                 #    0.19% of all dTLB cache accesses
+       0.001826132 seconds time elapsed
+       0.002378000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 128 0.125 
+        19,311,956      cycles                                                                
+        16,197,820      cache-references                                                      
+            40,104      cache-misses                     #    0.25% of all cache refs         
+            80,551      LLC-loads                                                             
+            28,931      LLC-load-misses                  #   35.92% of all LL-cache accesses  
+        16,197,862      dTLB-loads                                                            
+             5,957      dTLB-load-misses                 #    0.04% of all dTLB cache accesses
+       0.003792598 seconds time elapsed
+       0.000000000 seconds user
+       0.005460000 seconds sys
+spArr_SpGEMM 128 0.125 
+        11,497,672      cycles                                                                
+         7,476,218      cache-references                                                      
+            48,857      cache-misses                     #    0.65% of all cache refs         
+            80,914      LLC-loads                                                             
+            31,860      LLC-load-misses                  #   39.38% of all LL-cache accesses  
+         7,476,260      dTLB-loads                                                            
+             5,856      dTLB-load-misses                 #    0.08% of all dTLB cache accesses
+       0.002872819 seconds time elapsed
+       0.003877000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 256 0.125 
+        77,662,169      cycles                                                                
+        75,219,051      cache-references                                                      
+            97,362      cache-misses                     #    0.13% of all cache refs         
+           165,694      LLC-loads                                                             
+            39,431      LLC-load-misses                  #   23.80% of all LL-cache accesses  
+        75,219,160      dTLB-loads                                                            
+             7,837      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.011967814 seconds time elapsed
+       0.029356000 seconds user
+       0.000000000 seconds sys
+spArr_SpGEMM 256 0.125 
+        37,756,831      cycles                                                                
+        30,521,624      cache-references                                                      
+           120,148      cache-misses                     #    0.39% of all cache refs         
+           189,561      LLC-loads                                                             
+            47,729      LLC-load-misses                  #   25.18% of all LL-cache accesses  
+        30,521,730      dTLB-loads                                                            
+             8,194      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.008068863 seconds time elapsed
+       0.012339000 seconds user
+       0.000000000 seconds sys
+
+hashing_SpGEMM 512 0.125 
+       357,368,849      cycles                                                                
+       367,958,654      cache-references                                                      
+           522,465      cache-misses                     #    0.14% of all cache refs         
+           458,046      LLC-loads                                                             
+            93,713      LLC-load-misses                  #   20.46% of all LL-cache accesses  
+       367,959,201      dTLB-loads                                                            
+            39,231      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       0.049169218 seconds time elapsed
+       0.141763000 seconds user
+       0.004050000 seconds sys
+spArr_SpGEMM 512 0.125 
+       179,620,509      cycles                                                                
+       162,019,532      cache-references                                                      
+           505,218      cache-misses                     #    0.31% of all cache refs         
+           742,890      LLC-loads                                                             
+           181,441      LLC-load-misses                  #   24.42% of all LL-cache accesses  
+       162,019,652      dTLB-loads                                                            
+            41,200      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.033640751 seconds time elapsed
+       0.060714000 seconds user
+       0.014285000 seconds sys
+
+hashing_SpGEMM 1024 0.125 
+     1,848,574,827      cycles                                                                
+     1,944,649,690      cache-references                                                      
+         3,131,762      cache-misses                     #    0.16% of all cache refs         
+         6,480,916      LLC-loads                                                             
+           488,437      LLC-load-misses                  #    7.54% of all LL-cache accesses  
+     1,944,650,589      dTLB-loads                                                            
+           349,253      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.239826471 seconds time elapsed
+       0.754385000 seconds user
+       0.016050000 seconds sys
+spArr_SpGEMM 1024 0.125 
+     1,000,552,796      cycles                                                                
+     1,025,912,205      cache-references                                                      
+         2,450,339      cache-misses                     #    0.24% of all cache refs         
+         5,372,960      LLC-loads                                                             
+           899,677      LLC-load-misses                  #   16.74% of all LL-cache accesses  
+     1,025,912,677      dTLB-loads                                                            
+           350,666      dTLB-load-misses                 #    0.03% of all dTLB cache accesses
+       0.157089650 seconds time elapsed
+       0.404772000 seconds user
+       0.011905000 seconds sys
+
+hashing_SpGEMM 2048 0.125 
+    10,965,225,214      cycles                                                                
+    11,473,904,098      cache-references                                                      
+        20,240,001      cache-misses                     #    0.18% of all cache refs         
+        51,875,084      LLC-loads                                                             
+        20,848,203      LLC-load-misses                  #   40.19% of all LL-cache accesses  
+    11,473,909,178      dTLB-loads                                                            
+         1,961,633      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       1.356467431 seconds time elapsed
+       4.537222000 seconds user
+       0.031980000 seconds sys
+spArr_SpGEMM 2048 0.125 
+     6,859,906,809      cycles                                                                
+     7,230,899,181      cache-references                                                      
+        15,729,199      cache-misses                     #    0.22% of all cache refs         
+        38,975,448      LLC-loads                                                             
+        17,213,118      LLC-load-misses                  #   44.16% of all LL-cache accesses  
+     7,230,902,178      dTLB-loads                                                            
+         1,723,601      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       0.955470342 seconds time elapsed
+       2.813340000 seconds user
+       0.043958000 seconds sys
+
+hashing_SpGEMM 4096 0.125 
+    72,312,040,662      cycles                                                                
+    75,082,480,028      cache-references                                                      
+       160,367,163      cache-misses                     #    0.21% of all cache refs         
+       343,491,972      LLC-loads                                                             
+       266,194,995      LLC-load-misses                  #   77.50% of all LL-cache accesses  
+    75,082,513,465      dTLB-loads                                                            
+         9,775,568      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+       8.464276309 seconds time elapsed
+      30.011161000 seconds user
+       0.119932000 seconds sys
+spArr_SpGEMM 4096 0.125 
+    49,261,962,431      cycles                                                                
+    54,100,476,559      cache-references                                                      
+       119,969,205      cache-misses                     #    0.22% of all cache refs         
+       245,202,750      LLC-loads                                                             
+       191,554,457      LLC-load-misses                  #   78.12% of all LL-cache accesses  
+    54,100,498,609      dTLB-loads                                                            
+         8,181,858      dTLB-load-misses                 #    0.02% of all dTLB cache accesses
+       6.132899492 seconds time elapsed
+      20.276627000 seconds user
+       0.255806000 seconds sys
+
+hashing_SpGEMM 8192 0.125 
+   500,775,519,855      cycles                                                                
+   528,038,562,265      cache-references                                                      
+     2,972,908,137      cache-misses                     #    0.56% of all cache refs         
+     2,361,179,218      LLC-loads                                                             
+     2,205,805,971      LLC-load-misses                  #   93.42% of all LL-cache accesses  
+   528,038,780,569      dTLB-loads                                                            
+        48,770,953      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+     106.851455578 seconds time elapsed
+     208.207195000 seconds user
+       0.447972000 seconds sys
+spArr_SpGEMM 8192 0.125 
+   370,604,201,476      cycles                                                                
+   418,201,387,998      cache-references                                                      
+     1,404,754,141      cache-misses                     #    0.34% of all cache refs         
+     1,561,601,892      LLC-loads                                                             
+     1,483,277,803      LLC-load-misses                  #   94.98% of all LL-cache accesses  
+   418,201,547,185      dTLB-loads                                                            
+        38,924,864      dTLB-load-misses                 #    0.01% of all dTLB cache accesses
+     154.383023302 seconds time elapsed
+     153.664696000 seconds user
+       0.751944000 seconds sys
+

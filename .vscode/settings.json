@@ -3,6 +3,7 @@
         "bin.h": "c",
         "omp.h": "c",
         "stdio.h": "c",
-        "vector": "cpp"
+        "vector": "cpp",
+        "format": "cpp"
     }
 }

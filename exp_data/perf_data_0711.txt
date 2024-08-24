@@ -536,7 +536,7 @@ Multi_SpGEMM 4096 0.25
      1,191,060,174      L1-dcache-load-misses            #    0.39% of all L1-dcache accesses 
      1,394,452,553      LLC-loads                                                             
      1,287,041,738      LLC-load-misses                  #   92.30% of all LL-cache accesses  
-      95.618225538 seconds time elapsed
+      25.618225538 seconds time elapsed
      118.909922000 seconds user
        0.119981000 seconds sys
 

@@ -4,7 +4,7 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/opt/libomp/include",
+                "/opt/homebrew/Cellar/gcc/14.1.0_2/lib/gcc/current/gcc/aarch64-apple-darwin22/14/include"
             ],
             "defines": [],
             "macFrameworkPath": [
